@@ -1,0 +1,6 @@
+-1) Add device collection at client side! So can work out where in database to put it!
+        - Make a config file that has say owner and site name in it. Base station code readsa this file in and sets owner as a property
+        in all readings it sends across
+
+
+Start on client side server and browser and set up simple interface for data processing

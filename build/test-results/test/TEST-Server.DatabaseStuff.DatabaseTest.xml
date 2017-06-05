@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Server.DatabaseStuff.DatabaseTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:02:23" hostname="dyn1168-175.wlan.ic.ac.uk" time="20.539">
+  <properties/>
+  <testcase name="shouldThrowExceptionWhenMeanOfNoDataIsCalled" classname="Server.DatabaseStuff.DatabaseTest" time="0.154"/>
+  <testcase name="shouldThrowExceptionWhenDatabaseNotFound" classname="Server.DatabaseStuff.DatabaseTest" time="0.013"/>
+  <testcase name="shouldReturnEmptyEntrySetIfNoDataExistsBetweenTwoDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.018"/>
+  <testcase name="runningWholeSetUpShouldPutEntriesIntoDatabase" classname="Server.DatabaseStuff.DatabaseTest" time="20.13"/>
+  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.032"/>
+  <testcase name="shouldBeAbleToAddDataForMultipleLocationsAndGetMeanForEach" classname="Server.DatabaseStuff.DatabaseTest" time="0.108"/>
+  <testcase name="shouldBeAbleToAddMultipleDataPointsOverTimeForSameDevice" classname="Server.DatabaseStuff.DatabaseTest" time="0.057"/>
+  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingLongTimes" classname="Server.DatabaseStuff.DatabaseTest" time="0.024"/>
+  <system-out><![CDATA[here's a message
+adding entry...
+]]></system-out>
+  <system-err><![CDATA[Jun 05, 2017 5:02:23 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:8080]
+Jun 05, 2017 5:02:23 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer-2] Started.
+Jun 05, 2017 5:02:43 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:8080]
+]]></system-err>
+</testsuite>

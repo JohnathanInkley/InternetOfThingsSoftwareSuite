@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Server.BaseStationServerStuff.BaseStationConnectionServerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:02:22" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.134">
+  <properties/>
+  <testcase name="serverShouldRunAndReceiveReading" classname="Server.BaseStationServerStuff.BaseStationConnectionServerTest" time="0.134"/>
+  <system-out><![CDATA[here's a message
+]]></system-out>
+  <system-err><![CDATA[Jun 05, 2017 5:02:22 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:8080]
+Jun 05, 2017 5:02:23 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:8080]
+Jun 05, 2017 5:02:23 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer-1] Started.
+]]></system-err>
+</testsuite>

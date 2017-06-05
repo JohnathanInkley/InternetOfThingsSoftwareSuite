@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Server.DatabaseStuff.DatabaseEntrySetTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:02:23" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.009">
+  <properties/>
+  <testcase name="tryingToAccessNonExistentElementShouldThrowException" classname="Server.DatabaseStuff.DatabaseEntrySetTest" time="0.002"/>
+  <testcase name="setsWithSameEntriesShouldBeEqual" classname="Server.DatabaseStuff.DatabaseEntrySetTest" time="0.003"/>
+  <testcase name="shouldBeAbleToAddEntriesAndGetThemOut" classname="Server.DatabaseStuff.DatabaseEntrySetTest" time="0.0"/>
+  <testcase name="shouldReturnCorrectSize" classname="Server.DatabaseStuff.DatabaseEntrySetTest" time="0.0"/>
+  <testcase name="shouldBeAbleToJoinTwoEntrySets" classname="Server.DatabaseStuff.DatabaseEntrySetTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 05, 2017 5:02:23 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:8080]
+]]></system-err>
+</testsuite>
