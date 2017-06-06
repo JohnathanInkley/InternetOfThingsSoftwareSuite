@@ -26,6 +26,7 @@ public class SensorReadingProducer {
     private String deviceCollection;
 
     public SensorReadingProducer(String DeviceCollection) {
+        this.deviceCollection = DeviceCollection;
         dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     }
 

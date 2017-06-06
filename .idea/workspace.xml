@@ -2,86 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/holderWorkshopBaseStation.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/ownerFactoryBaseStation.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingSender.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/Resources/OwnerKeys.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/BaseStationManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/ReadingEncryptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingBackupCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingProducer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingSender.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/BaseStationManagerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/ReadingEncryptorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingBackupCreatorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingHandlerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingProducerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingSenderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.BaseStationManagerTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.ReadingEncryptorTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingBackupCreatorTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingHandlerTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingProducerTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingSenderTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/BaseStation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.BaseStationManagerTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.ReadingEncryptorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingBackupCreatorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingHandlerTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingProducerTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingSenderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/AESKey.txt" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/AESKey.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/BaseStationManager.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/ReadingEncryptor.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/ReadingEncryptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingBackupCreator.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingBackupCreator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingHandler.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingProducer.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/BaseStationManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationManagerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/ReadingEncryptorTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingBackupCreatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingBackupCreatorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingProducerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingProducerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingSenderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/BaseStationConnectionServer.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/BaseStationConnectionServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/PostResource.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/PostResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/BaseStationConnectionServerTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/BaseStationConnectionServerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/SensorReadingParserTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/SensorReadingParserTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/DatabaseStuff/DatabaseTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/DatabaseStuff/DatabaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.BaseStationConnectionServerTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.BaseStationConnectionServerTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.SensorReadingParserTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.SensorReadingParserTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntrySetTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntrySetTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntryTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntryTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DeviceCollectionTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DeviceCollectionTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.BaseStationServerStuff.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.BaseStationServerStuff.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.DatabaseStuff.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.DatabaseStuff.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.BaseStationConnectionServerTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.BaseStationConnectionServerTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.SensorReadingParserTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.SensorReadingParserTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntrySetTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntrySetTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntryTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DeviceCollectionTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DeviceCollectionTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -145,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo" pinned="false" current-in-tab="true">
+      <file leaf-file-name="todo" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -155,35 +77,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SensorReadingHandlerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadingEncryptorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="126" lean-forward="false" selection-start-line="10" selection-start-column="126" selection-end-line="10" selection-end-column="126" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorReadingProducer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IncomingReadingDecryptor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseStationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -234,30 +166,6 @@
               <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseStation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2238#2239#0" expanded="true" />
-                <element signature="e#2301#2302#0" expanded="true" />
-                <element signature="e#2342#2343#0" expanded="true" />
-                <element signature="e#2420#2421#0" expanded="true" />
-                <element signature="e#2454#2455#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-                <element signature="e#2690#2691#0" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
-                <element signature="e#3178#3179#0" expanded="true" />
-                <element signature="e#3214#3215#0" expanded="true" />
-                <element signature="e#3240#3241#0" expanded="true" />
-                <element signature="e#3275#3276#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -705,11 +613,11 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
       </list>
     </option>
   </component>
@@ -1630,8 +1538,16 @@
       <workItem from="1496305863204" duration="5891000" />
       <workItem from="1496398805794" duration="3204000" />
       <workItem from="1496409482351" duration="15618000" />
-      <workItem from="1496573722079" duration="52262000" />
+      <workItem from="1496573722079" duration="52459000" />
     </task>
+    <task id="LOCAL-00001" summary="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently).">
+      <created>1496764778803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496764778803</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1667,7 +1583,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148977000" />
+    <option name="totallyTimeSpent" value="149174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -1717,6 +1633,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2002,16 +1922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="126" lean-forward="false" selection-start-line="10" selection-start-column="126" selection-end-line="10" selection-end-column="126" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingSenderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -2069,26 +1979,6 @@
             <element signature="e#2656#2657#0" expanded="false" />
             <element signature="e#2700#2701#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2205,6 +2095,34 @@
         <state relative-caret-position="120">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="126" lean-forward="false" selection-start-line="10" selection-start-column="126" selection-end-line="10" selection-end-column="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
