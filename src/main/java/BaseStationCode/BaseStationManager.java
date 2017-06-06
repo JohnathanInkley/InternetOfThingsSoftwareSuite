@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -19,6 +19,7 @@ public class BaseStationManager {
     private ReadingEncryptor encryptor;
 
     private boolean shutdown = false;
+    private String collectionID = "";
 
     public void setHandler(SensorReadingHandler handler, int handlerSizeLimit) {
         this.handler = handler;
@@ -39,6 +40,10 @@ public class BaseStationManager {
 
     public void setEncryptor(ReadingEncryptor encryptor) {
         this.encryptor = encryptor;
+    }
+
+    public void setDeviceCollection(String collectionID) {
+        this.collectionID = collectionID;
     }
 
     public void start() {
@@ -105,13 +110,13 @@ public class BaseStationManager {
         this.notifyAll();
     }
 
-
     private void getReadingsFromHandlerAndPassToConsumer() {
         try {
             while (!shutdown) {
                 String reading = waitUntilHandlerHasReadingThenGet();
                 String encryptedReading = encryptor.encrypt(reading);
-                consumer.send(encryptedReading); // send should not return until the string is sent
+                String fullMessage = collectionID + BaseStation.DELIMITER_TO_SEPARATE_MESSAGE_AND_OWNER + encryptedReading;
+                consumer.send(fullMessage);
             }
         } catch (Exception e) {
             e.printStackTrace();

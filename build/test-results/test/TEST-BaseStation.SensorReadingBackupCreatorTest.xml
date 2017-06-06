@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BaseStation.SensorReadingBackupCreatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:01:59" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.019">
-  <properties/>
-  <testcase name="shouldWriteToFilesWithAGivenPrefix" classname="BaseStation.SensorReadingBackupCreatorTest" time="0.009"/>
-  <testcase name="ifBackupsWithSameNameExistWillBeReadIn" classname="BaseStation.SensorReadingBackupCreatorTest" time="0.007"/>
-  <testcase name="shouldKeepTrackOfNumberOfBackups" classname="BaseStation.SensorReadingBackupCreatorTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

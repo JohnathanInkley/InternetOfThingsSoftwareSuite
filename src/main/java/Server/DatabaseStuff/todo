@@ -1,6 +1,11 @@
--1) Add device collection at client side! So can work out where in database to put it!
-        - Make a config file that has say owner and site name in it. Base station code readsa this file in and sets owner as a property
-        in all readings it sends across
-
+1) Move parser on to client side (in database manager maybe)
+2) Check if we can get checksum from cc2650 or do we need clever parser
+3) Start thinking about browser DB interaction
+    - server written
+    - data processing unit linked in somehow
+    - Look for standard methods of getting data from server
+    - look typescript
+    - d3
+    - google maps api for heat map?
 
 Start on client side server and browser and set up simple interface for data processing

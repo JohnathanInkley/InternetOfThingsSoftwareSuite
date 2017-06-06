@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import org.junit.Test;
 
@@ -34,7 +34,7 @@ public class BaseStationManagerTest {
         when(sender.send(anyString())).thenAnswer(invocation -> {
             Object[] args = invocation.getArguments();
             String message = (String) args[0];
-            assertTrue(message.startsWith("["));
+            assertTrue(message.startsWith("owner.factory!["));
             assertTrue(message.endsWith("]"));
             checkMessagesAreProcessed.countDown();
             return true;
@@ -45,6 +45,7 @@ public class BaseStationManagerTest {
         underTest.setProducer(producer);
         underTest.setConsumer(sender);
         underTest.setEncryptor(encryptor);
+        underTest.setDeviceCollection("owner.factory");
 
         underTest.start();
         assertTrue(checkMessagesAreProcessed.await(20, TimeUnit.SECONDS));

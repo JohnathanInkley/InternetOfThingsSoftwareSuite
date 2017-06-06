@@ -1,11 +1,13 @@
 package Server.DatabaseStuff;
 
 
-import BaseStation.*;
+import BaseStationCode.BaseStation;
 import Server.BaseStationServerStuff.BaseStationConnectionServer;
+import Server.BaseStationServerStuff.IncomingReadingDecryptor;
 import Server.BaseStationServerStuff.SensorReadingParser;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -136,27 +138,19 @@ public class DatabaseTest {
     }
 
     @Test
-    public void runningWholeSetUpShouldPutEntriesIntoDatabase() throws InterruptedException {
+    public void runningWholeSetUpShouldPutEntriesIntoDatabase() throws InterruptedException, IOException {
         // Set up client side
-        BaseStationManager manager = new BaseStationManager();
-        SensorReadingProducer readingProducer = new SensorReadingProducer();
-        readingProducer.findPortAndOpen();
-        SensorReadingHandler readingHandler = new SensorReadingHandler();
-        SensorReadingBackupCreator backupCreator = new SensorReadingBackupCreator("dbBackup");
-        SensorReadingSender readingSender = new SensorReadingSender("http://localhost:8080/SensorServer/server");
-        ReadingEncryptor encryptor = new ReadingEncryptor();
-        encryptor.readKey("src/main/java/BaseStation/AESKey.txt");
-        manager.setConsumer(readingSender);
-        manager.setHandler(readingHandler, 10);
-        manager.setProducer(readingProducer);
-        manager.setBackupCreator(backupCreator);
-        manager.setEncryptor(encryptor);
+       BaseStation baseStation = new BaseStation();
+       baseStation.readConfigFile("src/main/java/BaseStationCode/Resources/ownerFactoryBaseStation.config");
+       baseStation.initialiseComponents();
 
         // Set up client connection server
         BaseStationConnectionServer server = new BaseStationConnectionServer("http://localhost:8080/SensorServer");
         SensorReadingParser parser = new SensorReadingParser();
         server.setReadingParser(parser);
-        server.setEncryptor(encryptor);
+        IncomingReadingDecryptor decryptor = new IncomingReadingDecryptor();
+        decryptor.readInKeysFromFile("src/main/java/Server/BaseStationServerStuff/Resources/OwnerKeys.txt");
+        server.setReadingDecryptor(decryptor);
 
         // Create database
         Database underTest = new Database("dbFullTest", "http://localhost:8086/");
@@ -164,13 +158,13 @@ public class DatabaseTest {
 
         // run server and client side code
         server.runServer();
-        manager.start();
+        baseStation.start();
 
         // wait so entries can be added
         Thread.sleep(20000);
 
         // shut down
-        manager.join();
+        baseStation.stop();
         server.stopServer();
     }
 

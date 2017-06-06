@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -16,6 +16,16 @@ public class ReadingEncryptor {
     private SecretKey secretAESKey;
     private Cipher encryptionCipher;
     private Cipher decryptionCipher;
+
+    public ReadingEncryptor(String privateKey) {
+        rawKeyAsBites = privateKey.getBytes();
+        generateAESKey();
+        initialiseCiphers();
+    }
+
+    public ReadingEncryptor() {
+
+    }
 
     public void readKey(String keyFileName) {
         this.keyFileName = keyFileName;

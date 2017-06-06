@@ -1,7 +1,6 @@
 package Server.BaseStationServerStuff;
 
-import BaseStation.ReadingEncryptor;
-import BaseStation.SensorReadingSender;
+import BaseStationCode.SensorReadingSender;
 import Server.DatabaseStuff.DatabaseEntry;
 import org.junit.Test;
 
@@ -30,22 +29,24 @@ public class BaseStationConnectionServerTest {
            messageReceived.countDown();
            return new DatabaseEntry();
         });
-
         underTest.setReadingParser(parser);
 
-        ReadingEncryptor encryptor = new ReadingEncryptor();
-        encryptor.readKey("src/main/java/BaseStation/AESKey.txt");
-        underTest.setEncryptor(encryptor);
+        IncomingReadingDecryptor decryptor = mock(IncomingReadingDecryptor.class);
+        when(decryptor.decrypt(anyString())).thenAnswer(invocation -> invocation.getArguments()[0]);
+        underTest.setReadingDecryptor(decryptor);
 
         underTest.runServer();
 
         SensorReadingSender sender = new SensorReadingSender("http://localhost:8080/SensorServer/server");
-        sender.send(encryptor.encrypt("[reading]"));
+        sender.send("[reading]");
 
         assertTrue(messageReceived.await(10, TimeUnit.SECONDS));
 
         underTest.stopServer();
     }
 
+    @Test
+    public void serverShouldGetDeviceCollectionFromMessageAndUseCorrectKey() {
 
+    }
 }

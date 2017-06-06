@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 
 import jssc.SerialPort;
@@ -23,10 +23,12 @@ public class SensorReadingProducer {
     private String serialPortFilePath;
     private SerialPort serialPort;
     private String currentReadingAsString;
+    private String deviceCollection;
 
-    public SensorReadingProducer() {
+    public SensorReadingProducer(String DeviceCollection) {
         dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     }
+
     public void findPortAndOpen() {
         findSerialPortPath();
         serialPort = new SerialPort(serialPortFilePath);
@@ -73,10 +75,9 @@ public class SensorReadingProducer {
         }
     }
 
-
     private void addTimestamp() {
         String currentTime = dateFormat.format(new Date());
-        currentReadingAsString = "["+ "{time,," + currentTime + "};";
+        currentReadingAsString = "["+ "{time,," + currentTime + "};{DeviceCollection,," + deviceCollection + "};";
     }
 
     private void waitForEndOfReading() throws SerialPortException {

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Server.DatabaseStuff.DatabaseEntryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:02:23" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.01">
+<testsuite name="Server.DatabaseStuff.DatabaseEntryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-06-06T15:09:24" hostname="dyn1173-78.wlan.ic.ac.uk" time="0.015">
   <properties/>
-  <testcase name="correctNumberOfEntriesCanBeCalculated" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.002"/>
+  <testcase name="correctNumberOfEntriesCanBeCalculated" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.003"/>
   <testcase name="timestampsCanBeSet" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.0"/>
   <testcase name="fieldValuesCanBeGotByName" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.0"/>
   <testcase name="entrySitesCanBeSet" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.002"/>
-  <testcase name="entriesCanBeComparedForEquality" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.001"/>
+  <testcase name="entriesCanBeComparedForEquality" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.003"/>
   <testcase name="timestampFormatsCanBeSetToGetTimeOutCorrectly" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.001"/>
-  <testcase name="fieldsCanBeIteratedThrough" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.002"/>
+  <testcase name="fieldsCanBeIteratedThrough" classname="Server.DatabaseStuff.DatabaseEntryTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

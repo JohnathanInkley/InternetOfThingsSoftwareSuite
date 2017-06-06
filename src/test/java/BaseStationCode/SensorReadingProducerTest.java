@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class SensorReadingProducerTest {
 
     @Test
     public void shouldBeAbleToFindSerialPortDeviceFile() {
-        SensorReadingProducer underTest  = new SensorReadingProducer();
+        SensorReadingProducer underTest  = new SensorReadingProducer("owner.factory");
         underTest.findPortAndOpen();
         assertEquals("/dev/cu.usbmodemL3002981", underTest.getSerialPortPath());
         underTest.close();
@@ -17,7 +17,7 @@ public class SensorReadingProducerTest {
 
     @Test
     public void shouldBeAbleToReadFromSerialPortAndGetAnEntry() {
-        SensorReadingProducer underTest = new SensorReadingProducer();
+        SensorReadingProducer underTest = new SensorReadingProducer("owner.factory");
         underTest.findPortAndOpen();
         String bufferContents = underTest.getSingleReading();
         while (bufferContents.equals("")) {

@@ -1,11 +1,19 @@
 package Server.BaseStationServerStuff;
 
 import Server.DatabaseStuff.DatabaseEntry;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class SensorReadingParserTest {
+
+    @Ignore
+    @Test
+    public void shouldReturnBadEntryIfStringImproperlyFormatted() {
+        SensorReadingParser underTest = new SensorReadingParser();
+        String badReading = "[{time,,,2000-01-01 12:34:56.123}]";
+    }
 
     @Test
     public void shouldGetTimeForReading() {
@@ -14,8 +22,6 @@ public class SensorReadingParserTest {
         DatabaseEntry parsedReading = underTest.parseReading(reading);
         assertEquals("2000-01-01 12:34:56.123", parsedReading.getTimestamp());
     }
-
-
 
     @Test
     public void shouldGetTimestampAndSingleField() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Server.DatabaseStuff.DeviceCollectionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:02:43" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.001">
+<testsuite name="Server.DatabaseStuff.DeviceCollectionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-06T15:09:44" hostname="dyn1173-78.wlan.ic.ac.uk" time="0.003">
   <properties/>
   <testcase name="shouldBeAbleToGetDeviceOwner" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.0"/>
   <testcase name="shouldBeAbleToGetNameOfCollection" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.001"/>

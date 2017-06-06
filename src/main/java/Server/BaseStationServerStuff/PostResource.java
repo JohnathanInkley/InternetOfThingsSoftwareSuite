@@ -1,9 +1,7 @@
 package Server.BaseStationServerStuff;
 
-import BaseStation.ReadingEncryptor;
 import Server.DatabaseStuff.Database;
 import Server.DatabaseStuff.DatabaseEntry;
-import Server.DatabaseStuff.DeviceCollection;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -15,7 +13,7 @@ public class PostResource {
 
     private static SensorReadingParser readingParser;
     private static Database database;
-    private static ReadingEncryptor readingEncryptor;
+    private static IncomingReadingDecryptor readingDecryptor;
 
     public static void setReadingParser(SensorReadingParser parser) {
         readingParser = parser;
@@ -25,24 +23,22 @@ public class PostResource {
         database = db;
     }
 
-    public static void setReadingEncryptor(ReadingEncryptor encryptor) {
-        readingEncryptor = encryptor;
+    public static void setReadingEncryptor(IncomingReadingDecryptor encryptor) {
+        readingDecryptor = encryptor;
     }
 
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
-    public void parseByteMessageAndAddToDatabase(String encodedMessage) {
-        String reading = readingEncryptor.decrypt(encodedMessage);
-        DatabaseEntry entry = readingParser.parseReading(reading);
-        if (database != null) {
+    public void parseMessageAndAddToDatabase(String encodedMessage) {
+        String reading = readingDecryptor.decrypt(encodedMessage);
+        if (!reading.equals(IncomingReadingDecryptor.UNAUTHORIZED_MESSAGE_ATTEMPT)) {
+            DatabaseEntry entry = readingParser.parseReading(reading);
             addToDatabase(entry);
         }
     }
 
     private void addToDatabase(DatabaseEntry entry) {
         System.out.println("adding entry...");
-        DeviceCollection dc = new DeviceCollection("owner", "factory");
-        entry.setDeviceCollectionIdentifier(dc);
         database.addEntry(entry);
     }
 

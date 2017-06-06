@@ -2,7 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/holderWorkshopBaseStation.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/ownerFactoryBaseStation.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/Resources/OwnerKeys.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/BaseStationManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/ReadingEncryptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingBackupCreator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingProducer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BaseStation/SensorReadingSender.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/BaseStationManagerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/ReadingEncryptorTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingBackupCreatorTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingHandlerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingProducerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/BaseStation/SensorReadingSenderTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.BaseStationManagerTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.ReadingEncryptorTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingBackupCreatorTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingHandlerTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingProducerTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BaseStation.SensorReadingSenderTest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/BaseStation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.BaseStationManagerTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.ReadingEncryptorTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingBackupCreatorTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingHandlerTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingProducerTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BaseStation.SensorReadingSenderTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/AESKey.txt" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/AESKey.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/BaseStationManager.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/ReadingEncryptor.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/ReadingEncryptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingBackupCreator.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingBackupCreator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingHandler.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingProducer.java" afterPath="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/BaseStationManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationManagerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/ReadingEncryptorTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingBackupCreatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingBackupCreatorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingProducerTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingProducerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingSenderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/BaseStationConnectionServer.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/BaseStationConnectionServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/PostResource.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/BaseStationServerStuff/PostResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/BaseStationConnectionServerTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/BaseStationConnectionServerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/SensorReadingParserTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/BaseStationServerStuff/SensorReadingParserTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/Server/DatabaseStuff/DatabaseTest.class" afterPath="$PROJECT_DIR$/build/classes/test/Server/DatabaseStuff/DatabaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.BaseStationConnectionServerTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.BaseStationConnectionServerTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.SensorReadingParserTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.BaseStationServerStuff.SensorReadingParserTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntrySetTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntrySetTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntryTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseEntryTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DatabaseTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DeviceCollectionTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Server.DatabaseStuff.DeviceCollectionTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.BaseStationServerStuff.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.BaseStationServerStuff.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.DatabaseStuff.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/Server.DatabaseStuff.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.BaseStationConnectionServerTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.BaseStationConnectionServerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.SensorReadingParserTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.BaseStationServerStuff.SensorReadingParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntrySetTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntrySetTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntryTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseEntryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DatabaseTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DeviceCollectionTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Server.DatabaseStuff.DeviceCollectionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" afterPath="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -56,14 +135,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReadingEncryptorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/ReadingEncryptorTest.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,9 +148,33 @@
       <file leaf-file-name="todo" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="87" lean-forward="false" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+            <state relative-caret-position="120">
+              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncomingReadingDecryptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseStationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,26 +182,8 @@
       <file leaf-file-name="PostResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadingEncryptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/ReadingEncryptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="177">
+              <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,46 +191,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorReadingSender.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java">
+      <file leaf-file-name="SensorReadingParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/SensorReadingParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="192">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SensorReadingSenderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BaseStationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/BaseStationManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="113" column="37" lean-forward="false" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
-              <folding>
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseStationManagerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/BaseStationManagerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="1620">
+              <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,12 +215,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
+      <file leaf-file-name="SensorReadingBackupCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingBackupCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="138" column="45" lean-forward="true" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorReadingParserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseStation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2238#2239#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2342#2343#0" expanded="true" />
+                <element signature="e#2420#2421#0" expanded="true" />
+                <element signature="e#2454#2455#0" expanded="true" />
+                <element signature="e#2513#2514#0" expanded="true" />
+                <element signature="e#2690#2691#0" expanded="true" />
+                <element signature="e#2742#2743#0" expanded="true" />
+                <element signature="e#3178#3179#0" expanded="true" />
+                <element signature="e#3214#3215#0" expanded="true" />
+                <element signature="e#3240#3241#0" expanded="true" />
+                <element signature="e#3275#3276#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -561,23 +659,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseEntry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorCollection.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/SensorCollectionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DeviceCollectionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntryField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DeviceCollection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseEntryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseEntrySetTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntrySet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/BufferReader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorSerialPortReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorSerialPortReader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorDataReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorDataReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingConsumer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/reading.proto" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/ServerServlet.java" />
@@ -588,7 +669,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingProducer.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingProducerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/GRAPE.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/TEMP.java" />
@@ -596,20 +676,39 @@
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/Reader.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/ReaderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingBackupCreatorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/SensorReadingParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingBackupCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/AESKey.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/ReadingEncryptor.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/ReadingEncryptorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStation/BaseStationManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStation/BaseStationManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStation/baseStation.config" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStation/holderWorkshopBaseStation.config" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStation/BaseStation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/ReadingEncryptor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/OwnerKeys.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/holderWorkshopBaseStation.config" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/ownerFactoryBaseStation.config" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingSenderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingSender.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" />
       </list>
     </option>
@@ -754,7 +853,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BaseStation" />
+              <option name="myItemId" value="BaseStationCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -858,7 +957,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BaseStation" />
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseStationServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseStationCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseStationCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -910,19 +1073,30 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
-    <property name="extract.method.default.visibility" value="public" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="BaseStation" />
-      <recent name="Server.BaseStationServerStuff" />
-      <recent name="Server.DatabaseStuff" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Server.BaseStationServerStuff" />
+      <recent name="BaseStationCode" />
+      <recent name="BaseStation" />
+      <recent name="Server.DatabaseStuff" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="BaseStationCode.BaseStation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/Resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/BaseStation" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="BaseStation" />
@@ -930,13 +1104,13 @@
       <recent name="Server.DatabaseStuff" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase">
-    <configuration default="false" name="SensorReadingSenderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.IncomingReadingDecryptorTest">
+    <configuration default="false" name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests BaseStation.SensorReadingSenderTest" />
+        <option name="scriptParameters" value="--tests &quot;Server.DatabaseStuff.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -950,31 +1124,12 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="BaseStationConnectionServerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="IncomingReadingDecryptorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.BaseStationServerStuff.BaseStationConnectionServerTest" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;Server.BaseStationServerStuff.BaseStationConnectionServerTest.serverShouldRunAndReceiveReading&quot;" />
+        <option name="scriptParameters" value="--tests Server.BaseStationServerStuff.IncomingReadingDecryptorTest" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -993,7 +1148,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BaseStation.BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork&quot;" />
+        <option name="scriptParameters" value="--tests &quot;BaseStationCode.BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1007,12 +1162,31 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="allTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;Server.DatabaseStuff.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase&quot;" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="SensorReadingSenderTest.invalidURLShouldReturnFalseWhenMessageSent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;BaseStationCode.SensorReadingSenderTest.invalidURLShouldReturnFalseWhenMessageSent&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1423,19 +1597,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Gradle.SensorReadingSenderTest" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.BaseStationConnectionServerTest" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" />
+      <item index="0" class="java.lang.String" itemvalue="Gradle.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.IncomingReadingDecryptorTest" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.allTests" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.SensorReadingSenderTest.invalidURLShouldReturnFalseWhenMessageSent" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.IncomingReadingDecryptorTest" />
         <item index="1" class="java.lang.String" itemvalue="Gradle.BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.SensorReadingSenderTest" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.BaseStationConnectionServerTest" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.SensorReadingSenderTest.invalidURLShouldReturnFalseWhenMessageSent" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.allTests" />
       </list>
     </recent_temporary>
   </component>
@@ -1456,48 +1630,48 @@
       <workItem from="1496305863204" duration="5891000" />
       <workItem from="1496398805794" duration="3204000" />
       <workItem from="1496409482351" duration="15618000" />
-      <workItem from="1496573722079" duration="31071000" />
+      <workItem from="1496573722079" duration="52262000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 55m 01s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 55m 57s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 56m 31s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 56m 55s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 57m 18s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 57m 37s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationConnectionServerTest_serverShouldRunAndReceiveReading - 2017.06.05 at 16h 58m 12s.xml">
-      <configuration name="BaseStationConnectionServerTest.serverShouldRunAndReceiveReading" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BaseStationManagerTest_shouldTakeProducerAndSenderAndAHandlerAndAllowToWork - 2017.06.05 at 16h 59m 39s.xml">
+    <history-entry file="BaseStationManagerTest_shouldTakeProducerAndSenderAndAHandlerAndAllowToWork - 2017.06.06 at 15h 47m 34s.xml">
       <configuration name="BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="BaseStationManagerTest_shouldTakeProducerAndSenderAndAHandlerAndAllowToWork - 2017.06.05 at 16h 59m 58s.xml">
+    <history-entry file="BaseStationManagerTest_shouldTakeProducerAndSenderAndAHandlerAndAllowToWork - 2017.06.06 at 15h 48m 56s.xml">
       <configuration name="BaseStationManagerTest.shouldTakeProducerAndSenderAndAHandlerAndAllowToWork" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.05 at 17h 00m 31s.xml">
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 35m 36s.xml">
       <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 37m 16s.xml">
+      <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 38m 56s.xml">
+      <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 39m 26s.xml">
+      <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 40m 10s.xml">
+      <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="DatabaseTest_runningWholeSetUpShouldPutEntriesIntoDatabase - 2017.06.06 at 15h 41m 27s.xml">
+      <configuration name="DatabaseTest.runningWholeSetUpShouldPutEntriesIntoDatabase" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="IncomingReadingDecryptorTest - 2017.06.06 at 15h 34m 55s.xml">
+      <configuration name="IncomingReadingDecryptorTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="IncomingReadingDecryptorTest - 2017.06.06 at 15h 49m 11s.xml">
+      <configuration name="IncomingReadingDecryptorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127786000" />
+    <option name="totallyTimeSpent" value="148977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1520,7 +1694,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.49427754" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3134752" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3134752" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746781" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1538,6 +1712,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -1546,7 +1723,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java</url>
-          <line>12</line>
+          <line>11</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1565,59 +1742,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar!/junit/framework/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/dto/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="184" column="19" lean-forward="false" selection-start-line="184" selection-start-column="19" selection-end-line="184" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="false" />
-            <element signature="e#10148#10149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/dto/QueryResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DeviceCollectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/sql/Timestamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="144" column="16" lean-forward="false" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1705,82 +1829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#442#443#0" expanded="false" />
-            <element signature="e#482#483#0" expanded="false" />
-            <element signature="e#672#673#0" expanded="false" />
-            <element signature="e#734#735#0" expanded="false" />
-            <element signature="e#784#785#0" expanded="false" />
-            <element signature="e#826#827#0" expanded="false" />
-            <element signature="e#862#863#0" expanded="false" />
-            <element signature="e#894#895#0" expanded="false" />
-            <element signature="e#966#967#0" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1130#1131#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1209#1210#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1285#1286#0" expanded="false" />
-            <element signature="e#1570#1571#0" expanded="false" />
-            <element signature="e#1627#1628#0" expanded="false" />
-            <element signature="e#2454#2455#0" expanded="false" />
-            <element signature="e#2490#2491#0" expanded="false" />
-            <element signature="e#2536#2537#0" expanded="false" />
-            <element signature="e#2613#2614#0" expanded="false" />
-            <element signature="e#2656#2657#0" expanded="false" />
-            <element signature="e#2700#2701#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingProducerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#240#241#0" expanded="false" />
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#590#591#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/GRAPE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1821,54 +1869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/SensorReadingParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="55" column="24" lean-forward="false" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingBackupCreatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingBackupCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="120" column="9" lean-forward="false" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1902,61 +1902,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/BaseStationManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="113" column="37" lean-forward="false" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
-          <folding>
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingBackupCreatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/AESKey.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/holderWorkshopBaseStation.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/ownerFactoryBaseStation.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="288">
+          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingProducerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        <state relative-caret-position="338">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/SensorReadingSender.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="603">
+          <caret line="60" column="47" lean-forward="false" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/SensorReadingSenderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/ReadingEncryptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-          <folding />
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/BaseStationManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="63">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/ReadingEncryptorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="126" lean-forward="false" selection-start-line="10" selection-start-column="126" selection-end-line="10" selection-end-column="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingSenderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1965,60 +2024,186 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="138" column="45" lean-forward="true" selection-start-line="138" selection-start-column="45" selection-end-line="138" selection-end-column="45" />
+        <state relative-caret-position="23">
+          <caret line="140" column="31" lean-forward="false" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/AESKey.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        <state relative-caret-position="-90">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStation/ReadingEncryptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        <state relative-caret-position="150">
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#442#443#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#784#785#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#1169#1170#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1249#1250#0" expanded="false" />
+            <element signature="e#1285#1286#0" expanded="false" />
+            <element signature="e#1570#1571#0" expanded="false" />
+            <element signature="e#1627#1628#0" expanded="false" />
+            <element signature="e#2454#2455#0" expanded="false" />
+            <element signature="e#2490#2491#0" expanded="false" />
+            <element signature="e#2536#2537#0" expanded="false" />
+            <element signature="e#2613#2614#0" expanded="false" />
+            <element signature="e#2656#2657#0" expanded="false" />
+            <element signature="e#2700#2701#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/BaseStationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2513#2514#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2742#2743#0" expanded="true" />
+            <element signature="e#3178#3179#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3240#3241#0" expanded="true" />
+            <element signature="e#3275#3276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/Resources/OwnerKeys.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="78" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
+        <state relative-caret-position="177">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStation/ReadingEncryptorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="627">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/SensorReadingParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="118" column="25" lean-forward="false" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingBackupCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="87" lean-forward="false" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+        <state relative-caret-position="120">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding />
         </state>
       </provider>

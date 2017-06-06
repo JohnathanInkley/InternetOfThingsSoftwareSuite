@@ -1,6 +1,5 @@
 package Server.BaseStationServerStuff;
 
-import BaseStation.ReadingEncryptor;
 import Server.DatabaseStuff.Database;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -14,7 +13,7 @@ public class BaseStationConnectionServer {
     private SensorReadingParser readingParser;
     private Database database;
     private HttpServer server;
-    private ReadingEncryptor encryptor;
+    private IncomingReadingDecryptor decryptor;
 
     public BaseStationConnectionServer(String url) {
         this.url = url;
@@ -40,8 +39,8 @@ public class BaseStationConnectionServer {
         PostResource.setDatabase(database);
     }
 
-    public void setEncryptor(ReadingEncryptor encryptor) {
-        this.encryptor = encryptor;
-        PostResource.setReadingEncryptor(encryptor);
+    public void setReadingDecryptor(IncomingReadingDecryptor decryptor) {
+        this.decryptor = decryptor;
+        PostResource.setReadingEncryptor(this.decryptor);
     }
 }

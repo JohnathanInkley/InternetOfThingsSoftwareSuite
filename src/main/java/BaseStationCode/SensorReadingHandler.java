@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import java.io.Serializable;
 import java.util.HashSet;

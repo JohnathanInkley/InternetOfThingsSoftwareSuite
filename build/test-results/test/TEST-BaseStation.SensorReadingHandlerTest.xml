@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BaseStation.SensorReadingHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-06-05T16:01:59" hostname="dyn1168-175.wlan.ic.ac.uk" time="0.024">
-  <properties/>
-  <testcase name="shouldAllowProducersToAddReadingsThatCanThenBeRemoved" classname="BaseStation.SensorReadingHandlerTest" time="0.024"/>
-  <system-out><![CDATA[[{time,,2017-06-05 17:01:59.142};{IP,,fd00::212:4b00:a55:5107};{OPT,lux,192.16};{BARP,hPA,1003.79};{BART,C,24.72};{TMPA,C,24.312};{TMPO,C,12.468};{HDCT,C,24.50};{HDCH,%RH,38.50};{MPGX,deg/sec,0.00};{MPGY,deg/sec,0.00};{MPGZ,deg/sec,0.00};{MPAX,G,0.00};{MPAY,G,0.00};{MPAZ,G,0.00};{BADT,C,20};{BATV,mV,3980}]
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

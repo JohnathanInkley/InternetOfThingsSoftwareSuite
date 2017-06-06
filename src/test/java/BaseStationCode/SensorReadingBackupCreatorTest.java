@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import org.junit.Test;
 

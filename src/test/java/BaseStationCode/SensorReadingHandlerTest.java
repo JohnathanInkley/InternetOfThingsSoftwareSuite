@@ -1,4 +1,4 @@
-package BaseStation;
+package BaseStationCode;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class SensorReadingHandlerTest {
     @Test
     public void shouldAllowProducersToAddReadingsThatCanThenBeRemoved() {
         SensorReadingHandler underTest = new SensorReadingHandler();
-        SensorReadingProducer producer = new SensorReadingProducer();
+        SensorReadingProducer producer = new SensorReadingProducer("owner.factory");
         producer.findPortAndOpen();
 
         underTest.add(producer.getSingleReading());
