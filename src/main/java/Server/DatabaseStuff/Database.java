@@ -25,7 +25,7 @@ public class Database {
         }
     }
 
-    public void addEntry(DatabaseEntry entry) {
+    public boolean addEntry(DatabaseEntry entry) {
         Map<String, Object> fieldMap = generateFieldMap(entry);
         Point point = Point
                 .measurement(entry.getDeviceCollectionIdentifier())
@@ -33,6 +33,7 @@ public class Database {
                 .time(entry.getLongTimeInMilliseconds(), TimeUnit.MILLISECONDS)
                 .build();
         database.write(name, "autogen", point);
+        return true;
     }
 
     private Map<String, Object> generateFieldMap(DatabaseEntry sampleEntry) {

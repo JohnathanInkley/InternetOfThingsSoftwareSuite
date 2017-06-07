@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Server.BaseStationServerStuff.BaseStationConnectionServerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-06-06T15:09:23" hostname="dyn1173-78.wlan.ic.ac.uk" time="0.107">
+<testsuite name="Server.BaseStationServerStuff.BaseStationConnectionServerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-06-07T14:40:08" hostname="dyn1172-220.wlan.ic.ac.uk" time="0.117">
   <properties/>
-  <testcase name="serverShouldGetDeviceCollectionFromMessageAndUseCorrectKey" classname="Server.BaseStationServerStuff.BaseStationConnectionServerTest" time="0.0"/>
-  <testcase name="serverShouldRunAndReceiveReading" classname="Server.BaseStationServerStuff.BaseStationConnectionServerTest" time="0.107"/>
-  <system-out><![CDATA[adding entry...
-]]></system-out>
-  <system-err><![CDATA[Jun 06, 2017 4:09:23 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+  <testcase name="serverShouldRunAndReceiveReading" classname="Server.BaseStationServerStuff.BaseStationConnectionServerTest" time="0.117"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 07, 2017 3:40:08 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:8080]
-Jun 06, 2017 4:09:24 PM org.glassfish.grizzly.http.server.NetworkListener start
+Jun 07, 2017 3:40:08 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:8080]
-Jun 06, 2017 4:09:24 PM org.glassfish.grizzly.http.server.HttpServer start
+Jun 07, 2017 3:40:08 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-1] Started.
+Jun 07, 2017 3:40:08 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:8080]
 ]]></system-err>
 </testsuite>

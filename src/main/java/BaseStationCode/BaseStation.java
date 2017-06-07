@@ -1,5 +1,7 @@
 package BaseStationCode;
 
+import Server.BaseStationServerStuff.SensorReadingParser;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -25,6 +27,8 @@ public class BaseStation {
     private SensorReadingSender sender;
     private SensorReadingBackupCreator backupCreator;
     private ReadingEncryptor readingEncryptor;
+    private SensorReadingParser parser;
+    private DBEntryToStringConverter entryToStringConverter;
 
     public void readConfigFile(String configFileName) {
         try (Stream<String> configItems = Files.lines(Paths.get(configFileName))) {
@@ -59,6 +63,8 @@ public class BaseStation {
         setUpSender();
         setUpProducer();
         setUpHandler();
+        setUpParser();
+        setUpEntryToStringConverter();
         setUpThreadRunner();
 
     }
@@ -84,6 +90,14 @@ public class BaseStation {
         handler = new SensorReadingHandler();
     }
 
+    private void setUpParser() {
+        parser = new SensorReadingParser();
+    }
+
+
+    private void setUpEntryToStringConverter() {
+        entryToStringConverter = new DBEntryToStringConverter();
+    }
 
     private void setUpThreadRunner() {
         threadRunner = new BaseStationManager();
@@ -93,6 +107,8 @@ public class BaseStation {
         threadRunner.setHandler(handler, handlerSizeLimit);
         threadRunner.setProducer(producer);
         threadRunner.setDeviceCollection(deviceCollection);
+        threadRunner.setReadingParser(parser);
+        threadRunner.setEntryToStringConverter(entryToStringConverter);
     }
 
     public void start() {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Server.DatabaseStuff.DeviceCollectionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-06T15:09:44" hostname="dyn1173-78.wlan.ic.ac.uk" time="0.003">
+<testsuite name="Server.DatabaseStuff.DeviceCollectionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-07T14:40:29" hostname="dyn1172-220.wlan.ic.ac.uk" time="0.001">
   <properties/>
   <testcase name="shouldBeAbleToGetDeviceOwner" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.0"/>
-  <testcase name="shouldBeAbleToGetNameOfCollection" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.001"/>
+  <testcase name="shouldBeAbleToGetNameOfCollection" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.0"/>
   <testcase name="collectionsWithSameNameAndOwnerShouldBeEqual" classname="Server.DatabaseStuff.DeviceCollectionTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

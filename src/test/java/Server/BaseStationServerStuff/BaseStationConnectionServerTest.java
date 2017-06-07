@@ -1,6 +1,8 @@
 package Server.BaseStationServerStuff;
 
+import BaseStationCode.DBEntryToStringConverter;
 import BaseStationCode.SensorReadingSender;
+import Server.DatabaseStuff.Database;
 import Server.DatabaseStuff.DatabaseEntry;
 import org.junit.Test;
 
@@ -10,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -22,31 +25,39 @@ public class BaseStationConnectionServerTest {
         BaseStationConnectionServer underTest = new BaseStationConnectionServer(url);
 
         CountDownLatch messageReceived = new CountDownLatch(1);
-        SensorReadingParser parser = mock(SensorReadingParser.class);
-        when(parser.parseReading(anyString())).thenAnswer(invocation -> {
+        Database mockDB = mock(Database.class);
+        when(mockDB.addEntry(any())).thenAnswer(invocation -> {
            Object[] args = invocation.getArguments();
-           assertEquals("[reading]", args[0]);
+           DatabaseEntry entry = (DatabaseEntry) args[0];
+           assertEquals(entry.get("pet"), "dog");
            messageReceived.countDown();
            return new DatabaseEntry();
         });
-        underTest.setReadingParser(parser);
+        underTest.setDatabase(mockDB);
 
-        IncomingReadingDecryptor decryptor = mock(IncomingReadingDecryptor.class);
-        when(decryptor.decrypt(anyString())).thenAnswer(invocation -> invocation.getArguments()[0]);
+        IncomingReadingDecryptor decryptor = setUpSimpleDecryptor();
         underTest.setReadingDecryptor(decryptor);
 
         underTest.runServer();
 
+        String entryString = generateStringRepresentingSimpleEntry();
         SensorReadingSender sender = new SensorReadingSender("http://localhost:8080/SensorServer/server");
-        sender.send("[reading]");
+        sender.send(entryString);
 
         assertTrue(messageReceived.await(10, TimeUnit.SECONDS));
 
         underTest.stopServer();
     }
 
-    @Test
-    public void serverShouldGetDeviceCollectionFromMessageAndUseCorrectKey() {
+    private IncomingReadingDecryptor setUpSimpleDecryptor() {
+        IncomingReadingDecryptor decryptor = mock(IncomingReadingDecryptor.class);
+        when(decryptor.decrypt(anyString())).thenAnswer(invocation -> invocation.getArguments()[0]);
+        return decryptor;
+    }
 
+    private String generateStringRepresentingSimpleEntry() throws IOException {
+        DatabaseEntry entry = new DatabaseEntry();
+        entry.add("pet", "dog");
+        return new DBEntryToStringConverter().convertToString(entry);
     }
 }

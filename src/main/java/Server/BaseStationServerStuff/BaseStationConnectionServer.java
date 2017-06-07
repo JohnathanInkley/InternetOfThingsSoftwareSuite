@@ -20,6 +20,7 @@ public class BaseStationConnectionServer {
     }
 
     public void runServer() {
+        PostResource.initialiseWebService();
         URI baseUri = URI.create(url);
         ResourceConfig resourceConfig = new ResourceConfig(PostResource.class);
         server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig);
@@ -43,4 +44,5 @@ public class BaseStationConnectionServer {
         this.decryptor = decryptor;
         PostResource.setReadingEncryptor(this.decryptor);
     }
+
 }

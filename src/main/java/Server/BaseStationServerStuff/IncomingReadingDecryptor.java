@@ -48,11 +48,7 @@ public class IncomingReadingDecryptor {
 
     public String decrypt(String messageToCheck) {
         String decryptedMessage = attemptToDecryptMessage(messageToCheck);
-        if (!decryptedMessage.startsWith("[{time")) {
-            return UNAUTHORIZED_MESSAGE_ATTEMPT;
-        } else {
-            return decryptedMessage;
-        }
+        return decryptedMessage;
     }
 
     private String attemptToDecryptMessage(String messageToCheck) {

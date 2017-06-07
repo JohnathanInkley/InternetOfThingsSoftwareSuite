@@ -1,12 +1,13 @@
 package Server.DatabaseStuff;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class DatabaseEntry implements Iterable<DatabaseEntryField> {
+public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable {
     private HashMap<String, Object> fields;
     private String timestamp;
     private SimpleDateFormat timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");

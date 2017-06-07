@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Server.DatabaseStuff.DatabaseTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-06-06T15:09:24" hostname="dyn1173-78.wlan.ic.ac.uk" time="20.608">
+<testsuite name="Server.DatabaseStuff.DatabaseTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-06-07T14:40:08" hostname="dyn1172-220.wlan.ic.ac.uk" time="20.612">
   <properties/>
-  <testcase name="shouldThrowExceptionWhenMeanOfNoDataIsCalled" classname="Server.DatabaseStuff.DatabaseTest" time="0.208"/>
-  <testcase name="shouldThrowExceptionWhenDatabaseNotFound" classname="Server.DatabaseStuff.DatabaseTest" time="0.008"/>
-  <testcase name="shouldReturnEmptyEntrySetIfNoDataExistsBetweenTwoDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.018"/>
-  <testcase name="runningWholeSetUpShouldPutEntriesIntoDatabase" classname="Server.DatabaseStuff.DatabaseTest" time="20.142"/>
-  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.042"/>
-  <testcase name="shouldBeAbleToAddDataForMultipleLocationsAndGetMeanForEach" classname="Server.DatabaseStuff.DatabaseTest" time="0.102"/>
-  <testcase name="shouldBeAbleToAddMultipleDataPointsOverTimeForSameDevice" classname="Server.DatabaseStuff.DatabaseTest" time="0.058"/>
-  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingLongTimes" classname="Server.DatabaseStuff.DatabaseTest" time="0.025"/>
-  <system-out><![CDATA[adding entry...
-]]></system-out>
-  <system-err><![CDATA[Jun 06, 2017 4:09:24 PM org.glassfish.grizzly.http.server.NetworkListener start
+  <testcase name="shouldThrowExceptionWhenMeanOfNoDataIsCalled" classname="Server.DatabaseStuff.DatabaseTest" time="0.181"/>
+  <testcase name="shouldThrowExceptionWhenDatabaseNotFound" classname="Server.DatabaseStuff.DatabaseTest" time="0.007"/>
+  <testcase name="shouldReturnEmptyEntrySetIfNoDataExistsBetweenTwoDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.016"/>
+  <testcase name="runningWholeSetUpShouldPutEntriesIntoDatabase" classname="Server.DatabaseStuff.DatabaseTest" time="20.134"/>
+  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingDates" classname="Server.DatabaseStuff.DatabaseTest" time="0.071"/>
+  <testcase name="shouldBeAbleToAddDataForMultipleLocationsAndGetMeanForEach" classname="Server.DatabaseStuff.DatabaseTest" time="0.108"/>
+  <testcase name="shouldBeAbleToAddMultipleDataPointsOverTimeForSameDevice" classname="Server.DatabaseStuff.DatabaseTest" time="0.062"/>
+  <testcase name="shouldBeAbleToQueryEntriesBetweenTwoTimesUsingLongTimes" classname="Server.DatabaseStuff.DatabaseTest" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jun 07, 2017 3:40:09 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:8080]
-Jun 06, 2017 4:09:24 PM org.glassfish.grizzly.http.server.HttpServer start
+Jun 07, 2017 3:40:09 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-2] Started.
-Jun 06, 2017 4:09:44 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+Jun 07, 2017 3:40:29 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:8080]
 ]]></system-err>
 </testsuite>

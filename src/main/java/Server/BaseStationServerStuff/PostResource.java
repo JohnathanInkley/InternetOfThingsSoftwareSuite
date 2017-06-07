@@ -1,5 +1,6 @@
 package Server.BaseStationServerStuff;
 
+import BaseStationCode.DBEntryToStringConverter;
 import Server.DatabaseStuff.Database;
 import Server.DatabaseStuff.DatabaseEntry;
 
@@ -7,6 +8,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
+import java.io.IOException;
 
 @Path("/server")
 public class PostResource {
@@ -14,6 +16,7 @@ public class PostResource {
     private static SensorReadingParser readingParser;
     private static Database database;
     private static IncomingReadingDecryptor readingDecryptor;
+    private static DBEntryToStringConverter entryConverter;
 
     public static void setReadingParser(SensorReadingParser parser) {
         readingParser = parser;
@@ -27,18 +30,25 @@ public class PostResource {
         readingDecryptor = encryptor;
     }
 
+    public static void initialiseWebService() {
+        entryConverter = new DBEntryToStringConverter();
+    }
+
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
     public void parseMessageAndAddToDatabase(String encodedMessage) {
-        String reading = readingDecryptor.decrypt(encodedMessage);
-        if (!reading.equals(IncomingReadingDecryptor.UNAUTHORIZED_MESSAGE_ATTEMPT)) {
-            DatabaseEntry entry = readingParser.parseReading(reading);
-            addToDatabase(entry);
+        String entryAsString = readingDecryptor.decrypt(encodedMessage);
+        if (!entryAsString.equals(IncomingReadingDecryptor.UNAUTHORIZED_MESSAGE_ATTEMPT)) {
+            try {
+                DatabaseEntry entry = entryConverter.convertToEntry(entryAsString);
+                addToDatabase(entry);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     private void addToDatabase(DatabaseEntry entry) {
-        System.out.println("adding entry...");
         database.addEntry(entry);
     }
 

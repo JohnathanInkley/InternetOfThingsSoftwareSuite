@@ -1,4 +1,6 @@
-1) Move parser on to client side (in database manager maybe)
+1) Move parser on to client side (in base station manager maybe)
+
+
 2) Check if we can get checksum from cc2650 or do we need clever parser
 3) Start thinking about browser DB interaction
     - server written

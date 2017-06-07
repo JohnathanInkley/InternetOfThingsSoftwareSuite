@@ -10,6 +10,11 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+    options.fork = true  // Fork your compilation into a child process
+    options.forkOptions.setMemoryMaximumSize("4g") // Set maximum memory to 4g
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile('org.influxdb:influxdb-java:2.5')

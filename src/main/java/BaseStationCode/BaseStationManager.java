@@ -1,5 +1,8 @@
 package BaseStationCode;
 
+import Server.BaseStationServerStuff.SensorReadingParser;
+import Server.DatabaseStuff.DatabaseEntry;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -17,9 +20,12 @@ public class BaseStationManager {
     private SensorReadingSender consumer;
     private SensorReadingBackupCreator backupCreator;
     private ReadingEncryptor encryptor;
+    private SensorReadingParser parser;
+    private DBEntryToStringConverter entryToStringConverter;
 
     private boolean shutdown = false;
     private String collectionID = "";
+
 
     public void setHandler(SensorReadingHandler handler, int handlerSizeLimit) {
         this.handler = handler;
@@ -44,6 +50,14 @@ public class BaseStationManager {
 
     public void setDeviceCollection(String collectionID) {
         this.collectionID = collectionID;
+    }
+
+    public void setReadingParser(SensorReadingParser parser) {
+        this.parser = parser;
+    }
+
+    public void setEntryToStringConverter(DBEntryToStringConverter entryToStringConverter) {
+        this.entryToStringConverter = entryToStringConverter;
     }
 
     public void start() {
@@ -113,9 +127,11 @@ public class BaseStationManager {
     private void getReadingsFromHandlerAndPassToConsumer() {
         try {
             while (!shutdown) {
-                String reading = waitUntilHandlerHasReadingThenGet();
-                String encryptedReading = encryptor.encrypt(reading);
-                String fullMessage = collectionID + BaseStation.DELIMITER_TO_SEPARATE_MESSAGE_AND_OWNER + encryptedReading;
+                String rawReading = waitUntilHandlerHasReadingThenGet();
+                DatabaseEntry parsedEntry = parser.parseReading(rawReading);
+                String entryAsString = entryToStringConverter.convertToString(parsedEntry);
+                String encryptedEntryAsString = encryptor.encrypt(entryAsString);
+                String fullMessage = collectionID + BaseStation.DELIMITER_TO_SEPARATE_MESSAGE_AND_OWNER + encryptedEntryAsString;
                 consumer.send(fullMessage);
             }
         } catch (Exception e) {
