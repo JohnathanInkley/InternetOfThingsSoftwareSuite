@@ -1,0 +1,6 @@
+Currently adding a new client to the system.
+Please enter the new client name:
+You have entered $CLIENT_NAME. Is this correct? (y for yes, n for no)
+Please enter the file name for the account registration key for the admin account:
+You have entered $FILE_NAME. Is this correct? (y for yes no for no)
+New client $CLIENT_NAME created. Account registration key has been written to $FILE_NAME

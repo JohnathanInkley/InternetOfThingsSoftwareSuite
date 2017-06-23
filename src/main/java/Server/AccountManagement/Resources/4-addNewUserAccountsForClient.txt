@@ -1,0 +1,7 @@
+You are currently adding new user accounts to an existing client.
+Please enter the client name:
+Client selected is $CLIENT_NAME. Is this correct? (y for yes, n for no)
+Number of new accounts needed:
+Number of new accounts requested is $NUM_ACCOUNTS. Is this correct? (y for yes, n for no)
+File name for account generation keys to be written to:
+Account generation keys have been written to $FILE_NAME

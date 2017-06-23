@@ -1,0 +1,4 @@
+You are currently deleting a client from the system. Please enter client name:
+You have client selected $CLIENT_NAME. Is this correct? (y for yes, n for no)
+You are about to delete client $CLIENT_NAME. THIS CANNOT BE UNDONE. Do you wish to proceed? (y for yes, n for no)
+Client $CLIENT_NAME has been removed from the system.

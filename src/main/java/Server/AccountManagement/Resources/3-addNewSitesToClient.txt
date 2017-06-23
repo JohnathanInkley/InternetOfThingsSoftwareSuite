@@ -1,0 +1,7 @@
+You are currently adding a new site for an existing client. Please enter client name:
+Client named $CLIENT_NAME cannot be found. Please enter client name:
+You are adding a new site for client $CLIENT_NAME. Is this correct? (y for yes, n for no)
+Please enter the name of the new site:
+Site $SITE_NAME already exists.
+You are creating site $SITE_NAME. Is this correct? (y for yes, n for no)
+New site $SITE_NAME has been created. Base station can now successfully connect to the server.

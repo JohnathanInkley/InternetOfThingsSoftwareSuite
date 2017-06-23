@@ -1,0 +1,5 @@
+The following clients currently have accounts registered with the system:
+Client: $CLIENT_NAME, number of sites: $SITE_NUM, number of user accounts: $NUM_ACCOUNTS
+Please enter a client name to see the sites associated with this client:
+Client $CLIENT_NAME currently has the following sites:
+Site: $SITE_NAME, number of sensors: $SENSOR_NUM
