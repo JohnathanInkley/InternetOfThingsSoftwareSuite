@@ -20,7 +20,7 @@ public class ClientDatabaseEditorTest {
         assertTrue(clientSites.contains("Widget Factory"));
         assertTrue(clientSites.contains("Wodget Factory"));
 
-//        database.deleteDatabase("ClientManagementDatabaseTest");
+       database.deleteDatabase("ClientManagementDatabaseTest");
     }
 
     @Test
@@ -35,4 +35,5 @@ public class ClientDatabaseEditorTest {
         assertTrue(clientList.contains("client2"));
         database.deleteDatabase("ClientManagementDatabaseTest1");
     }
+
 }
