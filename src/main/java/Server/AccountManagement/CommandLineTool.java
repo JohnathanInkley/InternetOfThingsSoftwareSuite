@@ -34,7 +34,12 @@ public class CommandLineTool {
     }
 
     private void readInTextResources() {
-        resourceReader = new ResourceFileReader(RESOURCE_FILE_PATH, ".txt");
+        try {
+            resourceReader = new ResourceFileReader(RESOURCE_FILE_PATH, ".txt");
+        } catch (Exception e) {
+            userWishesToQuit = true;
+            System.err.println("Error occurred: " + e.getMessage());
+        }
     }
 
     public void promptUserForChoice() {
@@ -47,12 +52,16 @@ public class CommandLineTool {
     }
 
     private void dealWithUserChoice() {
-        if (currentUserChoice.equals("q")) {
-            userWishesToQuit = true;
-        } else {
-            UserChoiceHandler userChoiceHandler = handlerGenerator.getHandler(currentUserChoice);
-            userChoiceHandler.processUserChoice();
+        try {
+            if (currentUserChoice.equals("q")) {
+                userWishesToQuit = true;
+            } else {
+                UserChoiceHandler userChoiceHandler = handlerGenerator.getHandler(currentUserChoice);
+                userChoiceHandler.processUserChoice(resourceReader.getTextLinesForResource(currentUserChoice));
+            }
+        } catch (Exception e) {
+            System.err.println("Error occurred: " + e.getMessage());
         }
-    }
 
+    }
 }

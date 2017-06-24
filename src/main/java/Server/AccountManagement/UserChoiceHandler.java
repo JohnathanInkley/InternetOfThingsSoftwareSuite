@@ -1,5 +1,7 @@
 package Server.AccountManagement;
 
+import java.util.List;
+
 public interface UserChoiceHandler {
-    public void processUserChoice();
+    void processUserChoice(List<String> linesOfTextForChoice);
 }
