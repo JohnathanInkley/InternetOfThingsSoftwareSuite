@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="Working on account manager command line tool. So far have set up a load of text files that are read in and displayed to the user. Create a command line tool that sets this up. Created a UserHandlerGenerator that reads in a config file and then you give it a prefix and it returns an object specified by name in the config file. Similarly creates a ResourceFileReader that gives you an array of the lines of text for a specified prefix">
+    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/todo.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/Database.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/Database.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/DatabaseEntry$1.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/DatabaseEntry$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/DatabaseEntry.class" afterPath="$PROJECT_DIR$/build/classes/main/Server/DatabaseStuff/DatabaseEntry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java" afterPath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/ClientListHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/ClientListHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserChoiceHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserChoiceHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/AccountManagement/Resources/Handler1.java" afterPath="$PROJECT_DIR$/src/test/java/Server/AccountManagement/Resources/Handler1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -73,11 +83,85 @@
       <file leaf-file-name="CommandLineTool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="213">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientDatabaseEditor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseEntry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="119" column="147" lean-forward="false" selection-start-line="119" selection-start-column="147" selection-end-line="119" selection-end-column="147" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1307#1308#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1387#1388#0" expanded="true" />
+                <element signature="e#1423#1424#0" expanded="true" />
+                <element signature="e#1461#1462#0" expanded="true" />
+                <element signature="e#1497#1498#0" expanded="true" />
+                <element signature="e#1782#1783#0" expanded="true" />
+                <element signature="e#1839#1840#0" expanded="true" />
+                <element signature="e#2666#2667#0" expanded="true" />
+                <element signature="e#2702#2703#0" expanded="true" />
+                <element signature="e#2748#2749#0" expanded="true" />
+                <element signature="e#2825#2826#0" expanded="true" />
+                <element signature="e#2868#2869#0" expanded="true" />
+                <element signature="e#2912#2913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientDatabaseEditorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todo.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/todo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="82" lean-forward="true" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,16 +178,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1-clientList.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/1-clientList.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -111,9 +185,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -501,16 +575,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingSender.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/IncomingReadingDecryptorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseStationCode/DBEntryToStringConverterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/BaseStationConnectionServerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/BaseStationServerStuff/SensorReadingParserTest.java" />
@@ -549,9 +618,14 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/ResourceFileReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/AccountManagement/Resources/Handler1.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/choiceToHandlerLookup.config" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserChoiceHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/ClientListHandler.java" />
+        <option value="$PROJECT_DIR$/src/todo.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java" />
       </list>
     </option>
   </component>
@@ -652,6 +726,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseStuff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,11 +903,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Server.DatabaseStuff" />
       <recent name="Server.AccountManagement" />
       <recent name="Server.FrontEndServerStuff" />
       <recent name="BaseStationCode" />
       <recent name="Server.BaseStationServerStuff" />
-      <recent name="BaseStation" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="BaseStationCode.BaseStation" />
@@ -829,25 +933,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.CommandLineTool">
-    <configuration default="false" name="FrontEndServerTest.serverShouldDoSomething" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;Server.FrontEndServerStuff.FrontEndServerTest.serverShouldDoSomething&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="false" name="FrontEndServerConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -912,6 +997,25 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests Server.AccountManagement.UserChoiceHandlerGeneratorTest" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="ClientDatabaseEditorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests Server.DatabaseStuff.ClientDatabaseEditorTest" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1322,19 +1426,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Gradle.FrontEndServerTest.serverShouldDoSomething" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.FrontEndServerConnectionTest" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.ResourceFileReaderTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.CommandLineTool" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.UserChoiceHandlerGeneratorTest" />
+      <item index="0" class="java.lang.String" itemvalue="Gradle.FrontEndServerConnectionTest" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.ResourceFileReaderTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CommandLineTool" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.UserChoiceHandlerGeneratorTest" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.ClientDatabaseEditorTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.CommandLineTool" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.ResourceFileReaderTest" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.UserChoiceHandlerGeneratorTest" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.FrontEndServerConnectionTest" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.FrontEndServerTest.serverShouldDoSomething" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.ClientDatabaseEditorTest" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.ResourceFileReaderTest" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.UserChoiceHandlerGeneratorTest" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.FrontEndServerConnectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1366,7 +1470,7 @@
       <workItem from="1497279959857" duration="1403000" />
       <workItem from="1497872908271" duration="12189000" />
       <workItem from="1498062172238" duration="4732000" />
-      <workItem from="1498209547631" duration="17441000" />
+      <workItem from="1498209547631" duration="30511000" />
     </task>
     <task id="LOCAL-00001" summary="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently).">
       <created>1496764778803</created>
@@ -1396,43 +1500,50 @@
       <option name="project" value="LOCAL" />
       <updated>1498225147776</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CommandLineTool now instead of crashing when components throw exception, displays to screen as an error message, and goes back to selection screen">
+      <created>1498303941824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1498303941824</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ResourceFileReaderTest - 2017.06.23 at 14h 25m 02s.xml">
-      <configuration name="ResourceFileReaderTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 14h 54m 15s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="ResourceFileReaderTest - 2017.06.23 at 14h 25m 43s.xml">
-      <configuration name="ResourceFileReaderTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 14h 57m 55s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="ResourceFileReaderTest - 2017.06.23 at 14h 26m 22s.xml">
-      <configuration name="ResourceFileReaderTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 14h 58m 34s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 13h 57m 00s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 00m 19s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 13h 59m 02s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 05m 17s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 14h 00m 35s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 11m 01s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 14h 02m 44s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 12m 37s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 14h 07m 05s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 13m 24s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 14h 07m 25s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 14m 51s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="UserChoiceHandlerGeneratorTest - 2017.06.23 at 14h 16m 13s.xml">
-      <configuration name="UserChoiceHandlerGeneratorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="ClientDatabaseEditorTest - 2017.06.24 at 15h 22m 11s.xml">
+      <configuration name="ClientDatabaseEditorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206085000" />
+    <option name="totallyTimeSpent" value="219155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1509,7 +1620,8 @@
     <MESSAGE value="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently)." />
     <MESSAGE value="Moved parser from server side to client side. Created a DBEntryToStringConverter object to facilitate this conversion" />
     <MESSAGE value="Working on account manager command line tool. So far have set up a load of text files that are read in and displayed to the user. Create a command line tool that sets this up. Created a UserHandlerGenerator that reads in a config file and then you give it a prefix and it returns an object specified by name in the config file. Similarly creates a ResourceFileReader that gives you an array of the lines of text for a specified prefix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on account manager command line tool. So far have set up a load of text files that are read in and displayed to the user. Create a command line tool that sets this up. Created a UserHandlerGenerator that reads in a config file and then you give it a prefix and it returns an object specified by name in the config file. Similarly creates a ResourceFileReader that gives you an array of the lines of text for a specified prefix" />
+    <MESSAGE value="CommandLineTool now instead of crashing when components throw exception, displays to screen as an error message, and goes back to selection screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="CommandLineTool now instead of crashing when components throw exception, displays to screen as an error message, and goes back to selection screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1525,8 +1637,14 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1535,51 +1653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/todo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/SensorReadingParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/SensorReadingProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BaseStationCode/SensorReadingBackupCreatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-363">
@@ -1612,13 +1685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="803" column="16" lean-forward="false" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/InfluxDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="153" column="14" lean-forward="false" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1657,20 +1723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="140" column="35" lean-forward="false" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1697,6 +1749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="11" column="0" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,13 +1958,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/1-clientList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="82" lean-forward="true" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1925,11 +1984,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/Resources/1-clientList.txt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/InfluxDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        <state relative-caret-position="149">
+          <caret line="243" column="14" lean-forward="false" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="155" column="82" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar!/org/junit/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntrySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#169#170#0" expanded="false" />
+            <element signature="e#212#213#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#291#292#0" expanded="false" />
+            <element signature="e#559#560#0" expanded="false" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="92" column="29" lean-forward="false" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5093#5094#0" expanded="false" />
+            <element signature="e#5146#5147#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/DatabaseEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="119" column="147" lean-forward="false" selection-start-line="119" selection-start-column="147" selection-end-line="119" selection-end-column="147" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1497#1498#0" expanded="true" />
+            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1839#1840#0" expanded="true" />
+            <element signature="e#2666#2667#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#2748#2749#0" expanded="true" />
+            <element signature="e#2825#2826#0" expanded="true" />
+            <element signature="e#2868#2869#0" expanded="true" />
+            <element signature="e#2912#2913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

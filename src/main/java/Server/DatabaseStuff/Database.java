@@ -44,6 +44,19 @@ public class Database {
         return fieldMap;
     }
 
+    public void removeAllWithCertainValue(String tableName, String field, String fieldValue) {
+        database.query(new Query("DELETE FROM \"" + tableName + "\" " +
+                "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name));
+    }
+
+    public DatabaseEntrySet getEntries(String tableName, String field, String fieldValue) {
+        Query query = new Query("SELECT * FROM \"" + tableName + "\" " +
+                "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name);
+        return getResultsSetFromQuery(query);
+    }
+
+
+
     public DatabaseEntrySet getSiteEntriesBetween(DeviceCollection site, long beforeTimeInMS, long afterTimeInMS) {
         Query query = new Query("SELECT * FROM \"" + site.identifier() + "\" " +
                                 "WHERE time > " + beforeTimeInMS + "ms " +
