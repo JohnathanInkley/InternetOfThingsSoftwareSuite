@@ -49,7 +49,7 @@ public class Database {
                 "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name));
     }
 
-    public DatabaseEntrySet getEntries(String tableName, String field, String fieldValue) {
+    public DatabaseEntrySet getEntriesWithCertainValue(String tableName, String field, String fieldValue) {
         Query query = new Query("SELECT * FROM \"" + tableName + "\" " +
                 "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name);
         return getResultsSetFromQuery(query);

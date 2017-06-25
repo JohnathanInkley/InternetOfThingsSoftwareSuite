@@ -8,16 +8,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable {
+    public static SimpleDateFormat timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+
     private HashMap<String, Object> fields;
     private String timestamp;
-    private SimpleDateFormat timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     public DatabaseEntry() {
         fields = new HashMap<>();
-    }
-
-    public void useTimestampAsId() {
-        fields.put("idStoredAsTimestamp", "true");
     }
 
     public void setDeviceCollectionIdentifier(DeviceCollection site) {
@@ -37,7 +34,7 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
     }
 
     public void setTimestampFormat(SimpleDateFormat timestampFormat) {
-        this.timestampFormat = timestampFormat;
+        DatabaseEntry.timestampFormat = timestampFormat;
     }
 
     public void add(String fieldName, Object  fieldValue) {
@@ -103,11 +100,7 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
 
     public long getLongTimeInMilliseconds() {
         try {
-            if (fields.get("idStoredAsTimestamp") != null) {
-                return produceIdAsLong();
-            } else {
-                return timestampFormat.parse(timestamp).getTime();
-            }
+            return timestampFormat.parse(timestamp).getTime();
         } catch (Exception e) {
             e.printStackTrace();
             return -1;

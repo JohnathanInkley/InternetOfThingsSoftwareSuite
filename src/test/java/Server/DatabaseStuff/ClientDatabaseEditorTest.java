@@ -1,5 +1,7 @@
 package Server.DatabaseStuff;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -8,32 +10,49 @@ import static org.junit.Assert.assertTrue;
 
 public class ClientDatabaseEditorTest {
 
+    private Database database;
+    private ClientDatabaseEditor underTest;
+
+    @Before
+    public void setUpUnderTest() {
+        database = new Database("ClientManagementDatabaseTest", "http://localhost:8086/");
+        underTest = new ClientDatabaseEditor(database);
+    }
+
+    @After
+    public void clearUp() {
+        database.deleteDatabase("ClientManagementDatabaseTest");
+    }
+
     @Test
     public void shouldBeAbleToAddSitesForClientAndGetThemOut() {
-        Database database = new Database("ClientManagementDatabaseTest", "http://localhost:8086/");
-
-        ClientDatabaseEditor underTest = new ClientDatabaseEditor(database);
-        underTest.createNewClient("Widgets Limited");
-        underTest.addSiteForClient("Widgets Limited", "Widget Factory");
-        underTest.addSiteForClient("Widgets Limited", "Wodget Factory");
-        List<String> clientSites = underTest.getSitesForClient("Widgets Limited");
-        assertTrue(clientSites.contains("Widget Factory"));
-        assertTrue(clientSites.contains("Wodget Factory"));
-
-       database.deleteDatabase("ClientManagementDatabaseTest");
+        underTest.createNewClient("c");
+        underTest.addSiteForClient("c", "s1");
+        underTest.addSiteForClient("c", "s2");
+        List<String> clientSites = underTest.getSitesForClient("c");
+        assertTrue(clientSites.contains("s1"));
+        assertTrue(clientSites.contains("s2"));
     }
 
     @Test
     public void shouldBeAbleToGetListOfClients() {
-        Database database = new Database("ClientManagementDatabaseTest1", "http://localhost:8086/");
-
-        ClientDatabaseEditor underTest = new ClientDatabaseEditor(database);
         underTest.createNewClient("client1");
         underTest.createNewClient("client2");
         List<String> clientList = underTest.getClientNames();
         assertTrue(clientList.contains("client1"));
         assertTrue(clientList.contains("client2"));
-        database.deleteDatabase("ClientManagementDatabaseTest1");
+    }
+
+    @Test
+    public void shouldBeAbleToQuerySiteOnceAdded() {
+        underTest.createNewClient("c");
+        underTest.addSiteForClient("c", "s");
+        // Will come back once I've designed a site object
+    }
+
+    @Test
+    public void shouldBeAbleToAddUsersForClient() {
+
     }
 
 }
