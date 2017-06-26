@@ -1,5 +1,8 @@
 package Server.AccountManagement;
 
+import Server.DatabaseStuff.ClientDatabaseEditor;
+import Server.DatabaseStuff.Database;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -7,6 +10,11 @@ public class CommandLineTool {
     private static String RESOURCE_FILE_PATH = "src/main/java/Server/AccountManagement/Resources";
     private static String STRING_TO_HANDLER_FILE = "choiceToHandlerLookup.config";
     private static String SELECTION_SCREEN_PREFIX = "0";
+
+    private static final String CLIENT_DATABASE_NAME = "ClientManagementDatabase";
+    private static final String DATABASE_URL = "http://localhost:8086/";
+    private final ClientDatabaseEditor databaseEditor;
+    private final Database database;
 
     private ResourceFileReader resourceReader;
     private UserChoiceHandlerGenerator handlerGenerator;
@@ -23,6 +31,8 @@ public class CommandLineTool {
     public CommandLineTool() {
         commandLineScanner = new Scanner(System.in);
         handlerGenerator = new UserChoiceHandlerGenerator(RESOURCE_FILE_PATH + "/" + STRING_TO_HANDLER_FILE);
+        database = new Database(CLIENT_DATABASE_NAME, DATABASE_URL);
+        databaseEditor = new ClientDatabaseEditor(database);
     }
 
     private void run() {
@@ -38,7 +48,7 @@ public class CommandLineTool {
             resourceReader = new ResourceFileReader(RESOURCE_FILE_PATH, ".txt");
         } catch (Exception e) {
             userWishesToQuit = true;
-            System.err.println("Error occurred: " + e.getMessage());
+            System.out.println("Error occurred: " + e.getMessage());
         }
     }
 
@@ -57,11 +67,19 @@ public class CommandLineTool {
                 userWishesToQuit = true;
             } else {
                 UserChoiceHandler userChoiceHandler = handlerGenerator.getHandler(currentUserChoice);
-                userChoiceHandler.processUserChoice(resourceReader.getTextLinesForResource(currentUserChoice));
+                userChoiceHandler.processUserChoice(resourceReader.getTextLinesForResource(currentUserChoice), this);
             }
         } catch (Exception e) {
-            System.err.println("Error occurred: " + e.getMessage());
+            System.out.println("Error occurred: " + e.getMessage());
         }
 
+    }
+
+    public ClientDatabaseEditor getDatabaseEditor() {
+        return databaseEditor;
+    }
+
+    public Scanner getCommandLineScanner() {
+        return commandLineScanner;
     }
 }

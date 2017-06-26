@@ -39,13 +39,13 @@ public class ClientEntry {
         int numberFieldsInEntry = entry.getNumberOfFields();
         int numberOfSitesInEntry = numberFieldsInEntry - 2;
         for (int i = 1; i <= numberOfSitesInEntry; i++) {
-            sites.add((String) entry.get("site" + i));
+            String siteName = (String) entry.get("site" + i);
+            if (siteName != null) {
+                sites.add(siteName);
+            }
         }
     }
 
-    public void populateClientsFromDbEntry(DatabaseEntry entry) {
-        int numberOfClients;
-    }
 
     public long getId() {
         return clientId;
@@ -81,4 +81,5 @@ public class ClientEntry {
         }
         return result;
     }
+
 }

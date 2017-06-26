@@ -1,11 +1,13 @@
 package Server.DatabaseStuff;
 
+import Server.PhysicalLocationStuff.SensorLocation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ClientDatabaseEditorTest {
@@ -29,7 +31,7 @@ public class ClientDatabaseEditorTest {
         underTest.createNewClient("c");
         underTest.addSiteForClient("c", "s1");
         underTest.addSiteForClient("c", "s2");
-        List<String> clientSites = underTest.getSitesForClient("c");
+        List<String> clientSites = underTest.getSiteNamesForClient("c");
         assertTrue(clientSites.contains("s1"));
         assertTrue(clientSites.contains("s2"));
     }
@@ -47,11 +49,20 @@ public class ClientDatabaseEditorTest {
     public void shouldBeAbleToQuerySiteOnceAdded() {
         underTest.createNewClient("c");
         underTest.addSiteForClient("c", "s");
-        // Will come back once I've designed a site object
+        SensorLocation sensor = new SensorLocation("IP1", 0.1, 0.2);
+        SensorLocation sensor2 = new SensorLocation("IP2", 0.3, 0.4);
+        underTest.addSensorToClientSite("c", "s", sensor);
+        underTest.addSensorToClientSite("c", "s", sensor2);
+        List<SensorLocation> sensors = underTest.getSensorsForClientSite("c", "s");
+
+        assertTrue(sensors.contains(sensor));
+        assertTrue(sensors.contains(sensor2));
+        assertEquals(2, sensors.size());
     }
 
     @Test
     public void shouldBeAbleToAddUsersForClient() {
+        underTest.createNewClient("c");
 
     }
 

@@ -3,5 +3,5 @@ package Server.AccountManagement;
 import java.util.List;
 
 public interface UserChoiceHandler {
-    void processUserChoice(List<String> linesOfTextForChoice);
+    void processUserChoice(List<String> linesOfTextForChoice, CommandLineTool commandLineTool);
 }

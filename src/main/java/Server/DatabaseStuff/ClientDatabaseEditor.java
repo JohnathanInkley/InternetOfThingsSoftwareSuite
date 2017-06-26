@@ -1,6 +1,8 @@
 package Server.DatabaseStuff;
 
 import Server.AccountManagement.ClientEntry;
+import Server.AccountManagement.SiteEntry;
+import Server.PhysicalLocationStuff.SensorLocation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,7 @@ public class ClientDatabaseEditor {
         return ClientEntry.getClientEntryFromSiteDbEntry(entry);
     }
 
-    public List<String> getSitesForClient(String clientName) {
+    public List<String> getSiteNamesForClient(String clientName) {
         ClientEntry client = getClientEntry(clientName);
         return client.getSites();
     }
@@ -62,4 +64,26 @@ public class ClientDatabaseEditor {
                     CLIENT_SITE_TABLE_NAME);
     }
 
+    public void addSensorToClientSite(String clientName, String siteName, SensorLocation sensor) {
+        SiteEntry site = getSiteEntryFromDatabaseForSite(clientName, siteName);
+        DatabaseEntry entry = site.getDbEntryForSensor(sensor);
+        database.addEntry(entry);
+    }
+
+    public List<SensorLocation> getSensorsForClientSite(String clientName, String siteName) {
+        SiteEntry site = getSiteEntryFromDatabaseForSite(clientName, siteName);
+        return site.getArrayOfSensors();
+    }
+
+    private SiteEntry getSiteEntryFromDatabaseForSite(String clientName, String siteName) {
+        String clientSiteIdentifier = clientName + "." + siteName;
+        DatabaseEntrySet siteEntries = database.getEntriesWithCertainValue(clientSiteIdentifier, TABLE_LABEL, clientSiteIdentifier);
+        SiteEntry site;
+        if (siteEntries.isEmpty()) {
+            site = new SiteEntry(clientName, siteName);
+        } else {
+            site = SiteEntry.getSiteFromDbEntrySet(siteEntries);
+        }
+        return site;
+    }
 }

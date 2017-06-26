@@ -20,7 +20,11 @@
         //1) Table of clients with sites: ID (time) to client name and list of sites
         2) Table of clients with users: ID (time) to client name and list of users (users also time as ID)
         3) List of users with permissions and details: User ID (time) to username, password, email etc and also sites available to user
-        4) Table of sites: for each site, has sensor lat and longs stored?
+        //4) Table of sites: for each site, has sensor lat and longs stored?
 
         So... Need to make User class? And then have efficient way of storing as a database entry. Will be smart!
         User class contains all good stuff and is easy to deal with. Get feedback on what user class will need
+
+        So... need to separate generating user keys to just adding users
+
+2) Allow users to add sensors at existing site to command line tool

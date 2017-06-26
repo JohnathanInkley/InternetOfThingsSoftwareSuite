@@ -42,4 +42,8 @@ public class DatabaseEntrySet {
         jointSet.entries.addAll(otherSet.entries);
         return jointSet;
     }
+
+    public boolean isEmpty() {
+        return size() == 0;
+    }
 }

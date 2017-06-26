@@ -27,7 +27,7 @@ public class ClientEntryTest {
     }
 
     @Test
-    public void shouldBeAbleToGetDbEntryFromClient() {
+    public void shouldBeAbleToGetSiteDbEntryFromClient() {
         ClientEntry underTest = new ClientEntry();
         underTest.setName("a");
         underTest.setId(1);
@@ -40,6 +40,15 @@ public class ClientEntryTest {
         entry.add(TABLE_LABEL, CLIENT_SITE_TABLE_NAME);
 
         assertEquals(entry, underTest.getSiteDbEntry());
+    }
+
+    @Test
+    public void shouldBeAbleToGetUserDbEntryFromClient() {
+        ClientEntry underTest = new ClientEntry();
+        underTest.setName("a");
+        underTest.setId(1);
+
+        // Will come back to when have define user class
     }
 
 }

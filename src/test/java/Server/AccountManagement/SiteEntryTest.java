@@ -1,6 +1,8 @@
 package Server.AccountManagement;
 
+import Server.DatabaseStuff.DatabaseEntry;
 import Server.DatabaseStuff.DatabaseEntrySet;
+import Server.PhysicalLocationStuff.SensorLocation;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -25,7 +27,36 @@ public class SiteEntryTest {
 
     @Test
     public void shouldBeAbleToMakeSiteEntryFromDatabaseEntrySet() {
+        DatabaseEntrySet entrySet = new DatabaseEntrySet();
+        DatabaseEntry entry = new DatabaseEntry();
+        entry.add("DeviceCollection", "client.site");
+        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.add("lat", 0.1);
+        entry.add("lon", 0.2);
+        entry.add("IP", "IP1");
+        entrySet.add(entry);
+        SiteEntry underTest = SiteEntry.getSiteFromDbEntrySet(entrySet);
 
+        SiteEntry expectedSite = new SiteEntry("client", "site");
+        expectedSite.addSensorDetails("IP1", 0.1, 0.2);
+
+        assertEquals(expectedSite, underTest);
+    }
+
+    @Test
+    public void shouldBeAbleToMakeDbEntryForSensor() {
+        SiteEntry underTest = new SiteEntry("client", "site");
+        SensorLocation sensor = new SensorLocation("IP1", 0.1, 0.2);
+        DatabaseEntry actualEntry = underTest.getDbEntryForSensor(sensor);
+
+        DatabaseEntry expectedEntry = new DatabaseEntry();
+        expectedEntry.add("DeviceCollection", "client.site");
+        expectedEntry.setTimestamp("1970-01-01 01:00:01.000");
+        expectedEntry.add("lat", 0.1);
+        expectedEntry.add("lon", 0.2);
+        expectedEntry.add("IP", "IP1");
+
+        assertEquals(expectedEntry, actualEntry);
     }
 
 }
