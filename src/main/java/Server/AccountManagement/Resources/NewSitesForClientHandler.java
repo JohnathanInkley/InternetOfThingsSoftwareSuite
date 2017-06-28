@@ -14,6 +14,7 @@ public class NewSitesForClientHandler implements UserChoiceHandler {
     private Scanner scanner;
     private String clientName;
     private String siteName;
+    private String configFilePath;
 
     @Override
     public void processUserChoice(List<String> linesOfTextForChoice, CommandLineTool commandLineTool) {
@@ -56,10 +57,22 @@ public class NewSitesForClientHandler implements UserChoiceHandler {
 
     private void attemptToAddSiteForClient() {
         try {
-            editor.addSiteForClient(clientName, siteName);
-            System.out.println(linesOfTextForChoice.get(6).replace("$SITE_NAME", siteName));
+            boolean userWishesToProceed = getConfigFilePathFromUser();
+            if (userWishesToProceed) {
+                editor.addSiteForClient(clientName, siteName);
+                editor.generateConfigFileForSite(clientName, siteName, configFilePath);
+                System.out.println(linesOfTextForChoice.get(8).replace("$SITE_NAME", siteName));
+            }
         } catch (Exception e) {
             System.out.println("No client found named " + clientName);
         }
+    }
+
+    private boolean getConfigFilePathFromUser() {
+        System.out.println(linesOfTextForChoice.get(6));
+
+        configFilePath = scanner.nextLine();
+        System.out.println(linesOfTextForChoice.get(7).replace("$FILE_PATH", configFilePath));
+        return "y".equals(scanner.nextLine());
     }
 }

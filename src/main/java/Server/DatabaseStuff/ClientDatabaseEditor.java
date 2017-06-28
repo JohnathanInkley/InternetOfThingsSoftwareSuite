@@ -1,10 +1,12 @@
 package Server.DatabaseStuff;
 
 import Server.AccountManagement.ClientEntry;
+import Server.AccountManagement.ConfigFileGenerator;
 import Server.AccountManagement.SiteEntry;
 import Server.PhysicalLocationStuff.SensorLocation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ClientDatabaseEditor {
@@ -12,11 +14,16 @@ public class ClientDatabaseEditor {
     public static final String CLIENT_USER_TABLE_NAME = "clientToUsersTable";
     public static final String CLIENT_FIELD_LABEL = "client";
     public static final String TABLE_LABEL = "DeviceCollection";
+    public static final String SUFFIX_FOR_CLIENTS_USER_TABLE = "userList";
+    private static final String TEMPLATE_CONFIG_FILE = "src/main/java/Server/AccountManagement/template.config";
+    private static final String BASE_STATION_SERVER_URL = "http://localhost:8080/SensorServer/server";
 
     private Database database;
+    private ConfigFileGenerator configGenerator;
 
     public ClientDatabaseEditor(Database database) {
         this.database = database;
+        configGenerator = new ConfigFileGenerator(TEMPLATE_CONFIG_FILE);
 
     }
 
@@ -33,9 +40,36 @@ public class ClientDatabaseEditor {
         database.addEntry(client.getSiteDbEntry());
     }
 
+    public void generateConfigFileForSite(String clientName, String siteName, String configFilePath) {
+        configGenerator.initialiseNewConfig();
+        configGenerator.setClientAndSiteName(clientName, siteName);
+        configGenerator.setServerAddress(BASE_STATION_SERVER_URL);
+        configGenerator.writeFile(configFilePath);
+        createTableForSiteInDatabase(clientName, siteName);
+    }
+
+    private void createTableForSiteInDatabase(String clientName, String siteName) {
+        String aesString = configGenerator.getAesString();
+        SiteEntry newSite = new SiteEntry(clientName, siteName);
+        newSite.addAesString(aesString);
+        database.addEntry(newSite.getDbEntries().get(0));
+    }
+
     private ClientEntry getClientEntry(String clientName) {
-        DatabaseEntry entry = database.getEntriesWithCertainValue(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName).get(0);
+        DatabaseEntry entry = database.getEntriesWithCertainValueFromTable(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName).get(0);
         return ClientEntry.getClientEntryFromSiteDbEntry(entry);
+    }
+
+    public HashMap<String,String> getAesKeys() {
+        HashMap<String, String> results = new HashMap<>();
+        DatabaseEntrySet aesStrings = database.getAllEntriesWithCertainValue("IP", SiteEntry.AES_STRING_ENTRY_LABEL);
+        for (int i = 0; i < aesStrings.size(); i++) {
+            DatabaseEntry entry = aesStrings.get(i);
+            String aesString = (String) entry.get("aesString");
+            String siteID = (String) entry.get(TABLE_LABEL);
+            results.put(siteID, aesString);
+        }
+        return results;
     }
 
     public List<String> getSiteNamesForClient(String clientName) {
@@ -59,7 +93,7 @@ public class ClientDatabaseEditor {
     }
 
     private DatabaseEntrySet getAllClientEntries() {
-        return database.getEntriesWithCertainValue(CLIENT_SITE_TABLE_NAME,
+        return database.getEntriesWithCertainValueFromTable(CLIENT_SITE_TABLE_NAME,
                     TABLE_LABEL,
                     CLIENT_SITE_TABLE_NAME);
     }
@@ -77,7 +111,7 @@ public class ClientDatabaseEditor {
 
     private SiteEntry getSiteEntryFromDatabaseForSite(String clientName, String siteName) {
         String clientSiteIdentifier = clientName + "." + siteName;
-        DatabaseEntrySet siteEntries = database.getEntriesWithCertainValue(clientSiteIdentifier, TABLE_LABEL, clientSiteIdentifier);
+        DatabaseEntrySet siteEntries = database.getEntriesWithCertainValueFromTable(clientSiteIdentifier, TABLE_LABEL, clientSiteIdentifier);
         SiteEntry site;
         if (siteEntries.isEmpty()) {
             site = new SiteEntry(clientName, siteName);

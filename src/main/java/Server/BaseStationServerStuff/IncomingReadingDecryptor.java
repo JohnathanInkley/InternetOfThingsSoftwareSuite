@@ -2,6 +2,7 @@ package Server.BaseStationServerStuff;
 
 import BaseStationCode.BaseStation;
 import BaseStationCode.ReadingEncryptor;
+import Server.DatabaseStuff.ClientDatabaseEditor;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -37,6 +38,11 @@ public class IncomingReadingDecryptor {
         } catch (IOException e) {
             throw new RuntimeException("Key file could not be read. Server cannot start without encryption");
         }
+    }
+
+    public void getKeysFromDatabase(ClientDatabaseEditor editor) {
+        setKeyMap(editor.getAesKeys());
+        generateEncryptorMap();
     }
 
     private void generateEncryptorMap() {

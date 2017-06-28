@@ -4,6 +4,7 @@ Please select one of the following options:
     1) See list of existing clients and sites
     2) Add new client to system
     3) Add new site for an existing client
-    4) Add new user accounts for an existing client
-    5) Delete existing client from the system
+    4) Add new sensor locations to an existing site
+    5) Add new user accounts for an existing client
+    6) Delete existing client from the system
 Or type q to quit

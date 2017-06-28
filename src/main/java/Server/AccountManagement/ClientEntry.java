@@ -5,9 +5,7 @@ import Server.DatabaseStuff.DatabaseEntry;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_FIELD_LABEL;
-import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_SITE_TABLE_NAME;
-import static Server.DatabaseStuff.ClientDatabaseEditor.TABLE_LABEL;
+import static Server.DatabaseStuff.ClientDatabaseEditor.*;
 import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
 
 public class ClientEntry {

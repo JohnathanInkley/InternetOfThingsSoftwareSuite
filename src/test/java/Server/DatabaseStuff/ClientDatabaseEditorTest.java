@@ -5,6 +5,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -58,6 +62,33 @@ public class ClientDatabaseEditorTest {
         assertTrue(sensors.contains(sensor));
         assertTrue(sensors.contains(sensor2));
         assertEquals(2, sensors.size());
+    }
+
+    @Test
+    public void shouldBeAbleToGenerateConfigFile() throws IOException {
+        underTest.createNewClient("c");
+        underTest.addSiteForClient("c", "s");
+        underTest.generateConfigFileForSite("c", "s", "src/test/java/Server/AccountManagement/csTest.config");
+
+        assertTrue(Files.isRegularFile(Paths.get("src/test/java/Server/AccountManagement/csTest.config")));
+
+        Files.delete(Paths.get("src/test/java/Server/AccountManagement/csTest.config"));
+    }
+
+    @Test
+    public void shouldBeAbleToGetAesStringsFromDatabase() throws IOException {
+        underTest.createNewClient("c");
+        underTest.addSiteForClient("c", "s1");
+        underTest.generateConfigFileForSite("c", "s1", "src/test/java/Server/AccountManagement/csTest1.config");
+        underTest.addSiteForClient("c", "s2");
+        underTest.generateConfigFileForSite("c", "s2", "src/test/java/Server/AccountManagement/csTest2.config");
+
+        HashMap<String, String> sitesToAesStrings = underTest.getAesKeys();
+        assertEquals(64, ((String) sitesToAesStrings.get("c.s1")).length());
+        assertEquals(64, ((String) sitesToAesStrings.get("c.s2")).length());
+
+        Files.delete(Paths.get("src/test/java/Server/AccountManagement/csTest1.config"));
+        Files.delete(Paths.get("src/test/java/Server/AccountManagement/csTest2.config"));
     }
 
     @Test

@@ -1,0 +1,12 @@
+You are currently adding new sensor locations for an existing site. Please enter client name:
+You have selected client $CLIENT_NAME. Is this correct? (y for yes, n for no)
+Please enter the site name you wish to add sensors for:
+You have selected site $SITE_NAME. Is this correct? (y for yes, n for no)
+How many sensors do you wish to add?
+You have entered $NUM_SENSORS. Is this correct? (y for yes, n for no)
+For sensor $SENSOR_COUNT, please enter the IPv6 address:
+For sensor $SENSOR_COUNT, please enter latitude:
+For sensor $SENSOR_COUNT, please enter longitude:
+IPv6: $IP, latitude: $LAT, longitude: $LON. Is this correct? (y for yes, n for no)
+Sensor added
+You have successfully added $NUM_SENSORS sensors to site $SITE_NAME for client $CLIENT_NAME

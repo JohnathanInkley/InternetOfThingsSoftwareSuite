@@ -14,9 +14,11 @@ import java.util.concurrent.TimeUnit;
 public class Database {
     private String name;
     private InfluxDB database;
+    private String url;
 
     public Database(String name, String url) {
         this.name = name;
+        this.url = url;
         try {
             database = InfluxDBFactory.connect(url);
             database.createDatabase(name);
@@ -49,13 +51,17 @@ public class Database {
                 "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name));
     }
 
-    public DatabaseEntrySet getEntriesWithCertainValue(String tableName, String field, String fieldValue) {
+    public DatabaseEntrySet getEntriesWithCertainValueFromTable(String tableName, String field, String fieldValue) {
         Query query = new Query("SELECT * FROM \"" + tableName + "\" " +
                 "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name);
         return getResultsSetFromQuery(query);
     }
 
-
+    public DatabaseEntrySet getAllEntriesWithCertainValue(String field, String fieldValue) {
+        Query query = new Query("SELECT * FROM /.*/ " +
+                "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name);
+        return getResultsSetFromQuery(query);
+    }
 
     public DatabaseEntrySet getSiteEntriesBetween(DeviceCollection site, long beforeTimeInMS, long afterTimeInMS) {
         Query query = new Query("SELECT * FROM \"" + site.identifier() + "\" " +
@@ -129,4 +135,7 @@ public class Database {
         database.deleteDatabase(databaseName);
     }
 
+    public String getURL() {
+        return url;
+    }
 }

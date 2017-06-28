@@ -4,4 +4,6 @@ You are adding a new site for client $CLIENT_NAME. Is this correct? (y for yes, 
 Please enter the name of the new site:
 Site $SITE_NAME already exists.
 You are creating site $SITE_NAME. Is this correct? (y for yes, n for no)
-New site $SITE_NAME has been created. Base station can now successfully connect to the server.
+Please enter the file path where you wish to write the config file for this site:
+File will be written to $FILE_PATH. Is this correct? (y for yes, n for no)
+New site $SITE_NAME has been created, and config file generated. Base station can now successfully connect to the server.

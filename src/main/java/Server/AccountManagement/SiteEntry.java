@@ -13,8 +13,10 @@ import java.util.List;
 import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
 
 public class SiteEntry {
-    private DeviceCollection siteDetails;
-    private HashMap<String, SensorLocation> sensorLocations; // hashmap of IPv6 address to lat and long. Will find smart way to store as string in db
+    public final static String AES_STRING_ENTRY_LABEL = "aesEntry";
+    private final DeviceCollection siteDetails;
+    private final HashMap<String, SensorLocation> sensorLocations;
+    private String aesString;
     private int sensorCount = 1;
 
     public SiteEntry(String clientName, String siteName) {
@@ -24,6 +26,10 @@ public class SiteEntry {
 
     public void addSensorDetails(String ipAddress, double lat, double lon) {
         sensorLocations.put(ipAddress, new SensorLocation(ipAddress, lat, lon));
+    }
+
+    public void addAesString(String aesString) {
+        this.aesString = aesString;
     }
 
     public void addSensor(SensorLocation sensor) {
@@ -38,6 +44,9 @@ public class SiteEntry {
             DatabaseEntry entry = generateDatabaseEntryFromSensorLocation(ip, sensor);
             sensorEntries.add(entry);
         }
+        if (sensorEntries.isEmpty()) {
+            sensorEntries.add(generateFakeEntryContainingAESKey());
+        }
         return sensorEntries;
     }
 
@@ -48,7 +57,13 @@ public class SiteEntry {
         entry.add("lat", sensor.getLatitude());
         entry.add("lon", sensor.getLongitude());
         entry.add("IP", ip);
+        entry.add("aesString", aesString);
         return entry;
+    }
+
+    private DatabaseEntry generateFakeEntryContainingAESKey() {
+        return generateDatabaseEntryFromSensorLocation(AES_STRING_ENTRY_LABEL,
+                new SensorLocation(aesString,0,0));
     }
 
     public static SiteEntry getSiteFromDbEntrySet(DatabaseEntrySet entrySet) {
@@ -62,7 +77,9 @@ public class SiteEntry {
 
     private static SiteEntry generateSiteEntryWithName(DatabaseEntrySet entrySet) {
         String[] clientSitePair = entrySet.get(0).getDeviceCollectionIdentifier().split("\\.");
-        return new SiteEntry(clientSitePair[0], clientSitePair[1]);
+        SiteEntry result = new SiteEntry(clientSitePair[0], clientSitePair[1]);
+        result.addAesString((String) entrySet.get(0).get("aesString"));
+        return result;
     }
 
     private static void addEntryToSite(DatabaseEntry currentEntry, SiteEntry result) {
@@ -81,7 +98,7 @@ public class SiteEntry {
         SiteEntry siteEntry = (SiteEntry) o;
 
         if (!siteDetails.equals(siteEntry.siteDetails)) return false;
-        return sensorLocations.equals(siteEntry.sensorLocations);
+        return sensorLocations.equals(siteEntry.sensorLocations) && aesString.equals(siteEntry.aesString);
     }
 
     @Override
@@ -100,7 +117,9 @@ public class SiteEntry {
     public List<SensorLocation> getArrayOfSensors() {
         List<SensorLocation> result = new ArrayList<>();
         for (String ip : sensorLocations.keySet()) {
-            result.add(sensorLocations.get(ip));
+            if (!ip.startsWith(AES_STRING_ENTRY_LABEL)) {
+                result.add(sensorLocations.get(ip));
+            }
         }
         return result;
     }

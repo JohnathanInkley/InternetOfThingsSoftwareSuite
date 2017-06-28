@@ -72,7 +72,6 @@ public class CommandLineTool {
         } catch (Exception e) {
             System.out.println("Error occurred: " + e.getMessage());
         }
-
     }
 
     public ClientDatabaseEditor getDatabaseEditor() {
