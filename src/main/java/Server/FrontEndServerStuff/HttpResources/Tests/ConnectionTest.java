@@ -1,4 +1,4 @@
-package Server.FrontEndServerStuff.HttpResources.Get;
+package Server.FrontEndServerStuff.HttpResources.Tests;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

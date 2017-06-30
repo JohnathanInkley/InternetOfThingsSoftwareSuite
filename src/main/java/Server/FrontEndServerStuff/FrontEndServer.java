@@ -1,7 +1,8 @@
 package Server.FrontEndServerStuff;
 
 import Server.DatabaseStuff.Database;
-import Server.FrontEndServerStuff.HttpResources.Get.ConnectionTest;
+import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler;
+import Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest;
 import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.ssl.SSLContextConfigurator;
@@ -24,12 +25,12 @@ public class FrontEndServer {
     public FrontEndServer(String url) {
         this.url = url;
         httpResources.add(ConnectionTest.class);
+        httpResources.add(AuthenticationHandler.class);
     }
 
     public void runServer() {
         URI baseUri = URI.create(url);
         ResourceConfig resourceConfig = new ResourceConfig(httpResources);
-        //server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig);
 
         SSLContextConfigurator sslCon = new SSLContextConfigurator();
         sslCon.setKeyStoreFile("src/main/java/Server/FrontEndServerStuff/keystore_server");

@@ -158,7 +158,7 @@ public class ClientDatabaseEditor {
     private UserEntry createNewUserEntry(String clientName, long maxIdOfCurrentUsers, int i) {
         UserEntry newUser = UserEntry.generateUnbuiltUser(clientName);
         newUser.setId(maxIdOfCurrentUsers + i);
-        UserNamePasswordPair credentials = newUser.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair credentials = newUser.generateDefaultPasswordAndBuild();
         userConfigGenerator.addUser(credentials);
         return newUser;
     }

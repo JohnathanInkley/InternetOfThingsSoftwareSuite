@@ -17,7 +17,7 @@ public class UserEntry {
     public static final int DEFAULT_USERNAME_LENGTH = 20;
     public static final int DEFAULT_PASSWORD_LENGTH = 30;
     public static final String HASHED_PASSWORD_LABEL = "hashedPassword";
-    public static final String USERNAME_LABEL = "userName";
+    public static final String USERNAME_LABEL = "username";
     public static final String FIRST_NAME_LABEL = "firstName";
     public static final String LAST_NAME_LABEL = "lastName";
     public static final String EMAIL_LABEL = "email";
@@ -47,13 +47,13 @@ public class UserEntry {
         sitesHavePermissionFor = new ArrayList<>();
     }
 
-    public UserNamePasswordPair generateDefaultPasswordAndBuild() {
+    public UsernamePasswordPair generateDefaultPasswordAndBuild() {
         if (id == null) {
             throw new RuntimeException("ID must be set before default username and password can be generated");
         }
         userName = SecureRandomStringGenerator.generateSecureRandomString(DEFAULT_USERNAME_LENGTH);
         String defaultPassword = SecureRandomStringGenerator.generateSecureRandomString(DEFAULT_PASSWORD_LENGTH);
-        UserNamePasswordPair defaultAccountDetails = new UserNamePasswordPair(userName, defaultPassword);
+        UsernamePasswordPair defaultAccountDetails = new UsernamePasswordPair(userName, defaultPassword);
         setPasswordAndHash(defaultPassword);
         built = true;
         return defaultAccountDetails;

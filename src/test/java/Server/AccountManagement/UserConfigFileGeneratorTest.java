@@ -28,8 +28,8 @@ public class UserConfigFileGeneratorTest {
     public void shouldBeAbleToAddUserNamePassWordPairAndHaveItWrittenToFile() throws IOException {
         UserConfigFileGenerator underTest = new UserConfigFileGenerator();
         underTest.initialiseNewConfigFile();
-        underTest.addUser(new UserNamePasswordPair("user1", "password1"));
-        underTest.addUser(new UserNamePasswordPair("user2", "password2"));
+        underTest.addUser(new UsernamePasswordPair("user1", "password1"));
+        underTest.addUser(new UsernamePasswordPair("user2", "password2"));
 
         String outputFilePath = "src/test/java/Server/AccountManagement/userConfigTest.config";
         underTest.generateOutputFile(outputFilePath);

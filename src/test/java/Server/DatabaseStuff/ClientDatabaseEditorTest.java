@@ -1,7 +1,7 @@
 package Server.DatabaseStuff;
 
 import Server.AccountManagement.UserEntry;
-import Server.AccountManagement.UserNamePasswordPair;
+import Server.AccountManagement.UsernamePasswordPair;
 import Server.PhysicalLocationStuff.SensorLocation;
 import org.junit.After;
 import org.junit.Before;
@@ -99,17 +99,17 @@ public class ClientDatabaseEditorTest {
         underTest.createNewClient("c");
         String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest.txt";
         underTest.generateNewUsersForClient("c", 2, outputFile);
-        UserNamePasswordPair pair = getCredentialsFromFile(outputFile);
+        UsernamePasswordPair pair = getCredentialsFromFile(outputFile);
 
-        UserEntry user = underTest.getUserEntry(pair.userName);
-        assertTrue(user.validateCredentials(pair.userName, pair.password));
+        UserEntry user = underTest.getUserEntry(pair.username);
+        assertTrue(user.validateCredentials(pair.username, pair.password));
     }
 
-    private UserNamePasswordPair getCredentialsFromFile(String outputFile) throws IOException {
+    private UsernamePasswordPair getCredentialsFromFile(String outputFile) throws IOException {
         List<String> users = Files.readAllLines(Paths.get(outputFile));
         Files.delete(Paths.get(outputFile));
         String[] usernamePassword = users.get(0).replace("username: ", "").replace("password: ", "").split("\\s+");
-        return new UserNamePasswordPair(usernamePassword[0], usernamePassword[1]);
+        return new UsernamePasswordPair(usernamePassword[0], usernamePassword[1]);
     }
 
     @Test
@@ -117,9 +117,9 @@ public class ClientDatabaseEditorTest {
         underTest.createNewClient("c");
         String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest1.txt";
         underTest.generateNewUsersForClient("c", 1, outputFile);
-        UserNamePasswordPair pair = getCredentialsFromFile(outputFile);
+        UsernamePasswordPair pair = getCredentialsFromFile(outputFile);
 
-        UserEntry user = underTest.getUserEntry(pair.userName);
+        UserEntry user = underTest.getUserEntry(pair.username);
         user.setUserName("u");
         user.setPasswordAndHash("p");
         user.setEmail("e@gmail.com");
@@ -131,7 +131,7 @@ public class ClientDatabaseEditorTest {
         assertTrue(modifiedUser.validateCredentials("u", "p"));
         assertEquals(user, modifiedUser);
 
-        assertEquals(null,  underTest.getUserEntry(pair.userName));
+        assertEquals(null,  underTest.getUserEntry(pair.username));
 
     }
 
@@ -140,12 +140,12 @@ public class ClientDatabaseEditorTest {
         underTest.createNewClient("c");
         String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest2.txt";
         underTest.generateNewUsersForClient("c", 1, outputFile);
-        UserNamePasswordPair user = getCredentialsFromFile(outputFile);
+        UsernamePasswordPair user = getCredentialsFromFile(outputFile);
         underTest.addSiteForClient("c", "s");
 
         underTest.deleteClient("c");
 
-        assertEquals(null, underTest.getUserEntry(user.userName));
+        assertEquals(null, underTest.getUserEntry(user.username));
         assertEquals(null, underTest.getSiteEntryForClient("c", "s"));
         assertFalse(underTest.getClientNames().contains("c"));
     }

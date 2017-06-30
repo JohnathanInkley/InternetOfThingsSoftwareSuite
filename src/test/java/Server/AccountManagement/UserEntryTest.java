@@ -15,10 +15,10 @@ public class UserEntryTest {
     public void shouldBeAbleToCreateUserForClientAndGetDefaultAccountCredentials() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(2);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         assertEquals(30, defaultAccountDetails.password.length());
-        assertEquals(20, defaultAccountDetails.userName.length());
+        assertEquals(20, defaultAccountDetails.username.length());
         assertEquals("client", underTest.getClientName());
         assertEquals(2, underTest.getId());
     }
@@ -38,12 +38,12 @@ public class UserEntryTest {
     public void shouldBeAbleToGetDatabaseEntryForInititalisedUserEntry() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         DatabaseEntry expected = new DatabaseEntry();
         expected.add("DeviceCollection", "client.userList");
         expected.add(HASHED_PASSWORD_LABEL, underTest.getHashedPassword());
-        expected.add(USERNAME_LABEL, defaultAccountDetails.userName);
+        expected.add(USERNAME_LABEL, defaultAccountDetails.username);
         expected.add("client", "client");
         expected.setTimestamp("1970-01-01 01:00:03.000");
 
@@ -65,18 +65,18 @@ public class UserEntryTest {
     public void defaultUserNameAndPasswordShouldValidateCorrectly() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
-        assertTrue(underTest.validateCredentials(defaultAccountDetails.userName, defaultAccountDetails.password));
+        assertTrue(underTest.validateCredentials(defaultAccountDetails.username, defaultAccountDetails.password));
     }
 
     @Test
     public void shouldBeAbleToChangeUsernameAfterCreation() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
-        assertEquals(defaultAccountDetails.userName, underTest.getUserName());
+        assertEquals(defaultAccountDetails.username, underTest.getUserName());
         underTest.setUserName("user");
         assertEquals("user", underTest.getUserName());
     }
@@ -85,7 +85,7 @@ public class UserEntryTest {
     public void shouldBeAbleToChangePasswordAfterCreation() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         underTest.setPasswordAndHash("newPassword");
         underTest.setUserName("user");
@@ -96,7 +96,7 @@ public class UserEntryTest {
     public void shouldBeAbleToSetNamesAndEmailAddress() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         underTest.setFirstName("John");
         underTest.setLastName("Smith");
@@ -113,7 +113,7 @@ public class UserEntryTest {
     public void shouldBeAbleToGiveSitePermissionsAndCheckIfSiteIsOnList() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         underTest.giveSitePermission("siteName");
         assertTrue(underTest.hasPermissionForSite("siteName"));
@@ -124,7 +124,7 @@ public class UserEntryTest {
     public void shouldHaveSitesPermissionsInDbEntry() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
-        UserNamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
+        UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         underTest.giveSitePermission("siteName1");
         underTest.giveSitePermission("siteName2");

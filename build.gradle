@@ -25,7 +25,7 @@ dependencies {
     // Mock objects
     compile group: 'org.mockito', name: 'mockito-all', version: '1.8.4'
 
-    // Http client for basestation
+    // Http client for base station and testing front end
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
 
     // Http server
@@ -34,4 +34,11 @@ dependencies {
 
     // Password hashing
     compile group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+
+    // Web tokens for authentication management with frontend
+    compile 'io.jsonwebtoken:jjwt:0.7.0'
+
+    // Json handler
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.1'
+
 }

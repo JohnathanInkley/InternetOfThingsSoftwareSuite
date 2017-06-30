@@ -7,17 +7,17 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class UserConfigFileGenerator {
-    ArrayList<UserNamePasswordPair> userNamePasswordPairs;
+    ArrayList<UsernamePasswordPair> usernamePasswordPairs;
 
     public void initialiseNewConfigFile() {
-        userNamePasswordPairs = new ArrayList<>();
+        usernamePasswordPairs = new ArrayList<>();
     }
 
     public void generateOutputFile(String outputFilePath) {
         try {
             BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFilePath));
-            for (UserNamePasswordPair pair : userNamePasswordPairs) {
-                writer.write("username: " + pair.userName + " password: " + pair.password);
+            for (UsernamePasswordPair pair : usernamePasswordPairs) {
+                writer.write("username: " + pair.username + " password: " + pair.password);
                 writer.newLine();
             }
             writer.close();
@@ -26,7 +26,7 @@ public class UserConfigFileGenerator {
         }
     }
 
-    public void addUser(UserNamePasswordPair userNamePasswordPair) {
-        userNamePasswordPairs.add(userNamePasswordPair);
+    public void addUser(UsernamePasswordPair usernamePasswordPair) {
+        usernamePasswordPairs.add(usernamePasswordPair);
     }
 }
