@@ -1,13 +1,14 @@
 package Server.DatabaseStuff;
 
-import Server.AccountManagement.ClientEntry;
-import Server.AccountManagement.ConfigFileGenerator;
-import Server.AccountManagement.SiteEntry;
+import Server.AccountManagement.*;
 import Server.PhysicalLocationStuff.SensorLocation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static Server.AccountManagement.UserEntry.USERNAME_LABEL;
+import static Server.AccountManagement.UserEntry.getUserFromDbEntry;
 
 public class ClientDatabaseEditor {
     public static final String CLIENT_SITE_TABLE_NAME = "clientToSiteTable";
@@ -19,12 +20,13 @@ public class ClientDatabaseEditor {
     private static final String BASE_STATION_SERVER_URL = "http://localhost:8080/SensorServer/server";
 
     private Database database;
-    private ConfigFileGenerator configGenerator;
+    private SiteConfigFileGenerator siteConfigGenerator;
+    private UserConfigFileGenerator userConfigGenerator;
 
     public ClientDatabaseEditor(Database database) {
         this.database = database;
-        configGenerator = new ConfigFileGenerator(TEMPLATE_CONFIG_FILE);
-
+        siteConfigGenerator = new SiteConfigFileGenerator(TEMPLATE_CONFIG_FILE);
+        userConfigGenerator = new UserConfigFileGenerator();
     }
 
     public void createNewClient(String clientName) {
@@ -32,35 +34,37 @@ public class ClientDatabaseEditor {
         client.setName(clientName);
         client.setId(getNumberOfClients()+1);
         database.addEntry(client.getSiteDbEntry());
+        database.addEntry(client.getUserDbEntry());
     }
 
     public void addSiteForClient(String clientName, String siteName) {
-        ClientEntry client = getClientEntry(clientName);
+        ClientEntry client = getClientSitesEntry(clientName);
         client.addSite(siteName);
         database.addEntry(client.getSiteDbEntry());
     }
 
     public void generateConfigFileForSite(String clientName, String siteName, String configFilePath) {
-        configGenerator.initialiseNewConfig();
-        configGenerator.setClientAndSiteName(clientName, siteName);
-        configGenerator.setServerAddress(BASE_STATION_SERVER_URL);
-        configGenerator.writeFile(configFilePath);
+        siteConfigGenerator.initialiseNewConfig();
+        siteConfigGenerator.setClientAndSiteName(clientName, siteName);
+        siteConfigGenerator.setServerAddress(BASE_STATION_SERVER_URL);
+        siteConfigGenerator.writeFile(configFilePath);
         createTableForSiteInDatabase(clientName, siteName);
     }
 
     private void createTableForSiteInDatabase(String clientName, String siteName) {
-        String aesString = configGenerator.getAesString();
+        String aesString = siteConfigGenerator.getAesString();
         SiteEntry newSite = new SiteEntry(clientName, siteName);
         newSite.addAesString(aesString);
         database.addEntry(newSite.getDbEntries().get(0));
     }
 
-    private ClientEntry getClientEntry(String clientName) {
+    private ClientEntry getClientSitesEntry(String clientName) {
         DatabaseEntry entry = database.getEntriesWithCertainValueFromTable(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName).get(0);
         return ClientEntry.getClientEntryFromSiteDbEntry(entry);
     }
 
-    public HashMap<String,String> getAesKeys() {
+
+    public HashMap<String,String> getAesKeysForSites() {
         HashMap<String, String> results = new HashMap<>();
         DatabaseEntrySet aesStrings = database.getAllEntriesWithCertainValue("IP", SiteEntry.AES_STRING_ENTRY_LABEL);
         for (int i = 0; i < aesStrings.size(); i++) {
@@ -73,7 +77,7 @@ public class ClientDatabaseEditor {
     }
 
     public List<String> getSiteNamesForClient(String clientName) {
-        ClientEntry client = getClientEntry(clientName);
+        ClientEntry client = getClientSitesEntry(clientName);
         return client.getSites();
     }
 
@@ -119,5 +123,118 @@ public class ClientDatabaseEditor {
             site = SiteEntry.getSiteFromDbEntrySet(siteEntries);
         }
         return site;
+    }
+
+    public SiteEntry getSiteEntryForClient(String clientName, String siteName) {
+        String clientSiteIdentifier = clientName + "." + siteName;
+        DatabaseEntrySet siteEntries = database.getEntriesWithCertainValueFromTable(clientSiteIdentifier, TABLE_LABEL, clientSiteIdentifier);
+        SiteEntry site;
+        if (siteEntries.isEmpty()) {
+            site = null;
+        } else {
+            site = SiteEntry.getSiteFromDbEntrySet(siteEntries);
+        }
+        return site;
+    }
+
+    public void generateNewUsersForClient(String clientName, int numberOfNewUsers, String outputFile) {
+        userConfigGenerator.initialiseNewConfigFile();
+
+        long maxIdOfCurrentUsers = getMaxIdOfCurrentUsers(clientName);
+        for (int i = 1; i <= numberOfNewUsers; i++) {
+            UserEntry newUser = createNewUserEntry(clientName, maxIdOfCurrentUsers, i);
+            addUserToClientUserTable(newUser);
+            database.addEntry(newUser.getDbEntry());
+        }
+        userConfigGenerator.generateOutputFile(outputFile);
+    }
+
+    private long getMaxIdOfCurrentUsers(String clientName) {
+        String userTableName = clientName + "." + SUFFIX_FOR_CLIENTS_USER_TABLE;
+        DatabaseEntrySet userEntries = database.getEntriesWithCertainValueFromTable(userTableName, TABLE_LABEL, userTableName);
+        return (long) userEntries.size();
+    }
+
+    private UserEntry createNewUserEntry(String clientName, long maxIdOfCurrentUsers, int i) {
+        UserEntry newUser = UserEntry.generateUnbuiltUser(clientName);
+        newUser.setId(maxIdOfCurrentUsers + i);
+        UserNamePasswordPair credentials = newUser.generateDefaultPasswordAndBuild();
+        userConfigGenerator.addUser(credentials);
+        return newUser;
+    }
+
+    public UserEntry getUserEntry(String username) {
+        DatabaseEntrySet matchingUsers = database.getAllEntriesWithCertainValue(USERNAME_LABEL, username);
+        if (matchingUsers.size() == 0) {
+          return null;
+        } else if (matchingUsers.size() > 1) {
+            throw new RuntimeException("More than one user with same username, please check situation");
+        }
+        return getUserFromDbEntry(matchingUsers.get(0));
+    }
+
+    private void addUserToClientUserTable(UserEntry newUser) {
+        ClientEntry client = getClientUsersEntry(newUser.getClientName());
+        client.addUser(newUser.getUserName());
+        database.addEntry(client.getUserDbEntry());
+    }
+
+    private ClientEntry getClientUsersEntry(String clientName) {
+        DatabaseEntry entry = database.getEntriesWithCertainValueFromTable(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName).get(0);
+        return ClientEntry.getClientEntryFromUserDbEntry(entry);
+    }
+
+    public List<String> getUserNamesForClient(String clientName) {
+        ClientEntry client = getClientUsersEntry(clientName);
+        return client.getUsers();
+    }
+
+    public void addUserEntry(UserEntry user) {
+        DatabaseEntry modifiedUserEntry = user.getDbEntry();
+        DatabaseEntry existingUserEntry = database.getSiteEntriesBetween(
+                modifiedUserEntry.getDeviceCollectionIdentifier(),
+                modifiedUserEntry.getLongTimeInMilliseconds(),
+                modifiedUserEntry.getLongTimeInMilliseconds())
+                .get(0);
+        ClientEntry clientOwningUser = getClientUsersEntry(user.getClientName());
+        clientOwningUser.removeUser(UserEntry.getUserFromDbEntry(existingUserEntry).getUserName());
+        clientOwningUser.addUser(user.getUserName());
+        database.addEntry(clientOwningUser.getUserDbEntry());
+        database.addEntry(modifiedUserEntry);
+    }
+
+    public void deleteClient(String clientName) {
+        deleteClientSiteTable(clientName);
+        deleteClientUserTable(clientName);
+        deleteClientFromClientTable(clientName);
+    }
+
+    private void deleteClientSiteTable(String clientName) {
+        List<String> siteNamesForClient = getSiteNamesForClient(clientName);
+        for (String siteName : siteNamesForClient) {
+            String tableName = clientName + "." + siteName;
+            database.removeAllFromGivenTable(tableName);
+        }
+    }
+
+    private void deleteClientUserTable(String clientName) {
+        database.removeAllFromGivenTable(clientName +  "." + SUFFIX_FOR_CLIENTS_USER_TABLE);
+    }
+
+    private void deleteClientFromClientTable(String clientName) {
+        DatabaseEntrySet allEntries = database.getAllEntriesWithCertainValue(CLIENT_FIELD_LABEL, clientName);
+        for (int i = 0; i < allEntries.size(); i++) {
+            DatabaseEntry entry = allEntries.get(i);
+            DatabaseEntry replacementEntry = new DatabaseEntry();
+            replacementEntry.setTimestamp(entry.getTimestamp());
+            for (DatabaseEntryField field : entry) {
+                replacementEntry.add(field.getFieldName(), "");
+            }
+            replacementEntry.add(TABLE_LABEL, entry.get(TABLE_LABEL));
+            database.addEntry(replacementEntry);
+        }
+
+        //database.removeAllWithCertainValue(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
+        //database.removeAllWithCertainValue(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
     }
 }

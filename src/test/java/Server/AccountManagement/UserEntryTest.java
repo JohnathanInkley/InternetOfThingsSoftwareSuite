@@ -44,6 +44,7 @@ public class UserEntryTest {
         expected.add("DeviceCollection", "client.userList");
         expected.add(HASHED_PASSWORD_LABEL, underTest.getHashedPassword());
         expected.add(USERNAME_LABEL, defaultAccountDetails.userName);
+        expected.add("client", "client");
         expected.setTimestamp("1970-01-01 01:00:03.000");
 
         assertEquals(expected, underTest.getDbEntry());
@@ -136,7 +137,21 @@ public class UserEntryTest {
 
     @Test
     public void shouldBeAbleToGenerateUserFromDbEntry() {
-        // To-do
+        DatabaseEntry entry = new DatabaseEntry();
+        entry.add("DeviceCollection", "client.userList");
+        entry.add(HASHED_PASSWORD_LABEL, "password");
+        entry.add(USERNAME_LABEL, "username");
+        entry.add("site1", "s1");
+        entry.add("site2", "s2");
+        entry.add("email", "hi@gmail.com");
+        entry.add(FIRST_NAME_LABEL, "first");
+        entry.add(LAST_NAME_LABEL, "last");
+        entry.add("client", "client");
+        entry.setTimestamp("1970-01-01 01:00:03.000");
+
+        UserEntry user = UserEntry.getUserFromDbEntry(entry);
+
+        assertEquals(entry, user.getDbEntry());
     }
 
 }

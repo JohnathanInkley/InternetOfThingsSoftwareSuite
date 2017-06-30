@@ -14,7 +14,6 @@ public class ConnectionTest {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String postRequestHandler(@Context HttpHeaders headers) {
-        System.out.println("Service: GET " + headers);
         Response.ok("success", MediaType.TEXT_PLAIN);
         return "connection ok";
     }

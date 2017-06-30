@@ -32,10 +32,10 @@ public class FrontEndServer {
         //server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig);
 
         SSLContextConfigurator sslCon = new SSLContextConfigurator();
-        sslCon.setKeyStoreFile(".src/main/java/Server/FrontEndServerStuff/keystore_server");
+        sslCon.setKeyStoreFile("src/main/java/Server/FrontEndServerStuff/keystore_server");
         sslCon.setKeyStorePass("keypassword1");
         HttpHandler handler = ContainerFactory.createContainer(HttpHandler.class, resourceConfig);
-        HttpServer secure = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig, true,
+        server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig, true,
                 new SSLEngineConfigurator(sslCon, false, false, false));
     }
 

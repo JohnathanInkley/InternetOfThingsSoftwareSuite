@@ -25,8 +25,8 @@ public class ClientEntry {
             ClientEntry result = new ClientEntry();
             result.name = (String) entry.get("client");
             result.populateSitesFromDbEntry(entry);
-            result.clientId = (timestampFormat.parse(entry.getTimestamp() + ".000").getTime()
-                    - timestampFormat.parse("1970-01-01 00:00:00.000").getTime())/1000;
+            result.clientId = (timestampFormat.parse(entry.getTimestamp()).getTime()
+                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
             return result;
         } catch (Exception e) {
             throw new RuntimeException("Client entry could not be created due to timestamp issues in database");
@@ -80,4 +80,50 @@ public class ClientEntry {
         return result;
     }
 
+    public void addUser(String userName) {
+        users.add(userName);
+    }
+
+    public DatabaseEntry getUserDbEntry() {
+        DatabaseEntry result = new DatabaseEntry();
+        result.setTimestamp(timestampFormat.format(new Date(clientId*1000)));
+        result.add(CLIENT_FIELD_LABEL, name);
+        result.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);
+        for (int i = 1; i <= users.size(); i++) {
+            result.add("user" + i, users.get(i - 1));
+        }
+        return result;
+    }
+
+    public static ClientEntry getClientEntryFromUserDbEntry(DatabaseEntry entry) {
+        try {
+            ClientEntry result = new ClientEntry();
+            result.name = (String) entry.get("client");
+            result.populateUsersFromDbEntry(entry);
+            result.clientId = (timestampFormat.parse(entry.getTimestamp()).getTime()
+                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
+            return result;
+        } catch (Exception e) {
+            throw new RuntimeException("Client entry could not be created due to timestamp issues in database");
+        }
+    }
+
+    private void populateUsersFromDbEntry(DatabaseEntry entry) {
+        int numberFieldsInEntry = entry.getNumberOfFields();
+        int numberOfUsersInEntry = numberFieldsInEntry - 2;
+        for (int i = 1; i <= numberOfUsersInEntry; i++) {
+            String userName = (String) entry.get("user" + i);
+            if (userName != null) {
+                users.add(userName);
+            }
+        }
+    }
+
+    public ArrayList<String> getUsers() {
+        return users;
+    }
+
+    public void removeUser(String userName) {
+        users.remove(userName);
+    }
 }

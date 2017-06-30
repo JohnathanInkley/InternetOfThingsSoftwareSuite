@@ -11,11 +11,11 @@ import static junit.framework.TestCase.assertTrue;
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
 
-public class ConfigFileGeneratorTest {
+public class SiteConfigFileGeneratorTest {
 
     @Test
     public void shouldMakeConfigFileWithRightLineTitles() throws IOException {
-        ConfigFileGenerator underTest = new ConfigFileGenerator("src/main/java/Server/AccountManagement/template.config");
+        SiteConfigFileGenerator underTest = new SiteConfigFileGenerator("src/main/java/Server/AccountManagement/template.config");
         underTest.initialiseNewConfig();
         underTest.setClientAndSiteName("client", "site");
         underTest.setServerAddress("http://localhost:8080/SensorServer/server");
@@ -35,7 +35,7 @@ public class ConfigFileGeneratorTest {
     @Test
     public void shouldThrowExceptionWhenBadTemplateFileGiven() {
         try {
-            ConfigFileGenerator underTest = new ConfigFileGenerator("badFile");
+            SiteConfigFileGenerator underTest = new SiteConfigFileGenerator("badFile");
             fail("No template file exists with this name");
         } catch (Exception e) {
             assertEquals("Could not open template config file: badFile", e.getMessage());

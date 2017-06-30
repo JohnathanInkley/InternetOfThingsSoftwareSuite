@@ -3,9 +3,7 @@ package Server.AccountManagement;
 import Server.DatabaseStuff.DatabaseEntry;
 import org.junit.Test;
 
-import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_FIELD_LABEL;
-import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_SITE_TABLE_NAME;
-import static Server.DatabaseStuff.ClientDatabaseEditor.TABLE_LABEL;
+import static Server.DatabaseStuff.ClientDatabaseEditor.*;
 import static org.junit.Assert.assertEquals;
 
 
@@ -14,7 +12,7 @@ public class ClientEntryTest {
     @Test
     public void shouldBeAbleToGetAClientWithSitesFromDbEntry() {
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp("1970-01-01 00:00:01");
+        entry.setTimestamp("1970-01-01 01:00:01.000");
         entry.add(CLIENT_FIELD_LABEL, "a");
         entry.add("site1", "factory");
         entry.add(TABLE_LABEL, CLIENT_SITE_TABLE_NAME);
@@ -47,8 +45,30 @@ public class ClientEntryTest {
         ClientEntry underTest = new ClientEntry();
         underTest.setName("a");
         underTest.setId(1);
+        underTest.addUser("u");
 
-        // Will come back to when have define user class
+        DatabaseEntry entry = new DatabaseEntry();
+        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.add(CLIENT_FIELD_LABEL, "a");
+        entry.add("user1", "u");
+        entry.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);
+
+        assertEquals(entry, underTest.getUserDbEntry());
+    }
+
+    @Test
+    public void shouldBeAbleToGetClientWithUsersFromDbEntry() {
+        DatabaseEntry entry = new DatabaseEntry();
+        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.add(CLIENT_FIELD_LABEL, "a");
+        entry.add("user1", "u");
+        entry.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);
+
+        ClientEntry underTest = ClientEntry.getClientEntryFromUserDbEntry(entry);
+        assertEquals(1, underTest.getId());
+        assertEquals(1, underTest.getUsers().size());
+        assertEquals("u", underTest.getUsers().get(0));
+        assertEquals("a", underTest.getName());
     }
 
 }

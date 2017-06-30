@@ -24,7 +24,7 @@ public class ClientListHandler implements UserChoiceHandler {
         System.out.println();
         printListOfClients();
         System.out.println();
-        printSitesForAGivenClient();
+        printSitesAndUsersForAGivenClient();
         System.out.println();
     }
 
@@ -40,18 +40,23 @@ public class ClientListHandler implements UserChoiceHandler {
     }
 
     private void printClientRowInTable(String client) {
-        String filledText = new String(linesOfTextForChoice.get(1));
-        int numSitesForClient = editor.getSiteNamesForClient(client).size();
-        filledText = filledText.replace("$CLIENT_NAME", client)
-                                .replace("$SITE_NUM", Integer.toString(numSitesForClient));
-        System.out.println(filledText);
+        if (!client.equals("")) {
+            int numSitesForClient = editor.getSiteNamesForClient(client).size();
+            int numUsersForClient = editor.getUserNamesForClient(client).size();
+            System.out.println(linesOfTextForChoice.get(1).replace("$CLIENT_NAME", client)
+                    .replace("$SITE_NUM", Integer.toString(numSitesForClient))
+                    .replace("$NUM_ACCOUNTS", Integer.toString(numUsersForClient)));
+        }
     }
 
-    private void printSitesForAGivenClient() {
+    private void printSitesAndUsersForAGivenClient() {
         System.out.println(linesOfTextForChoice.get(2));
         String clientName = scanner.nextLine();
         try {
             getSitesForClientAndPrint(clientName);
+            System.out.println();
+            getUsersForClientAndPrint(clientName);
+
         } catch (Exception e) {
             System.out.println("No client found named " + clientName);
         }
@@ -59,13 +64,19 @@ public class ClientListHandler implements UserChoiceHandler {
 
     private void getSitesForClientAndPrint(String clientName) {
         List<String> siteNamesForClient = editor.getSiteNamesForClient(clientName);
-        String text = linesOfTextForChoice.get(3).replace("$CLIENT_NAME", clientName);
-        System.out.println(text);
+        System.out.println(linesOfTextForChoice.get(3).replace("$CLIENT_NAME", clientName));
         for (String siteName : siteNamesForClient) {
-            int numSensors = editor.getSensorsForClientSite(clientName, siteName).size();
-            String line = linesOfTextForChoice.get(4).replace("$SITE_NAME", siteName)
-                    .replace("$SENSOR_NUM", Integer.toString(numSensors));
-            System.out.println(line);
+            Integer numSensors = editor.getSensorsForClientSite(clientName, siteName).size();
+            System.out.println(linesOfTextForChoice.get(4).replace("$SITE_NAME", siteName)
+                                                          .replace("$SENSOR_NUM", numSensors.toString()));
+        }
+    }
+
+    private void getUsersForClientAndPrint(String clientName) {
+        List<String> userNamesForClient = editor.getUserNamesForClient(clientName);
+        System.out.println(linesOfTextForChoice.get(5).replace("$CLIENT_NAME", clientName));
+        for (String userName : userNamesForClient) {
+            System.out.println(linesOfTextForChoice.get(6).replace("$USER_NAME", userName));
         }
     }
 }

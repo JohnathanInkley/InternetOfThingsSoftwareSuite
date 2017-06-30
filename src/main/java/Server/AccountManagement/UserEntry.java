@@ -3,10 +3,12 @@ package Server.AccountManagement;
 import Server.DatabaseStuff.DatabaseEntry;
 import org.mindrot.jbcrypt.BCrypt;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_FIELD_LABEL;
 import static Server.DatabaseStuff.ClientDatabaseEditor.SUFFIX_FOR_CLIENTS_USER_TABLE;
 import static Server.DatabaseStuff.ClientDatabaseEditor.TABLE_LABEL;
 import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
@@ -31,7 +33,6 @@ public class UserEntry {
 
     private boolean built;
 
-
     public static UserEntry generateUnbuiltUser(String clientName) {
         return new UserEntry(clientName);
     }
@@ -40,7 +41,10 @@ public class UserEntry {
         this.clientName = clientName;
         sitesHavePermissionFor = new ArrayList<>();
         built = false;
+    }
 
+    private UserEntry() {
+        sitesHavePermissionFor = new ArrayList<>();
     }
 
     public UserNamePasswordPair generateDefaultPasswordAndBuild() {
@@ -95,6 +99,7 @@ public class UserEntry {
         addFieldIfNotNull(result, FIRST_NAME_LABEL, firstName);
         addFieldIfNotNull(result, LAST_NAME_LABEL, lastName);
         addFieldIfNotNull(result, EMAIL_LABEL, email);
+        addFieldIfNotNull(result, CLIENT_FIELD_LABEL, clientName);
         addSitesToEntry(result);
         result.setTimestamp(timestampFormat.format(new Date(id*1000)));
         return result;
@@ -114,8 +119,9 @@ public class UserEntry {
     }
 
     public boolean validateCredentials(String userName, String password) {
-        return (userName == this.userName && BCrypt.checkpw(password, hashedPassword));
+        return (userName.equals(this.userName) && BCrypt.checkpw(password, hashedPassword));
     }
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -136,4 +142,72 @@ public class UserEntry {
     public boolean hasPermissionForSite(String siteName) {
         return sitesHavePermissionFor.contains(siteName);
     }
+
+    public static UserEntry getUserFromDbEntry(DatabaseEntry entry) {
+        UserEntry user = new UserEntry();
+        user.built = true;
+        user.firstName = (String) entry.get(FIRST_NAME_LABEL);
+        user.lastName = (String) entry.get(LAST_NAME_LABEL);
+        user.email = (String) entry.get(EMAIL_LABEL);
+        user.hashedPassword = (String) entry.get(HASHED_PASSWORD_LABEL);
+        user.userName = (String) entry.get(USERNAME_LABEL);
+        getSitesFromDbEntry(user, entry);
+        user.clientName = getClientNameFromDbEntry(entry);
+        user.id = getIdFromDbEntry(entry);
+        return user;
+    }
+
+
+    private static void getSitesFromDbEntry(UserEntry user, DatabaseEntry entry) {
+        int siteCount = 1;
+        String site = (String) entry.get("site" + siteCount++);
+        while (site != null) {
+            user.sitesHavePermissionFor.add(site);
+            site = (String) entry.get("site" + siteCount++);
+        }
+    }
+
+    private static String getClientNameFromDbEntry(DatabaseEntry entry) {
+        String rawTableName = (String) entry.get(TABLE_LABEL);
+        return rawTableName.split("\\.")[0];
+    }
+
+    private static Long getIdFromDbEntry(DatabaseEntry entry) {
+        try {
+            return (timestampFormat.parse(entry.getTimestamp()).getTime()
+                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
+        } catch (ParseException e) {
+            throw new RuntimeException("Database entry has incorrect timestamp format");
+        }
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserEntry userEntry = (UserEntry) o;
+
+        if (built != userEntry.built) return false;
+        if (!hashedPassword.equals(userEntry.hashedPassword)) return false;
+        if (!clientName.equals(userEntry.clientName)) return false;
+        if (!id.equals(userEntry.id)) return false;
+        if (!userName.equals(userEntry.userName)) return false;
+        if (firstName != null ? !firstName.equals(userEntry.firstName) : userEntry.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(userEntry.lastName) : userEntry.lastName != null) return false;
+        if (email != null ? !email.equals(userEntry.email) : userEntry.email != null) return false;
+        return sitesHavePermissionFor.equals(userEntry.sitesHavePermissionFor);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = clientName.hashCode();
+        result = 31 * result + userName.hashCode();
+        return result;
+    }
+
 }

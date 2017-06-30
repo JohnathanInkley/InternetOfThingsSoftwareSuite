@@ -41,7 +41,7 @@ public class IncomingReadingDecryptor {
     }
 
     public void getKeysFromDatabase(ClientDatabaseEditor editor) {
-        setKeyMap(editor.getAesKeys());
+        setKeyMap(editor.getAesKeysForSites());
         generateEncryptorMap();
     }
 

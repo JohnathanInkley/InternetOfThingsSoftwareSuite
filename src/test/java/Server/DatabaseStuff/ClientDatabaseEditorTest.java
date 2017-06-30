@@ -1,5 +1,7 @@
 package Server.DatabaseStuff;
 
+import Server.AccountManagement.UserEntry;
+import Server.AccountManagement.UserNamePasswordPair;
 import Server.PhysicalLocationStuff.SensorLocation;
 import org.junit.After;
 import org.junit.Before;
@@ -12,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class ClientDatabaseEditorTest {
@@ -83,7 +86,7 @@ public class ClientDatabaseEditorTest {
         underTest.addSiteForClient("c", "s2");
         underTest.generateConfigFileForSite("c", "s2", "src/test/java/Server/AccountManagement/csTest2.config");
 
-        HashMap<String, String> sitesToAesStrings = underTest.getAesKeys();
+        HashMap<String, String> sitesToAesStrings = underTest.getAesKeysForSites();
         assertEquals(64, ((String) sitesToAesStrings.get("c.s1")).length());
         assertEquals(64, ((String) sitesToAesStrings.get("c.s2")).length());
 
@@ -92,9 +95,59 @@ public class ClientDatabaseEditorTest {
     }
 
     @Test
-    public void shouldBeAbleToAddUsersForClient() {
+    public void shouldBeAbleToAddUsersForClient() throws IOException {
         underTest.createNewClient("c");
+        String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest.txt";
+        underTest.generateNewUsersForClient("c", 2, outputFile);
+        UserNamePasswordPair pair = getCredentialsFromFile(outputFile);
 
+        UserEntry user = underTest.getUserEntry(pair.userName);
+        assertTrue(user.validateCredentials(pair.userName, pair.password));
+    }
+
+    private UserNamePasswordPair getCredentialsFromFile(String outputFile) throws IOException {
+        List<String> users = Files.readAllLines(Paths.get(outputFile));
+        Files.delete(Paths.get(outputFile));
+        String[] usernamePassword = users.get(0).replace("username: ", "").replace("password: ", "").split("\\s+");
+        return new UserNamePasswordPair(usernamePassword[0], usernamePassword[1]);
+    }
+
+    @Test
+    public void onceUsersCreatedShouldBeAbleToChangeDetails() throws IOException {
+        underTest.createNewClient("c");
+        String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest1.txt";
+        underTest.generateNewUsersForClient("c", 1, outputFile);
+        UserNamePasswordPair pair = getCredentialsFromFile(outputFile);
+
+        UserEntry user = underTest.getUserEntry(pair.userName);
+        user.setUserName("u");
+        user.setPasswordAndHash("p");
+        user.setEmail("e@gmail.com");
+        user.setFirstName("f");
+        user.setLastName("l");
+        underTest.addUserEntry(user);
+
+        UserEntry modifiedUser = underTest.getUserEntry("u");
+        assertTrue(modifiedUser.validateCredentials("u", "p"));
+        assertEquals(user, modifiedUser);
+
+        assertEquals(null,  underTest.getUserEntry(pair.userName));
+
+    }
+
+    @Test
+    public void shouldBeAbleToDeleteClientFromDatabase() throws IOException {
+        underTest.createNewClient("c");
+        String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest2.txt";
+        underTest.generateNewUsersForClient("c", 1, outputFile);
+        UserNamePasswordPair user = getCredentialsFromFile(outputFile);
+        underTest.addSiteForClient("c", "s");
+
+        underTest.deleteClient("c");
+
+        assertEquals(null, underTest.getUserEntry(user.userName));
+        assertEquals(null, underTest.getSiteEntryForClient("c", "s"));
+        assertFalse(underTest.getClientNames().contains("c"));
     }
 
 }

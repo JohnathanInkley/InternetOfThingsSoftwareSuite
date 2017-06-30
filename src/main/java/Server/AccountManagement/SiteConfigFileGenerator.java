@@ -6,12 +6,12 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConfigFileGenerator {
+public class SiteConfigFileGenerator {
     private final List<String> templateFileLines;
     private List<String> outputFileLines;
     private String aesString;
 
-    public ConfigFileGenerator(String templateFilePath) {
+    public SiteConfigFileGenerator(String templateFilePath) {
         try {
             templateFileLines = Files.readAllLines(Paths.get(templateFilePath));
         } catch (Exception e) {

@@ -6,10 +6,13 @@ import org.influxdb.dto.Point;
 import org.influxdb.dto.Query;
 import org.influxdb.dto.QueryResult;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
 
 public class Database {
     private String name;
@@ -47,9 +50,14 @@ public class Database {
     }
 
     public void removeAllWithCertainValue(String tableName, String field, String fieldValue) {
-        database.query(new Query("DELETE FROM \"" + tableName + "\" " +
+        database.query(new Query("DROP SERIES FROM \"" + tableName + "\" " +
                 "WHERE \"" + field + "\" = \'" + fieldValue + "\' ", name));
     }
+
+    public void removeAllFromGivenTable(String tableName) {
+        database.query(new Query("DROP MEASUREMENT \"" + tableName + "\" ", name));
+    }
+
 
     public DatabaseEntrySet getEntriesWithCertainValueFromTable(String tableName, String field, String fieldValue) {
         Query query = new Query("SELECT * FROM \"" + tableName + "\" " +
@@ -65,8 +73,8 @@ public class Database {
 
     public DatabaseEntrySet getSiteEntriesBetween(DeviceCollection site, long beforeTimeInMS, long afterTimeInMS) {
         Query query = new Query("SELECT * FROM \"" + site.identifier() + "\" " +
-                                "WHERE time > " + beforeTimeInMS + "ms " +
-                                "AND time < " + afterTimeInMS + "ms " +
+                                "WHERE time >= " + beforeTimeInMS + "ms " +
+                                "AND time <= " + afterTimeInMS + "ms " +
                                 "", name);
 
         return getResultsSetFromQuery(query);
@@ -74,8 +82,18 @@ public class Database {
 
     public DatabaseEntrySet getSiteEntriesBetween(DeviceCollection site, String beforeDate, String afterDate) {
         Query query = new Query("SELECT * FROM \"" + site.identifier() + "\" " +
-                "WHERE time > '" + beforeDate + "' " +
-                "AND time < '" + afterDate + "' " +
+                "WHERE time >= '" + beforeDate + "' " +
+                "AND time <= '" + afterDate + "' " +
+                "", name);
+
+        return getResultsSetFromQuery(query);
+    }
+
+
+    public DatabaseEntrySet getSiteEntriesBetween(String deviceCollectionIdentifier, long beforeTimeInMS, long afterTimeInMS) {
+        Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
+                "WHERE time >= " + beforeTimeInMS + "ms " +
+                "AND time <= " + afterTimeInMS + "ms " +
                 "", name);
 
         return getResultsSetFromQuery(query);
@@ -126,7 +144,8 @@ public class Database {
             entry.add(columnLabels.get(i), individualEntry.get(i));
         }
         String time = ((String) entry.get("time")).replace("Z", "").replace("T", " ");
-        entry.setTimestamp(time);
+        entry.setTimestamp(time + ".000");
+        entry.setTimestamp(timestampFormat.format(new Date(entry.getLongTimeInMilliseconds() + 3600000)));
         entry.remove("time");
         return entry;
     }
