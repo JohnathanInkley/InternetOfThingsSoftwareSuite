@@ -1,7 +1,9 @@
 package Server.FrontEndServerStuff;
 
 import Server.DatabaseStuff.Database;
+import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler;
+import Server.FrontEndServerStuff.HttpResources.Authentication.ChangeUserDetailsHandler;
 import Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest;
 import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
@@ -26,11 +28,14 @@ public class FrontEndServer {
         this.url = url;
         httpResources.add(ConnectionTest.class);
         httpResources.add(AuthenticationHandler.class);
+        httpResources.add(ChangeUserDetailsHandler.class);
     }
 
     public void runServer() {
         URI baseUri = URI.create(url);
         ResourceConfig resourceConfig = new ResourceConfig(httpResources);
+        resourceConfig.register(AuthenticationFilter.class);
+
 
         SSLContextConfigurator sslCon = new SSLContextConfigurator();
         sslCon.setKeyStoreFile("src/main/java/Server/FrontEndServerStuff/keystore_server");

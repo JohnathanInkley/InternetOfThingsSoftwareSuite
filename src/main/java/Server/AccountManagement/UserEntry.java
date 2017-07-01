@@ -210,4 +210,11 @@ public class UserEntry {
         return result;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }

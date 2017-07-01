@@ -1,12 +1,8 @@
-1) Establish server - api inherently built into server
-    a) If using RSA first of all add key to webpage and add private key to server
 
 So things to do for API. Have established server and client.
 Need 1) Authentication for access to resources. Currently
 2) Once authentication achieved, design api for the following:
-    0) Change user details in database (for example, after default username and password used, making a real set and things like email)
     a) Get site names user has access to
     b) Get data from specific site that appears in access list
     c) If admin client user, get access to all sites and decide which users can view what
-    d)
 
