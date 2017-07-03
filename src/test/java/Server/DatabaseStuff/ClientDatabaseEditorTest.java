@@ -105,6 +105,17 @@ public class ClientDatabaseEditorTest {
         assertTrue(user.validateCredentials(pair.username, pair.password));
     }
 
+    @Test
+    public void shouldBeAbleToAddAdminForClient() throws IOException {
+        underTest.createNewClient("c");
+        String outputFile = "src/test/java/Server/AccountManagement/clientNewAdminTest.txt";
+        underTest.generateNewAdminsForClient("c", 2, outputFile);
+        UsernamePasswordPair pair = getCredentialsFromFile(outputFile);
+
+        UserEntry user = underTest.getUserEntry(pair.username);
+        assertTrue(user.validateCredentials(pair.username, pair.password));
+    }
+
     private UsernamePasswordPair getCredentialsFromFile(String outputFile) throws IOException {
         List<String> users = Files.readAllLines(Paths.get(outputFile));
         Files.delete(Paths.get(outputFile));
@@ -120,7 +131,7 @@ public class ClientDatabaseEditorTest {
         UsernamePasswordPair pair = getCredentialsFromFile(outputFile);
 
         UserEntry user = underTest.getUserEntry(pair.username);
-        user.setUserName("u");
+        user.setUsername("u");
         user.setPasswordAndHash("p");
         user.setEmail("e@gmail.com");
         user.setFirstName("f");

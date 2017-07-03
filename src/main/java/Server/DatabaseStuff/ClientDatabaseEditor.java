@@ -138,11 +138,21 @@ public class ClientDatabaseEditor {
     }
 
     public void generateNewUsersForClient(String clientName, int numberOfNewUsers, String outputFile) {
+        generateNewAccountsForClient(clientName, numberOfNewUsers, outputFile, false);
+    }
+
+
+    public void generateNewAdminsForClient(String clientName, int numberOfNewAdmins, String outputFile) {
+       generateNewAccountsForClient(clientName, numberOfNewAdmins, outputFile, true);
+    }
+
+    private void generateNewAccountsForClient(String clientName, int numberOfNewAccounts, String outputFile, boolean isAdmin) {
         userConfigGenerator.initialiseNewConfigFile();
 
         long maxIdOfCurrentUsers = getMaxIdOfCurrentUsers(clientName);
-        for (int i = 1; i <= numberOfNewUsers; i++) {
-            UserEntry newUser = createNewUserEntry(clientName, maxIdOfCurrentUsers, i);
+
+        for (int i = 1; i <= numberOfNewAccounts; i++) {
+            UserEntry newUser = createNewUserEntry(clientName, maxIdOfCurrentUsers, i, isAdmin);
             addUserToClientUserTable(newUser);
             database.addEntry(newUser.getDbEntry());
         }
@@ -155,9 +165,12 @@ public class ClientDatabaseEditor {
         return (long) userEntries.size();
     }
 
-    private UserEntry createNewUserEntry(String clientName, long maxIdOfCurrentUsers, int i) {
+    private UserEntry createNewUserEntry(String clientName, long maxIdOfCurrentUsers, int i, boolean createAsAdmin) {
         UserEntry newUser = UserEntry.generateUnbuiltUser(clientName);
         newUser.setId(maxIdOfCurrentUsers + i);
+        if (createAsAdmin) {
+            newUser.setAdminFlag();
+        }
         UsernamePasswordPair credentials = newUser.generateDefaultPasswordAndBuild();
         userConfigGenerator.addUser(credentials);
         return newUser;
@@ -170,12 +183,19 @@ public class ClientDatabaseEditor {
         } else if (matchingUsers.size() > 1) {
             throw new RuntimeException("More than one user with same username, please check situation");
         }
-        return getUserFromDbEntry(matchingUsers.get(0));
+        UserEntry user = getUserFromDbEntry(matchingUsers.get(0));
+        if (user.isAdmin()) {
+            List<String> clientSites = getSiteNamesForClient(user.getClientName());
+            for (String site : clientSites) {
+                user.giveSitePermission(site);
+            }
+        }
+        return user;
     }
 
     private void addUserToClientUserTable(UserEntry newUser) {
         ClientEntry client = getClientUsersEntry(newUser.getClientName());
-        client.addUser(newUser.getUserName());
+        client.addUser(newUser.getUsername());
         database.addEntry(client.getUserDbEntry());
     }
 
@@ -197,8 +217,8 @@ public class ClientDatabaseEditor {
                 modifiedUserEntry.getLongTimeInMilliseconds())
                 .get(0);
         ClientEntry clientOwningUser = getClientUsersEntry(user.getClientName());
-        clientOwningUser.removeUser(UserEntry.getUserFromDbEntry(existingUserEntry).getUserName());
-        clientOwningUser.addUser(user.getUserName());
+        clientOwningUser.removeUser(UserEntry.getUserFromDbEntry(existingUserEntry).getUsername());
+        clientOwningUser.addUser(user.getUsername());
         database.addEntry(clientOwningUser.getUserDbEntry());
         database.addEntry(modifiedUserEntry);
     }
@@ -237,4 +257,5 @@ public class ClientDatabaseEditor {
         //database.removeAllWithCertainValue(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
         //database.removeAllWithCertainValue(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
     }
+
 }

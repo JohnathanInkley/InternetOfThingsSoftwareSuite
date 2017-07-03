@@ -16,7 +16,7 @@ public class UserJson {
         if (id != 0)
             entry.setId(id);
         if (username != null)
-            entry.setUserName(username);
+            entry.setUsername(username);
         if (firstName != null)
             entry.setFirstName(firstName);
         if (lastName != null)

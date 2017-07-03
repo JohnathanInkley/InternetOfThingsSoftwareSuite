@@ -36,7 +36,7 @@ public class AuthenticationManager {
                             .setSubject("user")
                             .setHeaderParam("alg", "HS256")
                             .setHeaderParam("typ","JWT")
-                            .claim("username", userEntry.getUserName())
+                            .claim("username", userEntry.getUsername())
                             .claim("client",  userEntry.getClientName())
                             .signWith(SignatureAlgorithm.HS256, KEY)
                             .compact();

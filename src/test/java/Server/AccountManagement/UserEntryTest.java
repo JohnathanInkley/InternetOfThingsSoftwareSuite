@@ -38,6 +38,7 @@ public class UserEntryTest {
     public void shouldBeAbleToGetDatabaseEntryForInititalisedUserEntry() {
         UserEntry underTest = UserEntry.generateUnbuiltUser("client");
         underTest.setId(3);
+        underTest.setAdminFlag();
         UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         DatabaseEntry expected = new DatabaseEntry();
@@ -45,6 +46,7 @@ public class UserEntryTest {
         expected.add(HASHED_PASSWORD_LABEL, underTest.getHashedPassword());
         expected.add(USERNAME_LABEL, defaultAccountDetails.username);
         expected.add("client", "client");
+        expected.add(ADMIN_FLAG, "true");
         expected.setTimestamp("1970-01-01 01:00:03.000");
 
         assertEquals(expected, underTest.getDbEntry());
@@ -76,9 +78,9 @@ public class UserEntryTest {
         underTest.setId(3);
         UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
-        assertEquals(defaultAccountDetails.username, underTest.getUserName());
-        underTest.setUserName("user");
-        assertEquals("user", underTest.getUserName());
+        assertEquals(defaultAccountDetails.username, underTest.getUsername());
+        underTest.setUsername("user");
+        assertEquals("user", underTest.getUsername());
     }
 
     @Test
@@ -88,7 +90,7 @@ public class UserEntryTest {
         UsernamePasswordPair defaultAccountDetails = underTest.generateDefaultPasswordAndBuild();
 
         underTest.setPasswordAndHash("newPassword");
-        underTest.setUserName("user");
+        underTest.setUsername("user");
         assertTrue(underTest.validateCredentials("user", "newPassword"));
     }
 
@@ -147,6 +149,7 @@ public class UserEntryTest {
         entry.add(FIRST_NAME_LABEL, "first");
         entry.add(LAST_NAME_LABEL, "last");
         entry.add("client", "client");
+        entry.add(ADMIN_FLAG, "true");
         entry.setTimestamp("1970-01-01 01:00:03.000");
 
         UserEntry user = UserEntry.getUserFromDbEntry(entry);

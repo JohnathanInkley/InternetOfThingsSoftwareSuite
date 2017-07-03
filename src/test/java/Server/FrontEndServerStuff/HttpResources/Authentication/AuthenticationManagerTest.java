@@ -15,17 +15,18 @@ import static org.mockito.Mockito.when;
 
 public class AuthenticationManagerTest {
 
-    static final String VALID_USERNAME = "user";
+    public static final String VALID_USERNAME = "user";
     static final String VALID_PASSWORD = "pass";
     static final String INVALID_USERNAME = "badUser";
     static final String INVALID_PASSWORD = "badPass";
+    static final String NEW_USERNAME = "newUser";
     static final String EMAIL = "hello@gmail.com";
     static final String FIRST_NAME = "first";
     static final String LAST_NAME = "last";
-    static final String CLIENT = "owner";
+    public static final String CLIENT = "owner";
     static final long USER_ID = 1l;
-    static final String VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwidXNlcm5hbWUiOiJ1c2VyIiwiY2xpZW50Ijoib3duZXIifQ.KL9GcoPx0fKERF5rwiuvPasvwly_mZG9CgGnDhXv96I";
-    static final String BAD_TOKEN = VALID_TOKEN.replace("a","b");
+    public static final String NON_ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwidXNlcm5hbWUiOiJ1c2VyIiwiY2xpZW50Ijoib3duZXIifQ.KL9GcoPx0fKERF5rwiuvPasvwly_mZG9CgGnDhXv96I";
+    static final String BAD_TOKEN = NON_ADMIN_TOKEN.replace("a","b");
 
     private static AuthenticationManager underTest;
     private static ClientDatabaseEditor editor;
@@ -49,7 +50,7 @@ public class AuthenticationManagerTest {
         when(user.getEmail()).thenReturn(EMAIL);
         when(user.getFirstName()).thenReturn(FIRST_NAME);
         when(user.getLastName()).thenReturn(LAST_NAME);
-        when(user.getUserName()).thenReturn(VALID_USERNAME);
+        when(user.getUsername()).thenReturn(VALID_USERNAME);
         return editor;
     }
 
@@ -70,7 +71,7 @@ public class AuthenticationManagerTest {
 
     @Test
     public void shouldReturnJWTContainingUsernameAndClientNameIfCredentialsValid() {
-        assertEquals(VALID_TOKEN, underTest.getJWT(VALID_USERNAME));
+        assertEquals(NON_ADMIN_TOKEN, underTest.getJWT(VALID_USERNAME));
     }
 
     @Test
@@ -86,7 +87,7 @@ public class AuthenticationManagerTest {
     @Test
     public void shouldProduceResponseContainingAllFields() {
         UserJson response = underTest.generateAuthenticationResponse(VALID_USERNAME);
-        assertEquals(VALID_TOKEN, response.token);
+        assertEquals(NON_ADMIN_TOKEN, response.token);
         assertEquals(EMAIL, response.email);
         assertEquals(FIRST_NAME, response.firstName);
         assertEquals(LAST_NAME, response.lastName);
@@ -97,7 +98,7 @@ public class AuthenticationManagerTest {
 
     @Test
     public void shouldAcceptValidToken() {
-        assertTrue(underTest.isValidJWT(VALID_TOKEN));
+        assertTrue(underTest.isValidJWT(NON_ADMIN_TOKEN));
     }
 
     @Test
@@ -107,7 +108,7 @@ public class AuthenticationManagerTest {
 
     @Test
     public void shouldProduceUserJsonForValidTokens() {
-        assertEquals(VALID_USERNAME, underTest.getUserEntryForJWT(VALID_TOKEN).getUserName());
+        assertEquals(VALID_USERNAME, underTest.getUserEntryForJWT(NON_ADMIN_TOKEN).getUsername());
     }
 
 }

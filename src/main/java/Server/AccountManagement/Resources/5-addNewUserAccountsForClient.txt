@@ -1,6 +1,7 @@
 You are currently adding new user accounts to an existing client.
 Please enter the client name:
 Client selected is $CLIENT_NAME. Is this correct? (y for yes, n for no)
+Are these admin accounts? (y for yes, n for regular accounts)
 Please enter the number of new accounts needed:
 Number of new accounts requested is $NUM_ACCOUNTS. Is this correct? (y for yes, n for no)
 Please enter the file name for default usernames and passwords to be written to:

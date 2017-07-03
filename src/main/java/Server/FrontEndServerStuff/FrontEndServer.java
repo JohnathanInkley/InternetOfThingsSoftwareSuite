@@ -4,6 +4,7 @@ import Server.DatabaseStuff.Database;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler;
 import Server.FrontEndServerStuff.HttpResources.Authentication.ChangeUserDetailsHandler;
+import Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler;
 import Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest;
 import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
@@ -29,6 +30,7 @@ public class FrontEndServer {
         httpResources.add(ConnectionTest.class);
         httpResources.add(AuthenticationHandler.class);
         httpResources.add(ChangeUserDetailsHandler.class);
+        httpResources.add(GetListOfSitesHandler.class);
     }
 
     public void runServer() {

@@ -15,6 +15,7 @@ public class NewUserAccountsForClientHandler implements UserChoiceHandler {
     private String clientName;
     private Integer numAccounts;
     private String fileName;
+    private String areAdminAccounts;
 
     @Override
     public void processUserChoice(List<String> linesOfTextForChoice, CommandLineTool commandLineTool) {
@@ -38,27 +39,33 @@ public class NewUserAccountsForClientHandler implements UserChoiceHandler {
         clientName = scanner.nextLine();
         System.out.println(linesOfTextForChoice.get(2).replace("$CLIENT_NAME", clientName));
         if ("y".equals(scanner.nextLine())) {
-            getNumberOfNewAccounts();
+            getAreTheyAdminAccounts();
         } else {
             getClientName();
         }
     }
 
-    private void getNumberOfNewAccounts() {
+    private void getAreTheyAdminAccounts() {
         System.out.println(linesOfTextForChoice.get(3));
+        areAdminAccounts = scanner.nextLine();
+        getNumberOfAccountsNeeded();
+    }
+
+    private void getNumberOfAccountsNeeded() {
+        System.out.println(linesOfTextForChoice.get(4));
         numAccounts = Integer.valueOf(scanner.nextLine());
-        System.out.println(linesOfTextForChoice.get(4).replace("$NUM_ACCOUNTS", numAccounts.toString()));
+        System.out.println(linesOfTextForChoice.get(5).replace("$NUM_ACCOUNTS", numAccounts.toString()));
         if ("y".equals(scanner.nextLine())) {
             getFileNameForUserConfigFile();
         } else {
-            getNumberOfNewAccounts();
+            getAreTheyAdminAccounts();
         }
     }
 
     private void getFileNameForUserConfigFile() {
-        System.out.println(linesOfTextForChoice.get(5));
+        System.out.println(linesOfTextForChoice.get(6));
         fileName = scanner.nextLine();
-        System.out.println(linesOfTextForChoice.get(6).replace("$FILE_NAME", fileName));
+        System.out.println(linesOfTextForChoice.get(7).replace("$FILE_NAME", fileName));
         if ("y".equals(scanner.nextLine())) {
             generateNewAccounts();
         } else {
@@ -67,8 +74,12 @@ public class NewUserAccountsForClientHandler implements UserChoiceHandler {
     }
 
     private void generateNewAccounts() {
-        editor.generateNewUsersForClient(clientName, numAccounts, fileName);
-        System.out.println(linesOfTextForChoice.get(7).replace("$FILE_NAME", fileName)
+        if ("y".equals(areAdminAccounts)) {
+            editor.generateNewAdminsForClient(clientName, numAccounts, fileName);
+        } else {
+            editor.generateNewUsersForClient(clientName, numAccounts, fileName);
+        }
+        System.out.println(linesOfTextForChoice.get(8).replace("$FILE_NAME", fileName)
                                                         .replace("$NUM_ACCOUNTS", numAccounts.toString())
                                                         .replace("CLIENT_NAME", clientName));
     }

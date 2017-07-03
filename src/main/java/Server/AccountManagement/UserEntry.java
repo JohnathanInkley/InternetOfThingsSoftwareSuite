@@ -21,14 +21,16 @@ public class UserEntry {
     public static final String FIRST_NAME_LABEL = "firstName";
     public static final String LAST_NAME_LABEL = "lastName";
     public static final String EMAIL_LABEL = "email";
+    public static final String ADMIN_FLAG = "isAdmin";
 
     private String hashedPassword;
     private String clientName;
     private Long id;
-    private String userName;
+    private String username;
     private String firstName;
     private String lastName;
     private String email;
+    private String isAdmin = "false";
     private List<String> sitesHavePermissionFor;
 
     private boolean built;
@@ -47,13 +49,21 @@ public class UserEntry {
         sitesHavePermissionFor = new ArrayList<>();
     }
 
+    public void setAdminFlag() {
+        isAdmin = "true";
+    }
+
+    public boolean isAdmin() {
+        return isAdmin.equals("true");
+    }
+
     public UsernamePasswordPair generateDefaultPasswordAndBuild() {
         if (id == null) {
             throw new RuntimeException("ID must be set before default username and password can be generated");
         }
-        userName = SecureRandomStringGenerator.generateSecureRandomString(DEFAULT_USERNAME_LENGTH);
+        username = SecureRandomStringGenerator.generateSecureRandomString(DEFAULT_USERNAME_LENGTH);
         String defaultPassword = SecureRandomStringGenerator.generateSecureRandomString(DEFAULT_PASSWORD_LENGTH);
-        UsernamePasswordPair defaultAccountDetails = new UsernamePasswordPair(userName, defaultPassword);
+        UsernamePasswordPair defaultAccountDetails = new UsernamePasswordPair(username, defaultPassword);
         setPasswordAndHash(defaultPassword);
         built = true;
         return defaultAccountDetails;
@@ -72,12 +82,12 @@ public class UserEntry {
         return clientName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public void setId(long id) {
@@ -95,11 +105,12 @@ public class UserEntry {
         DatabaseEntry result = new DatabaseEntry();
         addFieldIfNotNull(result, TABLE_LABEL, clientName + "." + SUFFIX_FOR_CLIENTS_USER_TABLE);
         addFieldIfNotNull(result, HASHED_PASSWORD_LABEL, hashedPassword);
-        addFieldIfNotNull(result, USERNAME_LABEL, userName);
+        addFieldIfNotNull(result, USERNAME_LABEL, username);
         addFieldIfNotNull(result, FIRST_NAME_LABEL, firstName);
         addFieldIfNotNull(result, LAST_NAME_LABEL, lastName);
         addFieldIfNotNull(result, EMAIL_LABEL, email);
         addFieldIfNotNull(result, CLIENT_FIELD_LABEL, clientName);
+        addFieldIfNotNull(result, ADMIN_FLAG, isAdmin);
         addSitesToEntry(result);
         result.setTimestamp(timestampFormat.format(new Date(id*1000)));
         return result;
@@ -119,7 +130,7 @@ public class UserEntry {
     }
 
     public boolean validateCredentials(String userName, String password) {
-        return (userName.equals(this.userName) && BCrypt.checkpw(password, hashedPassword));
+        return (userName.equals(this.username) && BCrypt.checkpw(password, hashedPassword));
     }
 
 
@@ -150,7 +161,8 @@ public class UserEntry {
         user.lastName = (String) entry.get(LAST_NAME_LABEL);
         user.email = (String) entry.get(EMAIL_LABEL);
         user.hashedPassword = (String) entry.get(HASHED_PASSWORD_LABEL);
-        user.userName = (String) entry.get(USERNAME_LABEL);
+        user.username = (String) entry.get(USERNAME_LABEL);
+        user.isAdmin = (String) entry.get(ADMIN_FLAG);
         getSitesFromDbEntry(user, entry);
         user.clientName = getClientNameFromDbEntry(entry);
         user.id = getIdFromDbEntry(entry);
@@ -193,10 +205,11 @@ public class UserEntry {
         UserEntry userEntry = (UserEntry) o;
 
         if (built != userEntry.built) return false;
+        if (!isAdmin.equals(userEntry.isAdmin)) return false;
         if (!hashedPassword.equals(userEntry.hashedPassword)) return false;
         if (!clientName.equals(userEntry.clientName)) return false;
         if (!id.equals(userEntry.id)) return false;
-        if (!userName.equals(userEntry.userName)) return false;
+        if (!username.equals(userEntry.username)) return false;
         if (firstName != null ? !firstName.equals(userEntry.firstName) : userEntry.firstName != null) return false;
         if (lastName != null ? !lastName.equals(userEntry.lastName) : userEntry.lastName != null) return false;
         if (email != null ? !email.equals(userEntry.email) : userEntry.email != null) return false;
@@ -206,7 +219,7 @@ public class UserEntry {
     @Override
     public int hashCode() {
         int result = clientName.hashCode();
-        result = 31 * result + userName.hashCode();
+        result = 31 * result + username.hashCode();
         return result;
     }
 
@@ -216,5 +229,9 @@ public class UserEntry {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public List<String> getSitePermissions() {
+        return sitesHavePermissionFor;
     }
 }
