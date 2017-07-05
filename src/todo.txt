@@ -1,24 +1,9 @@
-
-So things to do for API. Have established server and client.
-Need 1) Authentication for access to resources. Currently
-2) Once authentication achieved, design api for the following:
-//    a) Get site names user has access to
-    b) Get data from specific site that appears in access list (see 2 below)
-//    c) If admin client user, get access to all sites and decide which users can view what
-
 2)
-api/data/getLabels
-{
-    'site' : "site1"
-}
 
-api/data/get
+Have everything else done!
 
-{
-    "site" : "site1",
-    "dataLabel" : "temperature",
-    "timeStart" : "dfgd",
-    "timeEnd" : "sdsd"
-}
+Have separately this
+api/sites/{siteName}/sensors/{sensorIP}/data/{dataLabel}/timeStart/{time1}/timeEnd/{time2}
+and if reading not available for sensor, return blank
 
 3) Wire together

@@ -89,7 +89,6 @@ public class Database {
         return getResultsSetFromQuery(query);
     }
 
-
     public DatabaseEntrySet getSiteEntriesBetween(String deviceCollectionIdentifier, long beforeTimeInMS, long afterTimeInMS) {
         Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
                 "WHERE time >= " + beforeTimeInMS + "ms " +
@@ -97,6 +96,23 @@ public class Database {
                 "", name);
 
         return getResultsSetFromQuery(query);
+    }
+
+    public DatabaseEntry getLatestEntryForSite(String deviceCollectionIdentifier) {
+        Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
+                "GROUP BY * ORDER BY DESC LIMIT 1" +
+                "", name);
+
+        return getResultsSetFromQuery(query).get(0);
+    }
+
+    public DatabaseEntry getLatestEntryForParticularLabel(String deviceCollectionIdentifier, String fieldName, String fieldValue) {
+        Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
+                "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
+                "GROUP BY * ORDER BY DESC LIMIT 1" +
+                "", name);
+
+        return getResultsSetFromQuery(query).get(0);
     }
 
     public double getMeanSiteEntriesForFieldBetween(DeviceCollection site, String fieldName, String beforeDate, String afterDate) {

@@ -37,14 +37,12 @@ public class AuthenticationFilter implements ContainerRequestFilter {
             requestContext.abortWith(
                     Response.status(Response.Status.UNAUTHORIZED).build());
         } else {
-
             UserEntry user = authenticationManager.getUserEntryForJWT(token);
 
             requestContext.setSecurityContext(new SecurityContext() {
                 @Override
                 public Principal getUserPrincipal() {
-                    return () -> user.getUsername();
-                }
+                    return () -> user.getUsername();}
 
                 @Override
                 public boolean isUserInRole(String role) {
