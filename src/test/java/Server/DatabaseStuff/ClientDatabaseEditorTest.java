@@ -127,9 +127,9 @@ public class ClientDatabaseEditorTest {
     public void onceUsersCreatedShouldBeAbleToChangeDetails() throws IOException {
         underTest.createNewClient("c");
         String outputFile = "src/test/java/Server/AccountManagement/clientNewUserTest1.txt";
+
         underTest.generateNewUsersForClient("c", 1, outputFile);
         UsernamePasswordPair pair = getCredentialsFromFile(outputFile);
-
         UserEntry user = underTest.getUserEntry(pair.username);
         user.setUsername("u");
         user.setPasswordAndHash("p");

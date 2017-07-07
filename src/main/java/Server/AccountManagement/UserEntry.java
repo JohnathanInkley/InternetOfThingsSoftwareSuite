@@ -7,11 +7,12 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import static Server.DatabaseStuff.ClientDatabaseEditor.CLIENT_FIELD_LABEL;
 import static Server.DatabaseStuff.ClientDatabaseEditor.SUFFIX_FOR_CLIENTS_USER_TABLE;
 import static Server.DatabaseStuff.ClientDatabaseEditor.TABLE_LABEL;
-import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
+import static Server.DatabaseStuff.DatabaseEntry.TIMESTAMP_FORMAT;
 
 public class UserEntry {
     public static final int DEFAULT_USERNAME_LENGTH = 20;
@@ -112,7 +113,8 @@ public class UserEntry {
         addFieldIfNotNull(result, CLIENT_FIELD_LABEL, clientName);
         addFieldIfNotNull(result, ADMIN_FLAG, isAdmin);
         addSitesToEntry(result);
-        result.setTimestamp(timestampFormat.format(new Date(id*1000)));
+        TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        result.setTimestamp(TIMESTAMP_FORMAT.format(new Date(id*1000)));
         return result;
     }
 
@@ -148,6 +150,11 @@ public class UserEntry {
 
     public void giveSitePermission(String siteName) {
         sitesHavePermissionFor.add(siteName);
+    }
+
+
+    public void removeSitePermission(String siteName) {
+        sitesHavePermissionFor.remove(siteName);
     }
 
     public boolean hasPermissionForSite(String siteName) {
@@ -186,8 +193,9 @@ public class UserEntry {
 
     private static Long getIdFromDbEntry(DatabaseEntry entry) {
         try {
-            return (timestampFormat.parse(entry.getTimestamp()).getTime()
-                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
+            TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+            return (TIMESTAMP_FORMAT.parse(entry.getTimestamp()).getTime()
+                    - TIMESTAMP_FORMAT.parse("1970-01-01 00:00:00.000").getTime())/1000;
         } catch (ParseException e) {
             throw new RuntimeException("Database entry has incorrect timestamp format");
         }
@@ -234,4 +242,5 @@ public class UserEntry {
     public List<String> getSitePermissions() {
         return sitesHavePermissionFor;
     }
+
 }

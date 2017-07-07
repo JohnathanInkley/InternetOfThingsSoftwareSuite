@@ -6,9 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable {
-    public static SimpleDateFormat timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    public static SimpleDateFormat TIMESTAMP_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     private HashMap<String, Object> fields;
     private String timestamp;
@@ -34,7 +35,7 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
     }
 
     public void setTimestampFormat(SimpleDateFormat timestampFormat) {
-        DatabaseEntry.timestampFormat = timestampFormat;
+        DatabaseEntry.TIMESTAMP_FORMAT = timestampFormat;
     }
 
     public void add(String fieldName, Object  fieldValue) {
@@ -76,7 +77,7 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
         DatabaseEntry otherEntry = (DatabaseEntry) other;
         if (timestamp == null && otherEntry.timestamp == null) {
             return fields.equals(otherEntry.fields);
-        } else if (timestamp == null | otherEntry == null | timestampFormat == null | otherEntry.timestampFormat == null) {
+        } else if (timestamp == null | otherEntry == null | TIMESTAMP_FORMAT == null | otherEntry.TIMESTAMP_FORMAT == null) {
             return false;
         } else {
             return fields.equals(otherEntry.fields) && getLongTimeInMilliseconds() == otherEntry.getLongTimeInMilliseconds();
@@ -100,7 +101,8 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
 
     public long getLongTimeInMilliseconds() {
         try {
-            return timestampFormat.parse(timestamp).getTime();
+            TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+            return TIMESTAMP_FORMAT.parse(timestamp).getTime();
         } catch (Exception e) {
             e.printStackTrace();
             return -1;
@@ -111,8 +113,8 @@ public class DatabaseEntry implements Iterable<DatabaseEntryField>, Serializable
         try {
             return Long.valueOf(timestamp);
         } catch (NumberFormatException e) { // When ID entries come out of database, they have timestamp as ID + date(1970/01/01) so need to revert to ID
-            return timestampFormat.parse(timestamp + ".000").getTime()
-                    - timestampFormat.parse("1970-01-01 00:00:00.000").getTime();
+            return TIMESTAMP_FORMAT.parse(timestamp + ".000").getTime()
+                    - TIMESTAMP_FORMAT.parse("1970-01-01 00:00:00.000").getTime();
         }
     }
 }

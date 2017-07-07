@@ -1,9 +1,2 @@
-2)
-
-Have everything else done!
-
-Have separately this
-api/sites/{siteName}/sensors/{sensorIP}/data/{dataLabel}/timeStart/{time1}/timeEnd/{time2}
-and if reading not available for sensor, return blank
 
 3) Wire together

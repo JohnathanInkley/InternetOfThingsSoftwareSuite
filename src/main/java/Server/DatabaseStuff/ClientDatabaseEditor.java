@@ -201,6 +201,7 @@ public class ClientDatabaseEditor {
 
     private ClientEntry getClientUsersEntry(String clientName) {
         DatabaseEntry entry = database.getEntriesWithCertainValueFromTable(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName).get(0);
+        ClientEntry entry1 = ClientEntry.getClientEntryFromUserDbEntry(entry);
         return ClientEntry.getClientEntryFromUserDbEntry(entry);
     }
 
@@ -254,8 +255,8 @@ public class ClientDatabaseEditor {
             database.addEntry(replacementEntry);
         }
 
-        //database.removeAllWithCertainValue(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
-        //database.removeAllWithCertainValue(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
+        database.removeAllWithCertainValue(CLIENT_SITE_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
+        database.removeAllWithCertainValue(CLIENT_USER_TABLE_NAME, CLIENT_FIELD_LABEL, clientName);
     }
 
 }

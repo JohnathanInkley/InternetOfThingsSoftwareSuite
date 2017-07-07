@@ -18,8 +18,8 @@ public class SiteEntryTest {
 
         DatabaseEntrySet sensorEntries = underTest.getDbEntries(); // we should add a site as a table into our site database: can't imagine we'll have bazillions of sites
 
-        assertEquals("1970-01-01 01:00:01.000", sensorEntries.get(0).getTimestamp());
-        assertEquals("1970-01-01 01:00:02.000", sensorEntries.get(1).getTimestamp());
+        assertEquals("1970-01-01 00:00:01.000", sensorEntries.get(0).getTimestamp());
+        assertEquals("1970-01-01 00:00:02.000", sensorEntries.get(1).getTimestamp());
         assertEquals("client.site", sensorEntries.get(0).getDeviceCollectionIdentifier());
         assertEquals("keyString", sensorEntries.get(0).get("aesString"));
         assertEquals("IP2", sensorEntries.get(0).get("IP"));
@@ -56,7 +56,7 @@ public class SiteEntryTest {
 
         DatabaseEntry expectedEntry = new DatabaseEntry();
         expectedEntry.add("DeviceCollection", "client.site");
-        expectedEntry.setTimestamp("1970-01-01 01:00:01.000");
+        expectedEntry.setTimestamp("1970-01-01 00:00:01.000");
         expectedEntry.add("lat", 0.1);
         expectedEntry.add("lon", 0.2);
         expectedEntry.add("IP", "IP1");

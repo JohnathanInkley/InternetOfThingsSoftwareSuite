@@ -149,5 +149,37 @@ public class GetSiteData {
         }
     }
 
-
+    @GET
+    @Path("/api/sites/{siteName}/sensors/{sensorIP}/{label}/from/{startDate}/{startTime}/until/{endDate}/{endTime}")
+    @Secured
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getSensorDataBetweenTimes(@PathParam("siteName") String siteName,
+                                              @PathParam("sensorIP") String IP,
+                                              @PathParam("label") String dataLabel,
+                                              @PathParam("startDate") String startDate,
+                                              @PathParam("startTime") String startTime,
+                                              @PathParam("endDate") String endDate,
+                                              @PathParam("endTime") String endTime,
+                                              @Context SecurityContext context) {
+        UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
+        if (!user.getSitePermissions().contains(siteName)) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        } else {
+            String siteTableIdentifier = user.getClientName() + "." + siteName;
+            String start = startDate + " " + startTime;
+            String end = endDate + " " + endTime;
+            DatabaseEntrySet sensorEntries = timeSeriesDatabase.getSensorEntriesBetween(siteTableIdentifier, IP, start, end);
+            List<DataValuesWithMetaData> results = new ArrayList<>();
+            for (int i = 0; i < sensorEntries.size(); i++) {
+                DatabaseEntry entry = sensorEntries.get(i);
+                DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getTimestamp(), IP, dataLabel, (Double) entry.get(dataLabel));
+                results.add(datum);
+            }
+            String resultJson = gson.toJson(results);
+            return Response.ok()
+                    .type(MediaType.APPLICATION_JSON)
+                    .entity(resultJson)
+                    .build();
+        }
+    }
 }

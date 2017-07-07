@@ -47,7 +47,7 @@ public class UserEntryTest {
         expected.add(USERNAME_LABEL, defaultAccountDetails.username);
         expected.add("client", "client");
         expected.add(ADMIN_FLAG, "true");
-        expected.setTimestamp("1970-01-01 01:00:03.000");
+        expected.setTimestamp("1970-01-01 00:00:03.000");
 
         assertEquals(expected, underTest.getDbEntry());
     }
@@ -150,7 +150,7 @@ public class UserEntryTest {
         entry.add(LAST_NAME_LABEL, "last");
         entry.add("client", "client");
         entry.add(ADMIN_FLAG, "true");
-        entry.setTimestamp("1970-01-01 01:00:03.000");
+        entry.setTimestamp("1970-01-01 00:00:03.000");
 
         UserEntry user = UserEntry.getUserFromDbEntry(entry);
 

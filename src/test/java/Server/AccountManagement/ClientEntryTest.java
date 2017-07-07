@@ -12,7 +12,7 @@ public class ClientEntryTest {
     @Test
     public void shouldBeAbleToGetAClientWithSitesFromDbEntry() {
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.setTimestamp("1970-01-01 00:00:01.000");
         entry.add(CLIENT_FIELD_LABEL, "a");
         entry.add("site1", "factory");
         entry.add(TABLE_LABEL, CLIENT_SITE_TABLE_NAME);
@@ -32,7 +32,7 @@ public class ClientEntryTest {
         underTest.addSite("factory");
 
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.setTimestamp("1970-01-01 00:00:01.000");
         entry.add(CLIENT_FIELD_LABEL, "a");
         entry.add("site1", "factory");
         entry.add(TABLE_LABEL, CLIENT_SITE_TABLE_NAME);
@@ -48,7 +48,7 @@ public class ClientEntryTest {
         underTest.addUser("u");
 
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.setTimestamp("1970-01-01 00:00:01.000");
         entry.add(CLIENT_FIELD_LABEL, "a");
         entry.add("user1", "u");
         entry.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);
@@ -59,7 +59,7 @@ public class ClientEntryTest {
     @Test
     public void shouldBeAbleToGetClientWithUsersFromDbEntry() {
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp("1970-01-01 01:00:01.000");
+        entry.setTimestamp("1970-01-01 00:00:01.000");
         entry.add(CLIENT_FIELD_LABEL, "a");
         entry.add("user1", "u");
         entry.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);

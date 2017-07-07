@@ -5,12 +5,9 @@ import Server.DatabaseStuff.DatabaseEntrySet;
 import Server.DatabaseStuff.DeviceCollection;
 import Server.PhysicalLocationStuff.SensorLocation;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
-import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
+import static Server.DatabaseStuff.DatabaseEntry.TIMESTAMP_FORMAT;
 
 public class SiteEntry {
     public final static String AES_STRING_ENTRY_LABEL = "aesEntry";
@@ -52,7 +49,8 @@ public class SiteEntry {
 
     private DatabaseEntry generateDatabaseEntryFromSensorLocation(String ip, SensorLocation sensor) {
         DatabaseEntry entry = new DatabaseEntry();
-        entry.setTimestamp(timestampFormat.format(new Date(1000*sensorCount++)));
+        TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        entry.setTimestamp(TIMESTAMP_FORMAT.format(new Date(1000*sensorCount++)));
         entry.setDeviceCollectionIdentifier(siteDetails);
         entry.add("lat", sensor.getLatitude());
         entry.add("lon", sensor.getLongitude());

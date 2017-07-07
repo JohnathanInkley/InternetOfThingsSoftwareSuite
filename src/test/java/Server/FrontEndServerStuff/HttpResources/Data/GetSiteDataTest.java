@@ -170,8 +170,6 @@ public class GetSiteDataTest {
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatusLine().getStatusCode());
     }
 
-
-
     @Test
     public void shouldGet401IfNoAccessToSite() throws IOException {
         HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
@@ -180,6 +178,32 @@ public class GetSiteDataTest {
         HttpResponse response = httpClient.execute(getBadSiteData);
 
         assertEquals(Response.Status.UNAUTHORIZED.getStatusCode(), response.getStatusLine().getStatusCode());
+    }
+
+    @Test
+    public void shouldBeAbleToGetDataForSensorAtAGivenSite() throws IOException {
+        HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
+        HttpGet getSensorData = new HttpGet(serverUrl + "/api/sites/" + SITE_NAME + "/sensors/123/temp/from/2000-01-01/01:00:00/until/2000-01-01/01:00:08");
+        getSensorData.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        HttpResponse response = httpClient.execute(getSensorData);
+
+        byte[] messageBytes = new byte[(int) response.getEntity().getContentLength()];
+        response.getEntity().getContent().read(messageBytes);
+        Type listOfDataType = new TypeToken<List<DataValuesWithMetaData>>() {}.getType();
+        List<DataValuesWithMetaData> listOfData = gson.fromJson(new String(messageBytes), listOfDataType);
+
+        List<DataValuesWithMetaData> listShouldBe = new ArrayList<>();
+        for (int i = 0; i <= 4; i++) {
+            DataValuesWithMetaData data  = new DataValuesWithMetaData("2000-01-01 00:00:0" + (2*i) + ".000", "123", "temp", 30.0 + 2*i);
+            listShouldBe.add(data);
+        }
+
+        System.out.println(listOfData);
+        System.out.println(listShouldBe);
+
+        assertEquals(Response.Status.OK.getStatusCode(), response.getStatusLine().getStatusCode());
+        assertTrue(listShouldBe.containsAll(listOfData));
+
     }
 
     private static void setupDatabase() throws IOException {
@@ -204,10 +228,10 @@ public class GetSiteDataTest {
     }
 
     private static void makeDatabaseEntries() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 9; i++) {
             DatabaseEntry entry = new DatabaseEntry();
             entry.add("DeviceCollection", CLIENT + "." + SITE_NAME);
-            entry.setTimestamp("2000-01-01 01:00:0" + i + ".000");
+            entry.setTimestamp("2000-01-01 00:00:0" + i + ".000");
             if (i % 2 == 0) {
                 entry.add(DATA_LABELS.get(0), 30.0 + i);
                 entry.add("IP", "123");

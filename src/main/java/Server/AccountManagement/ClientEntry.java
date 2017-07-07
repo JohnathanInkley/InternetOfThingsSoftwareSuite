@@ -4,9 +4,10 @@ import Server.DatabaseStuff.DatabaseEntry;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TimeZone;
 
 import static Server.DatabaseStuff.ClientDatabaseEditor.*;
-import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
+import static Server.DatabaseStuff.DatabaseEntry.TIMESTAMP_FORMAT;
 
 public class ClientEntry {
 
@@ -25,8 +26,8 @@ public class ClientEntry {
             ClientEntry result = new ClientEntry();
             result.name = (String) entry.get("client");
             result.populateSitesFromDbEntry(entry);
-            result.clientId = (timestampFormat.parse(entry.getTimestamp()).getTime()
-                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
+            result.clientId = (TIMESTAMP_FORMAT.parse(entry.getTimestamp()).getTime()
+                    - TIMESTAMP_FORMAT.parse("1970-01-01 00:00:00.000").getTime())/1000;
             return result;
         } catch (Exception e) {
             throw new RuntimeException("Client entry could not be created due to timestamp issues in database");
@@ -71,7 +72,8 @@ public class ClientEntry {
 
     public DatabaseEntry getSiteDbEntry() {
         DatabaseEntry result = new DatabaseEntry();
-        result.setTimestamp(timestampFormat.format(new Date(clientId*1000)));
+        TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        result.setTimestamp(TIMESTAMP_FORMAT.format(new Date(clientId*1000)));
         result.add(CLIENT_FIELD_LABEL, name);
         result.add(TABLE_LABEL, CLIENT_SITE_TABLE_NAME);
         for (int i = 1; i <= sites.size(); i++) {
@@ -86,7 +88,8 @@ public class ClientEntry {
 
     public DatabaseEntry getUserDbEntry() {
         DatabaseEntry result = new DatabaseEntry();
-        result.setTimestamp(timestampFormat.format(new Date(clientId*1000)));
+        TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        result.setTimestamp(TIMESTAMP_FORMAT.format(new Date(clientId*1000)));
         result.add(CLIENT_FIELD_LABEL, name);
         result.add(TABLE_LABEL, CLIENT_USER_TABLE_NAME);
         for (int i = 1; i <= users.size(); i++) {
@@ -100,8 +103,8 @@ public class ClientEntry {
             ClientEntry result = new ClientEntry();
             result.name = (String) entry.get("client");
             result.populateUsersFromDbEntry(entry);
-            result.clientId = (timestampFormat.parse(entry.getTimestamp()).getTime()
-                    - timestampFormat.parse("1970-01-01 01:00:00.000").getTime())/1000;
+            result.clientId = (TIMESTAMP_FORMAT.parse(entry.getTimestamp()).getTime()
+                    - TIMESTAMP_FORMAT.parse("1970-01-01 00:00:00.000").getTime())/1000;
             return result;
         } catch (Exception e) {
             throw new RuntimeException("Client entry could not be created due to timestamp issues in database");

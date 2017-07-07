@@ -30,34 +30,65 @@ public class GetListOfSitesHandler {
     }
 
     @GET
-    @Path("/api/sites")
+    @Path("/api/{usernameToView}/sites")
     @Secured
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getSitesUserHasAccessTo(@Context SecurityContext securityContext) {
+    public Response getSitesUserHasAccessTo(@PathParam("usernameToView") String usernameToView, @Context SecurityContext securityContext) {
         String username = securityContext.getUserPrincipal().getName();
         UserEntry user = editor.getUserEntry(username);
-        List<String> sitePermissions = user.getSitePermissions();
-        String sitePermissionsAsString = gson.toJson(sitePermissions);
-        return Response.status(Response.Status.OK)
-                .type(MediaType.APPLICATION_JSON)
-                .entity(sitePermissionsAsString)
-                .build();
+        UserEntry userToView = editor.getUserEntry(usernameToView);
+
+        if (userToView == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        } else if (username.equals(usernameToView) || (user.isAdmin() && user.getClientName().equals(userToView.getClientName()))) {
+            List<String> sitePermissions = userToView.getSitePermissions();
+            String sitePermissionsAsString = gson.toJson(sitePermissions);
+            return Response.status(Response.Status.OK)
+                    .type(MediaType.APPLICATION_JSON)
+                    .entity(sitePermissionsAsString)
+                    .build();
+        } else {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        }
     }
 
     @PUT
-    @Path("/api/sites/add")
+    @Path("/api/sites/{siteName}/addUser/{username}")
     @Secured
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addSitePermissionsForUser(String userSiteString, @Context SecurityContext securityContext) {
+    public Response addSitePermissionsForUser(@PathParam("siteName") String siteName,
+                                              @PathParam("username") String username,
+                                              @Context SecurityContext securityContext) {
         String adminUsername = securityContext.getUserPrincipal().getName();
         UserEntry adminEntry = editor.getUserEntry(adminUsername);
 
-        UsernameSitePair usernameSitePair = gson.fromJson(userSiteString, UsernameSitePair.class);
         List<String> clientSites = editor.getSiteNamesForClient(adminEntry.getClientName());
 
-        if (adminEntry.isAdmin() && clientSites.contains(usernameSitePair.siteName)) {
-            UserEntry userEntry = editor.getUserEntry(usernameSitePair.username);
-            userEntry.giveSitePermission(usernameSitePair.siteName);
+        if (adminEntry.isAdmin() && clientSites.contains(siteName)) {
+            UserEntry userEntry = editor.getUserEntry(username);
+            userEntry.giveSitePermission(siteName);
+            editor.addUserEntry(userEntry);
+            return Response.ok().build();
+        } else {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        }
+    }
+
+    @PUT
+    @Path("/api/sites/{siteName}/removeUser/{username}")
+    @Secured
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response removeSitePermissionsForUser(@PathParam("siteName") String siteName,
+                                              @PathParam("username") String username,
+                                              @Context SecurityContext securityContext) {
+        String adminUsername = securityContext.getUserPrincipal().getName();
+        UserEntry adminEntry = editor.getUserEntry(adminUsername);
+
+        List<String> clientSites = editor.getSiteNamesForClient(adminEntry.getClientName());
+
+        if (adminEntry.isAdmin() && clientSites.contains(siteName)) {
+            UserEntry userEntry = editor.getUserEntry(username);
+            userEntry.removeSitePermission(siteName);
             editor.addUserEntry(userEntry);
             return Response.ok().build();
         } else {

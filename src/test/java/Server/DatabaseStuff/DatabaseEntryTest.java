@@ -91,7 +91,7 @@ public class DatabaseEntryTest {
     @Test
     public void timestampFormatsCanBeSetToGetTimeOutCorrectly() {
         DatabaseEntry underTest = new DatabaseEntry();
-        String timestamp = ("1970-01-01 01:00:05.000");
+        String timestamp = ("1970-01-01 00:00:05.000");
         underTest.setTimestamp(timestamp);
         underTest.setTimestampFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS"));
 

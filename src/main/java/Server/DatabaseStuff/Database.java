@@ -6,13 +6,10 @@ import org.influxdb.dto.Point;
 import org.influxdb.dto.Query;
 import org.influxdb.dto.QueryResult;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import static Server.DatabaseStuff.DatabaseEntry.timestampFormat;
+import static Server.DatabaseStuff.DatabaseEntry.TIMESTAMP_FORMAT;
 
 public class Database {
     private String name;
@@ -98,13 +95,16 @@ public class Database {
         return getResultsSetFromQuery(query);
     }
 
-    public DatabaseEntry getLatestEntryForSite(String deviceCollectionIdentifier) {
-        Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
-                "GROUP BY * ORDER BY DESC LIMIT 1" +
+    public DatabaseEntrySet getSensorEntriesBetween(String site, String sensorIP, String beforeDate, String afterDate) {
+        Query query = new Query("SELECT * FROM \"" + site + "\" " +
+                "WHERE \"IP\" = '" + sensorIP + "' " +
+                "AND time >= '" + beforeDate + "' " +
+                "AND time <= '" + afterDate + "' " +
                 "", name);
 
-        return getResultsSetFromQuery(query).get(0);
+        return getResultsSetFromQuery(query);
     }
+
 
     public DatabaseEntry getLatestEntryForParticularLabel(String deviceCollectionIdentifier, String fieldName, String fieldValue) {
         Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
@@ -161,7 +161,9 @@ public class Database {
         }
         String time = ((String) entry.get("time")).replace("Z", "").replace("T", " ");
         entry.setTimestamp(time + ".000");
-        entry.setTimestamp(timestampFormat.format(new Date(entry.getLongTimeInMilliseconds() + 3600000)));
+        // careful, removing this 3600000 may break AccountManagementTests - need to solve
+        TIMESTAMP_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        entry.setTimestamp(TIMESTAMP_FORMAT.format(new Date(entry.getLongTimeInMilliseconds())));
         entry.remove("time");
         return entry;
     }
