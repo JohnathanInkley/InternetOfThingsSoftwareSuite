@@ -19,6 +19,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -176,7 +177,7 @@ public class AuthenticationTest {
     private HttpResponse submitCredentialsToServer(String username, String password) throws IOException {
         String credentials = gson.toJson(new UsernamePasswordPair(username, password));
         HttpPost post = new HttpPost(apiAddress);
-        post.setHeader("Content-Type", "text/plain");
+        post.setHeader("Content-Type", MediaType.APPLICATION_JSON);
         post.setEntity(new StringEntity(credentials));
         return httpClient.execute(post);
     }

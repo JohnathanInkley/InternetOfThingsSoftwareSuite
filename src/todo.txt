@@ -1,2 +1,4 @@
+Download postman and work out what is going on with http connection closed. Those guys think connection is being closed because of the failure
+
 
 3) Wire together

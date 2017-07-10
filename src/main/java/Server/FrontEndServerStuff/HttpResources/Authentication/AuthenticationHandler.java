@@ -5,10 +5,7 @@ import Server.DatabaseStuff.ClientDatabaseEditor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -25,10 +22,18 @@ public class AuthenticationHandler {
         gson = new GsonBuilder().create();
     }
 
+    @GET
+    @Path("/foo")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response helloWorld() {
+        return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Hello").build();
+    }
+
     @POST
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUsernameAndPasswordFromLoginRequest(String usernameAndPassword) {
+        System.out.println("logging in...");
         UsernamePasswordPair credentials = generateCredentials(usernameAndPassword);
         if (authenticationManager.validateUser(credentials)) {
             UserJson userResponse = authenticationManager.generateAuthenticationResponse(credentials.username);
@@ -38,7 +43,7 @@ public class AuthenticationHandler {
                     .entity(userAsJson)
                     .build();
         } else {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+            return Response.status(Response.Status.UNAUTHORIZED).entity("Bad credentials").build();
         }
     }
 
