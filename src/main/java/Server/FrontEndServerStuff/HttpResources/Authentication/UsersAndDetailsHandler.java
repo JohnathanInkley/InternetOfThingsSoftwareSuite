@@ -30,7 +30,7 @@ public class UsersAndDetailsHandler {
     @PUT
     @Path("/api/users")
     @Secured
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUpdatedUserDetailsAndAddToDatabase(String userAsJson, @Context SecurityContext securityContext) {
         UserEntry userEntry = getOriginalUserFromDatabase(securityContext);
