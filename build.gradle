@@ -15,6 +15,10 @@ task execute(type:JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+execute {
+    standardInput = System.in
+}
+
 compileJava {
     options.fork = true  // Fork your compilation into a child process
     options.forkOptions.setMemoryMaximumSize("4g") // Set maximum memory to 4g
