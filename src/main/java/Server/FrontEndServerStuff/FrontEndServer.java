@@ -67,7 +67,7 @@ public class FrontEndServer {
         UsersAndDetailsHandler.setClientDatabaseEditor(editor);
         GetListOfSitesHandler.setClientDatabaseEditor(editor);
 
-        FrontEndServer server = new FrontEndServer("https://localhost:8081");
+        FrontEndServer server = new FrontEndServer("https://0.0.0.0:8081");
         server.runServer();
         while (true) {
 
