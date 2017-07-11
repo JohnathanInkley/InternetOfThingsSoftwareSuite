@@ -1,4 +1,5 @@
 Download postman and work out what is going on with http connection closed. Those guys think connection is being closed because of the failure
 
+ TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 is cipher suite
 
 3) Wire together

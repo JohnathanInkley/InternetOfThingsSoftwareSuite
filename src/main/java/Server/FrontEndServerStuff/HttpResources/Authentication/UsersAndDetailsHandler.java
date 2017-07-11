@@ -13,7 +13,7 @@ import javax.ws.rs.core.SecurityContext;
 import java.util.List;
 
 @Path("")
-public class ChangeUserDetailsHandler {
+public class UsersAndDetailsHandler {
 
     private static ClientDatabaseEditor editor;
     private static AuthenticationManager authenticationManager;

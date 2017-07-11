@@ -206,7 +206,7 @@ public class AuthenticationTest {
 
     private static void setClientDatabaseEditorsInHandlers(ClientDatabaseEditor editor) {
         AuthenticationHandler.setClientDatabaseEditor(editor);
-        ChangeUserDetailsHandler.setClientDatabaseEditor(editor);
+        UsersAndDetailsHandler.setClientDatabaseEditor(editor);
     }
 
 }

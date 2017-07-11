@@ -4,7 +4,7 @@ import Server.DatabaseStuff.ClientDatabaseEditor;
 import Server.DatabaseStuff.Database;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler;
-import Server.FrontEndServerStuff.HttpResources.Authentication.ChangeUserDetailsHandler;
+import Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler;
 import Server.FrontEndServerStuff.HttpResources.Data.GetSiteData;
 import Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler;
 import Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest;
@@ -31,7 +31,7 @@ public class FrontEndServer {
         this.url = url;
         httpResources.add(ConnectionTest.class);
         httpResources.add(AuthenticationHandler.class);
-        httpResources.add(ChangeUserDetailsHandler.class);
+        httpResources.add(UsersAndDetailsHandler.class);
         httpResources.add(GetListOfSitesHandler.class);
         httpResources.add(GetSiteData.class);
     }
@@ -45,11 +45,12 @@ public class FrontEndServer {
         SSLContextConfigurator sslCon = new SSLContextConfigurator();
         sslCon.setKeyStoreFile("src/main/java/Server/FrontEndServerStuff/keystore_server");
         sslCon.setKeyStorePass("keypassword1");
-        sslCon.setTrustStoreFile("src/main/java/Server/FrontEndServerStuff/keystore_server");
+        sslCon.setTrustStoreFile("src/main/java/Server/FrontEndServerStuff/myTrustStore");
         sslCon.setTrustStorePass("keypassword1");
         HttpHandler handler = ContainerFactory.createContainer(HttpHandler.class, resourceConfig);
+        SSLEngineConfigurator engineConfigurator = new SSLEngineConfigurator(sslCon, false, false, false);
         server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resourceConfig, true,
-                new SSLEngineConfigurator(sslCon, false, false, false));
+                engineConfigurator);
     }
 
     public void stopServer() {
@@ -63,10 +64,10 @@ public class FrontEndServer {
         ClientDatabaseEditor editor = new ClientDatabaseEditor(clientDatabase);
         AuthenticationHandler.setClientDatabaseEditor(editor);
         GetSiteData.setClientDatabaseEditor(editor, tsDatabase);
-        ChangeUserDetailsHandler.setClientDatabaseEditor(editor);
+        UsersAndDetailsHandler.setClientDatabaseEditor(editor);
         GetListOfSitesHandler.setClientDatabaseEditor(editor);
 
-        FrontEndServer server = new FrontEndServer("https://0.0.0.0:8081");
+        FrontEndServer server = new FrontEndServer("https://localhost:8081");
         server.runServer();
         while (true) {
 
