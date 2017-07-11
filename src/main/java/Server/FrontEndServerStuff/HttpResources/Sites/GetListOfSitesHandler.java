@@ -35,6 +35,7 @@ public class GetListOfSitesHandler {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getSitesUserHasAccessTo(@PathParam("usernameToView") String usernameToView, @Context SecurityContext securityContext) {
         String username = securityContext.getUserPrincipal().getName();
+        System.out.println(username + " is attempting to get sites");
         UserEntry user = editor.getUserEntry(username);
         UserEntry userToView = editor.getUserEntry(usernameToView);
 
