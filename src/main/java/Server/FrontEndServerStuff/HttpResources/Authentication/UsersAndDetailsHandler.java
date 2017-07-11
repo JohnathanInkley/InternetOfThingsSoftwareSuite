@@ -34,6 +34,7 @@ public class UsersAndDetailsHandler {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUpdatedUserDetailsAndAddToDatabase(String userAsJson, @Context SecurityContext securityContext) {
         UserEntry userEntry = getOriginalUserFromDatabase(securityContext);
+        System.out.println("Updating user " + userEntry.getUsername());
         parseUserChangesAndUpdateDatabase(userAsJson, userEntry);
         String newUserAsJson = generateNewUserTokenAndResponse(userEntry);
         return Response.status(Response.Status.OK)
