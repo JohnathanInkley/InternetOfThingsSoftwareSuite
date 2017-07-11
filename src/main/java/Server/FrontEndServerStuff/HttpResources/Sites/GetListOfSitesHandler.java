@@ -39,7 +39,7 @@ public class GetListOfSitesHandler {
         UserEntry userToView = editor.getUserEntry(usernameToView);
 
         if (userToView == null) {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+            return Response.status(Response.Status.NOT_FOUND).build();
         } else if (username.equals(usernameToView) || (user.isAdmin() && user.getClientName().equals(userToView.getClientName()))) {
             List<String> sitePermissions = userToView.getSitePermissions();
             String sitePermissionsAsString = gson.toJson(sitePermissions);

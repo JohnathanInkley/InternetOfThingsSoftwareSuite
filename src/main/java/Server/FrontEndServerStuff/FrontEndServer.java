@@ -58,7 +58,7 @@ public class FrontEndServer {
     }
 
     public static void main(String[] args) {
-        String databaseURL = "http://localhost:8086/";
+        String databaseURL = "http://0.0.0.0:8086/";
         Database tsDatabase = new Database("ts", databaseURL);
         Database clientDatabase = new Database("ClientManagementDatabase", databaseURL);
         ClientDatabaseEditor editor = new ClientDatabaseEditor(clientDatabase);
