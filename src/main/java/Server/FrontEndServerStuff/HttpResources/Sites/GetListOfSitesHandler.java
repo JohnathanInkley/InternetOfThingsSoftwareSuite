@@ -35,7 +35,6 @@ public class GetListOfSitesHandler {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getSitesUserHasAccessTo(@PathParam("usernameToView") String usernameToView, @Context SecurityContext securityContext) {
         String username = securityContext.getUserPrincipal().getName();
-        System.out.println(username + " is attempting to get sites");
         UserEntry user = editor.getUserEntry(username);
         UserEntry userToView = editor.getUserEntry(usernameToView);
 
@@ -56,7 +55,6 @@ public class GetListOfSitesHandler {
     @PUT
     @Path("/api/sites/{siteName}/addUser/{username}")
     @Secured
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response addSitePermissionsForUser(@PathParam("siteName") String siteName,
                                               @PathParam("username") String username,
                                               @Context SecurityContext securityContext) {
@@ -78,7 +76,6 @@ public class GetListOfSitesHandler {
     @PUT
     @Path("/api/sites/{siteName}/removeUser/{username}")
     @Secured
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response removeSitePermissionsForUser(@PathParam("siteName") String siteName,
                                               @PathParam("username") String username,
                                               @Context SecurityContext securityContext) {

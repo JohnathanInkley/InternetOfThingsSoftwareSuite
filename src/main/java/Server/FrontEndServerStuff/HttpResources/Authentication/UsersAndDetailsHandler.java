@@ -62,7 +62,7 @@ public class UsersAndDetailsHandler {
     @PUT
     @Path("/api/users/updatePassword")
     @Secured
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response updatePassword(String oldPasswordAndNewPassword, @Context SecurityContext securityContext) {
         String username = securityContext.getUserPrincipal().getName();
         UserEntry userEntry = editor.getUserEntry(username);
