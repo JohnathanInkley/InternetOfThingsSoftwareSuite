@@ -187,7 +187,9 @@ public class ClientDatabaseEditor {
         if (user.isAdmin()) {
             List<String> clientSites = getSiteNamesForClient(user.getClientName());
             for (String site : clientSites) {
-                user.giveSitePermission(site);
+                if (!user.hasPermissionForSite(site)) {
+                    user.giveSitePermission(site);
+                }
             }
         }
         return user;

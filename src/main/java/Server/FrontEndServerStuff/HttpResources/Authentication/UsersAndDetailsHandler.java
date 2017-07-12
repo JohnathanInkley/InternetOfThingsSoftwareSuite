@@ -72,7 +72,7 @@ public class UsersAndDetailsHandler {
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED)
-                    .type(MediaType.APPLICATION_JSON_TYPE)
+                    .type(MediaType.APPLICATION_JSON)
                     .entity("{\"Incorrect Password\"}").build();
         }
     }
