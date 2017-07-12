@@ -28,6 +28,8 @@ public class AuthenticationHandler {
     @Path("/hello/{foo}")
     @Produces(MediaType.TEXT_PLAIN)
     public Response helloWorld(@PathParam("foo") String foo) {
+        System.out.println(foo);
+        System.out.println(editor.getUserNamesForClient("JI"));
         UserEntry userEntry = editor.getUserEntry(foo);
         if (userEntry != null) {
             return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Hello").build();

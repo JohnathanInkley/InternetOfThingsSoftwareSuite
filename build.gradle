@@ -17,6 +17,7 @@ task execute(type:JavaExec) {
 
 execute {
     standardInput = System.in
+    standardOutput = System.out
 }
 
 compileJava {
