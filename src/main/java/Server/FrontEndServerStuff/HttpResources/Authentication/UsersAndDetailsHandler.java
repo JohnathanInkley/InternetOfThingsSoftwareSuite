@@ -71,7 +71,9 @@ public class UsersAndDetailsHandler {
             editor.addUserEntry(userEntry);
             return Response.status(Response.Status.OK).build();
         } else {
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+            return Response.status(Response.Status.UNAUTHORIZED)
+                    .type(MediaType.APPLICATION_JSON_TYPE)
+                    .entity("{\"Incorrect Password\"}").build();
         }
     }
 
