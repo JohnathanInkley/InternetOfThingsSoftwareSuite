@@ -6,7 +6,7 @@ import java.util.Random;
 public class SecureRandomStringGenerator {
 
     public static String generateSecureRandomString(int length) {
-        char[] acceptableChars = "!#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~".toCharArray();
+        char[] acceptableChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
         SecureRandom srand = new SecureRandom();
         Random rand = new Random();
         char[] buff = new char[length];
