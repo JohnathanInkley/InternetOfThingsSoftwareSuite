@@ -24,10 +24,14 @@ public class AuthenticationHandler {
 
     @GET
     @Secured
-    @Path("/foo")
+    @Path("/hello/{foo}")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response helloWorld() {
-        return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Hello").build();
+    public Response helloWorld(@PathParam("foo") String foo) {
+        if (foo.equals("foo")) {
+            return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Hello").build();
+        } else {
+            return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Goodbye").build();
+        }
     }
 
     @POST
