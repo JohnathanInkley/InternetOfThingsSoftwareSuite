@@ -23,6 +23,7 @@ public class AuthenticationHandler {
     }
 
     @GET
+    @Secured
     @Path("/foo")
     @Produces(MediaType.TEXT_PLAIN)
     public Response helloWorld() {

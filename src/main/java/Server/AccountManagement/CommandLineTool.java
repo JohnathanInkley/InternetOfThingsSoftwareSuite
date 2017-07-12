@@ -12,7 +12,7 @@ public class CommandLineTool {
     private static String SELECTION_SCREEN_PREFIX = "0";
 
     private static final String CLIENT_DATABASE_NAME = "ClientManagementDatabase";
-    private static final String DATABASE_URL = "http://localhost:8086/";
+    private static final String DATABASE_URL = "http://146.169.46.116:8086/";
     private final ClientDatabaseEditor databaseEditor;
     private final Database database;
 
