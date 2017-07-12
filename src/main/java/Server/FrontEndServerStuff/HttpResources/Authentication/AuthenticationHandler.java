@@ -1,5 +1,6 @@
 package Server.FrontEndServerStuff.HttpResources.Authentication;
 
+import Server.AccountManagement.UserEntry;
 import Server.AccountManagement.UsernamePasswordPair;
 import Server.DatabaseStuff.ClientDatabaseEditor;
 import com.google.gson.Gson;
@@ -27,7 +28,8 @@ public class AuthenticationHandler {
     @Path("/hello/{foo}")
     @Produces(MediaType.TEXT_PLAIN)
     public Response helloWorld(@PathParam("foo") String foo) {
-        if (foo.equals("foo")) {
+        UserEntry userEntry = editor.getUserEntry(foo);
+        if (userEntry != null) {
             return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Hello").build();
         } else {
             return Response.status(Response.Status.OK).type(MediaType.TEXT_PLAIN).entity("Goodbye").build();

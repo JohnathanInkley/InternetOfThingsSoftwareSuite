@@ -104,8 +104,8 @@
       <file leaf-file-name="AuthenticationHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="195">
+              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1661,7 +1661,7 @@
       <workItem from="1499344399762" duration="26753000" />
       <workItem from="1499677113459" duration="15837000" />
       <workItem from="1499723344546" duration="529000" />
-      <workItem from="1499766946250" duration="13581000" />
+      <workItem from="1499766946250" duration="13993000" />
     </task>
     <task id="LOCAL-00001" summary="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently).">
       <created>1496764778803</created>
@@ -1880,7 +1880,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499856425193</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Securing get/foo to test whether token works">
+      <created>1499857042136</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1499857042136</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1916,7 +1923,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441318000" />
+    <option name="totallyTimeSpent" value="441730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2394,8 +2401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state relative-caret-position="195">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding />
         </state>
       </provider>
