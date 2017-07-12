@@ -34,7 +34,6 @@ public class UsersAndDetailsHandler {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUpdatedUserDetailsAndAddToDatabase(String userAsJson, @Context SecurityContext securityContext) {
         UserEntry userEntry = getOriginalUserFromDatabase(securityContext);
-        System.out.println("Updating user " + userEntry.getUsername());
         parseUserChangesAndUpdateDatabase(userAsJson, userEntry);
         String newUserAsJson = generateNewUserTokenAndResponse(userEntry);
         return Response.status(Response.Status.OK)
@@ -70,7 +69,7 @@ public class UsersAndDetailsHandler {
         if (userEntry.validateCredentials(username, newCredentials.oldPassword)) {
             userEntry.setPasswordAndHash(newCredentials.newPassword);
             editor.addUserEntry(userEntry);
-            return Response.ok().build();
+            return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
