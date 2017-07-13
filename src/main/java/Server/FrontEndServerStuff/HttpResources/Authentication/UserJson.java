@@ -11,6 +11,7 @@ public class UserJson {
     public String client;
     public String email;
     public String token;
+    public String isAdmin;
 
     public void addNonVoidElementsToUserEntry(UserEntry entry) {
         if (id != 0)

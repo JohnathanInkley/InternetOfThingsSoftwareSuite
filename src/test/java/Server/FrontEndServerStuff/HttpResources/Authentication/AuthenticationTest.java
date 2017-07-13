@@ -90,6 +90,7 @@ public class AuthenticationTest {
     public void serverShouldRejectRequestWithInvalidJWT() throws IOException {
         HttpPut put = new HttpPut(serverUrl + "/api/users");
         put.setHeader("Authorization", "Bearer " + BAD_TOKEN);
+        put.setHeader("Content-Type", MediaType.APPLICATION_JSON);
         put.setEntity(new StringEntity(""));
         HttpResponse response = httpClient.execute(put);
 
@@ -105,6 +106,7 @@ public class AuthenticationTest {
 
         HttpPut put = new HttpPut(serverUrl + "/api/users");
         put.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        put.setHeader("Content-Type", MediaType.APPLICATION_JSON);
         put.setEntity(new StringEntity(gson.toJson(modifiedUser,UserJson.class)));
         HttpResponse response = httpClient.execute(put);
 
@@ -170,6 +172,7 @@ public class AuthenticationTest {
     private HttpResponse attemptToChangePassword(String body) throws IOException {
         HttpPut put = new HttpPut(serverUrl + "/api/users/updatePassword");
         put.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        put.setHeader("Content-Type", MediaType.APPLICATION_JSON);
         put.setEntity(new StringEntity(body));
         return httpClient.execute(put);
     }

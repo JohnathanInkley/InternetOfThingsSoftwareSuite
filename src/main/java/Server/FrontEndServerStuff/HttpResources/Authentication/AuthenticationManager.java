@@ -50,6 +50,7 @@ public class AuthenticationManager {
         response.firstName = user.getFirstName();
         response.lastName = user.getLastName();
         response.id = (int) user.getId();
+        response.isAdmin = user.isAdmin() ? "true" : "false";
         response.username = username;
         response.token = getJWTFromUser(user);
         return response;
