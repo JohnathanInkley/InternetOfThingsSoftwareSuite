@@ -35,6 +35,10 @@ public class BaseStationConnectionServer {
 
         // run server
         server.runServer();
+
+        while (true) {
+
+        }
     }
 
     public BaseStationConnectionServer(String url) {

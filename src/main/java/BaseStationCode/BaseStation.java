@@ -35,6 +35,10 @@ public class BaseStation {
         baseStation.readConfigFile("src/main/java/BaseStationCode/Resources/baseStation.config");
         baseStation.initialiseComponents();
         baseStation.start();
+
+        while (true) {
+
+        }
     }
 
     public void readConfigFile(String configFileName) {
