@@ -30,6 +30,13 @@ public class BaseStation {
     private SensorReadingParser parser;
     private DBEntryToStringConverter entryToStringConverter;
 
+    public static void main(String[] args) {
+        BaseStation baseStation = new BaseStation();
+        baseStation.readConfigFile("src/main/java/BaseStationCode/Resources/baseStation.config");
+        baseStation.initialiseComponents();
+        baseStation.start();
+    }
+
     public void readConfigFile(String configFileName) {
         try (Stream<String> configItems = Files.lines(Paths.get(configFileName))) {
             generateConfigMap(configItems);

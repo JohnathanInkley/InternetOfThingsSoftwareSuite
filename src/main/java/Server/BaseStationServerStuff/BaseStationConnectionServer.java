@@ -1,5 +1,6 @@
 package Server.BaseStationServerStuff;
 
+import Server.DatabaseStuff.ClientDatabaseEditor;
 import Server.DatabaseStuff.Database;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -14,6 +15,27 @@ public class BaseStationConnectionServer {
     private Database database;
     private HttpServer server;
     private IncomingReadingDecryptor decryptor;
+
+    public static void main(String[] args) {
+        // Create database
+        Database tsDatabase = new Database("ts", "http://0.0.0.0:8086/");
+        Database clientDatabase = new Database("ClientManagementDatabase", "http://0.0.0.0:8086/");
+
+        // Set up client connection server
+        BaseStationConnectionServer server = new BaseStationConnectionServer("http://0.0.0.0:8080/SensorServer");
+        SensorReadingParser parser = new SensorReadingParser();
+        server.setReadingParser(parser);
+
+        IncomingReadingDecryptor decryptor = new IncomingReadingDecryptor();
+        ClientDatabaseEditor editor = new ClientDatabaseEditor(clientDatabase);
+        decryptor.setClientDatabaseEditor(editor);
+        server.setReadingDecryptor(decryptor);
+
+        server.setDatabase(tsDatabase);
+
+        // run server
+        server.runServer();
+    }
 
     public BaseStationConnectionServer(String url) {
         this.url = url;

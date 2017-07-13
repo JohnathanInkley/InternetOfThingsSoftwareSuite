@@ -10,6 +10,7 @@ repositories {
     mavenCentral()
 }
 
+
 task execute(type:JavaExec) {
     main = mainClass
     classpath = sourceSets.main.runtimeClasspath
@@ -19,6 +20,7 @@ execute {
     standardInput = System.in
     standardOutput = System.out
 }
+
 
 compileJava {
     options.fork = true  // Fork your compilation into a child process

@@ -8,6 +8,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 @Path("/server")
@@ -36,15 +37,19 @@ public class PostResource {
 
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
-    public void parseMessageAndAddToDatabase(String encodedMessage) {
+    public Response parseMessageAndAddToDatabase(String encodedMessage) {
         String entryAsString = readingDecryptor.decrypt(encodedMessage);
         if (!entryAsString.equals(IncomingReadingDecryptor.UNAUTHORIZED_MESSAGE_ATTEMPT)) {
             try {
                 DatabaseEntry entry = entryConverter.convertToEntry(entryAsString);
                 addToDatabase(entry);
+                return Response.status(Response.Status.OK).build();
             } catch (IOException e) {
                 e.printStackTrace();
+                return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
             }
+        } else {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
         }
     }
 
