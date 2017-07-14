@@ -185,7 +185,9 @@ public class UserEntry {
         int siteCount = 1;
         String site = (String) entry.get("site" + siteCount++);
         while (site != null) {
-            user.sitesHavePermissionFor.add(site);
+            if (!user.sitesHavePermissionFor.contains(site)) {
+                user.sitesHavePermissionFor.add(site);
+            }
             site = (String) entry.get("site" + siteCount++);
         }
     }
