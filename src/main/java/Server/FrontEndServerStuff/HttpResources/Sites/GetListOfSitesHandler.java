@@ -67,7 +67,7 @@ public class GetListOfSitesHandler {
             UserEntry userEntry = editor.getUserEntry(username);
             userEntry.giveSitePermission(siteName);
             editor.addUserEntry(userEntry);
-            return Response.ok().build();
+            return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
@@ -88,7 +88,7 @@ public class GetListOfSitesHandler {
             UserEntry userEntry = editor.getUserEntry(username);
             userEntry.removeSitePermission(siteName);
             editor.addUserEntry(userEntry);
-            return Response.ok().build();
+            return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
