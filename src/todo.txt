@@ -1,6 +1,8 @@
-TO DO:
-1) Input real data into database (set up sensor to put data to server)
-2) Have drop down to get sensors and labels and times
-3) Then, get the data based on user input
+Figure out why can't remove sites from user!
+Seems to be dupilicating when copy out of databse or something strange. Figure out on monday
+
+Also figure out why graph appears off screen - try not using d3?
+
+Also, change inputs to be material too?
 
 password is dog
