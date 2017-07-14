@@ -149,12 +149,16 @@ public class UserEntry {
     }
 
     public void giveSitePermission(String siteName) {
-        sitesHavePermissionFor.add(siteName);
+        if (!sitesHavePermissionFor.contains(siteName)) {
+            sitesHavePermissionFor.add(siteName);
+        }
     }
 
 
     public void removeSitePermission(String siteName) {
-        sitesHavePermissionFor.remove(siteName);
+        while (sitesHavePermissionFor.contains(siteName)) {
+            sitesHavePermissionFor.remove(siteName);
+        }
     }
 
     public boolean hasPermissionForSite(String siteName) {

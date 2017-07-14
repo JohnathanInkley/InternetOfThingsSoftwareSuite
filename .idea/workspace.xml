@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="added admin yes or no to user json returned by the server">
+    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java" afterPath="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -67,12 +68,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetListOfSitesHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetListOfSitesHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="89" column="43" lean-forward="true" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+            <state relative-caret-position="443">
+              <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserEntry.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="160" column="9" lean-forward="false" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1441#1442#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
+                <element signature="e#1679#1680#0" expanded="true" />
+                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1803#1804#0" expanded="true" />
+                <element signature="e#1835#1836#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2764#2765#0" expanded="true" />
+                <element signature="e#2801#2802#0" expanded="true" />
+                <element signature="e#2834#2835#0" expanded="true" />
+                <element signature="e#2882#2883#0" expanded="true" />
+                <element signature="e#2922#2923#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
+                <element signature="e#2988#2989#0" expanded="true" />
+                <element signature="e#3022#3023#0" expanded="true" />
+                <element signature="e#3050#3051#0" expanded="true" />
+                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3102#3103#0" expanded="true" />
+                <element signature="e#4644#4645#0" expanded="true" />
+                <element signature="e#4686#4687#0" expanded="true" />
+                <element signature="e#4734#4735#0" expanded="true" />
+                <element signature="e#4774#4775#0" expanded="true" />
+                <element signature="e#4816#4817#0" expanded="true" />
+                <element signature="e#4850#4851#0" expanded="true" />
+                <element signature="e#5276#5277#0" expanded="true" />
+                <element signature="e#5340#5341#0" expanded="true" />
+                <element signature="e#7029#7030#0" expanded="true" />
+                <element signature="e#7057#7058#0" expanded="true" />
+                <element signature="e#8252#8253#0" expanded="true" />
+                <element signature="e#8284#8285#0" expanded="true" />
+                <element signature="e#8319#8320#0" expanded="true" />
+                <element signature="e#8350#8351#0" expanded="true" />
+                <element signature="e#8398#8399#0" expanded="true" />
+                <element signature="e#8443#8444#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -514,7 +563,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/CorsFilter.java" />
@@ -540,6 +588,7 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java" />
       </list>
     </option>
   </component>
@@ -1424,7 +1473,7 @@
       <workItem from="1499766946250" duration="26388000" />
       <workItem from="1499940245160" duration="5280000" />
       <workItem from="1499984207771" duration="599000" />
-      <workItem from="1500030899669" duration="3041000" />
+      <workItem from="1500030899669" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently).">
       <created>1496764778803</created>
@@ -1720,7 +1769,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499946817954</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Changed sites to return Status.OK in a put request">
+      <created>1500040406324</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1500040406324</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1756,7 +1812,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463045000" />
+    <option name="totallyTimeSpent" value="463445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1830,7 +1886,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added a ClientDatabaseEditor that uses the databases existing interface as a way of adding clients and sites to those clients. Will now add user functionality to it" />
     <MESSAGE value="Refactored out strings in ClientDatabaseEditor to be static variables for class&#10;" />
     <MESSAGE value="Created a ClientEntry class to make the ClientDatabseEditor better, ClientEntry  is in charge of turning database entries into easy to use client objects and vice versa. Doing the same thing with SiteEntry currently which will represent a table in the database storing list of sensors and their IPs as well as owner and name etc" />
     <MESSAGE value="Started to wire up clientDatabaseEditor to the command line tool. Current functionality allows new clients to be added to the system, sites added for these clients, and a list of clients and sites for each to be displayed. About to start UserEntry." />
@@ -1855,7 +1910,8 @@
     <MESSAGE value="Fixed base station server to look for new AES keys in the database if it doesn't already have one for a site. Added a psvm for this server and also for the base station" />
     <MESSAGE value="Added while true statements so servers run until killed" />
     <MESSAGE value="added admin yes or no to user json returned by the server" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin yes or no to user json returned by the server" />
+    <MESSAGE value="Changed sites to return Status.OK in a put request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed sites to return Status.OK in a put request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2150,13 +2206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="56" column="19" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -2246,9 +2295,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="89" column="43" lean-forward="true" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+        <state relative-caret-position="443">
+          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="160" column="9" lean-forward="false" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
+            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2834#2835#0" expanded="true" />
+            <element signature="e#2882#2883#0" expanded="true" />
+            <element signature="e#2922#2923#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
+            <element signature="e#3022#3023#0" expanded="true" />
+            <element signature="e#3050#3051#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#4644#4645#0" expanded="true" />
+            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4734#4735#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#5276#5277#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
+            <element signature="e#7029#7030#0" expanded="true" />
+            <element signature="e#7057#7058#0" expanded="true" />
+            <element signature="e#8252#8253#0" expanded="true" />
+            <element signature="e#8284#8285#0" expanded="true" />
+            <element signature="e#8319#8320#0" expanded="true" />
+            <element signature="e#8350#8351#0" expanded="true" />
+            <element signature="e#8398#8399#0" expanded="true" />
+            <element signature="e#8443#8444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
