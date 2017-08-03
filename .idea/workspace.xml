@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="Printed client sites for user when site removed to debug why not working">
+    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -67,11 +67,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetListOfSitesHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetListOfSitesHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+              <caret line="91" column="27" lean-forward="true" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientDatabaseEditor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="226" column="45" lean-forward="true" selection-start-line="226" selection-start-column="45" selection-end-line="226" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -575,7 +585,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/SecureRandomStringGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/UsersAndDetailsHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
         <option value="$PROJECT_DIR$/JILive.test" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
@@ -590,6 +599,7 @@
         <option value="$PROJECT_DIR$/src/main/java/BaseStationCode/Resources/baseStation.config" />
         <option value="$PROJECT_DIR$/src/todo.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
       </list>
     </option>
   </component>
@@ -1309,7 +1319,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="2708000" />
+      <workItem from="1500670013280" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="Added AES encryption that is read from a file with a list of siteIDs and AES keys (IncomingReadingDecryptor class). Added BaseStation class that reads a config file and producers an object that starts sending readings to a specified server. Also Fixed the SensorReadingSender so that when connection drops, uses exponential back off before trying again and returns after either a reading is sent (with true) or after a specified number of attempts (around 30 minutes currently).">
       <created>1496764778803</created>
@@ -1640,7 +1650,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501768837219</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Printed client sites for user when site removed to debug why not working">
+      <created>1501771691040</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1501771691040</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1676,7 +1693,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="475271000" />
+    <option name="totallyTimeSpent" value="475696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2064,13 +2081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="224" column="61" lean-forward="false" selection-start-line="224" selection-start-column="61" selection-end-line="224" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -2168,7 +2178,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <caret line="91" column="27" lean-forward="true" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="226" column="45" lean-forward="true" selection-start-line="226" selection-start-column="45" selection-end-line="226" selection-end-column="45" />
           <folding />
         </state>
       </provider>
