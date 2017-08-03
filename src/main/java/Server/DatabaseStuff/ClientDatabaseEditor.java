@@ -223,6 +223,8 @@ public class ClientDatabaseEditor {
         clientOwningUser.removeUser(UserEntry.getUserFromDbEntry(existingUserEntry).getUsername());
         clientOwningUser.addUser(user.getUsername());
         database.addEntry(clientOwningUser.getUserDbEntry());
+        database.removeAllWithCertainValue(CLIENT_USER_TABLE_NAME, USERNAME_LABEL, (String) existingUserEntry.get("username"));
+        System.out.println("entry there before: " + existingUserEntry);
         System.out.println("entry going in: " + modifiedUserEntry);
         database.addEntry(modifiedUserEntry);
     }
