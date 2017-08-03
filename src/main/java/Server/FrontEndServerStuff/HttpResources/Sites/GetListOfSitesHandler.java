@@ -86,7 +86,9 @@ public class GetListOfSitesHandler {
 
         if (adminEntry.isAdmin() && clientSites.contains(siteName)) {
             UserEntry userEntry = editor.getUserEntry(username);
+            System.out.println(userEntry.getSitePermissions());
             userEntry.removeSitePermission(siteName);
+            System.out.println(userEntry.getSitePermissions());
             editor.addUserEntry(userEntry);
             return Response.status(Response.Status.OK).build();
         } else {

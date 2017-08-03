@@ -6,3 +6,18 @@ Also figure out why graph appears off screen - try not using d3?
 Also, change inputs to be material too?
 
 password is dog
+
+---- To do for when get back ----
+Approx 4 weeks. 1 week for report, 1 week presentation
+3 weeks for machine learning and front end stuff
+
+- Data visualisation -
+Heat map predictions something
+
+
+- Machine learning stuff -
+
+- Standard stats and graphs to show it - 1.5 week
+    - mean
+    - etc
+
