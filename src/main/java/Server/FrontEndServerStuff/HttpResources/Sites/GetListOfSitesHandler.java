@@ -86,10 +86,12 @@ public class GetListOfSitesHandler {
 
         if (adminEntry.isAdmin() && clientSites.contains(siteName)) {
             UserEntry userEntry = editor.getUserEntry(username);
-            System.out.println(userEntry.getSitePermissions());
+            System.out.println("before: " + userEntry.getSitePermissions());
             userEntry.removeSitePermission(siteName);
-            System.out.println(userEntry.getSitePermissions());
+            System.out.println("supposedly after: " + userEntry.getSitePermissions());
             editor.addUserEntry(userEntry);
+            userEntry = editor.getUserEntry(username);
+            System.out.println("real after: " + userEntry.getSitePermissions());
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
