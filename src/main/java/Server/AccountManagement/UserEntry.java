@@ -158,6 +158,7 @@ public class UserEntry {
     public void removeSitePermission(String siteName) {
         while (sitesHavePermissionFor.contains(siteName)) {
             sitesHavePermissionFor.remove(siteName);
+            sitesHavePermissionFor.add(null);
         }
     }
 

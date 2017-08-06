@@ -1,5 +1,10 @@
-Figure out why can't remove sites from user!
-Seems to be dupilicating when copy out of databse or something strange. Figure out on monday
+Figure out why can't remove sites from user! Think done
+- logic: if you were designing a ts database, you would probably like to be able to add different readings for the same time
+        sequentially. For example, you may have multiple sensors and they add their readings after each other.
+        Thus if a user has site1: x and site2: y, when you get the entry out and remove say y, you're left with site1: x
+         This means when you add user to database again, you're not overriding site2: y, it's as if you're adding a different reading
+         Thus I now add a null whenever I delete an entry. This ensures that site2 is set to null and so is indeed overwritten
+TEST THIS CHANGE WORKS!
 
 Also figure out why graph appears off screen - try not using d3?
 
