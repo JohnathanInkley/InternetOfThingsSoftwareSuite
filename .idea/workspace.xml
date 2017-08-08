@@ -4,8 +4,6 @@
     <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -59,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="270">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseEntryStatsToolboxTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseEntryStatsToolboxTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
@@ -573,9 +571,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/ArrayListPartioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/ArrayListPartitioner.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/ArrayListPartitionerTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -1496,14 +1494,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="20384000" />
-    </task>
-    <task id="LOCAL-00007" summary="Refactored out strings in ClientDatabaseEditor to be static variables for class&#10;">
-      <created>1498320294903</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1498320294903</updated>
+      <workItem from="1500670013280" duration="20439000" />
     </task>
     <task id="LOCAL-00008" summary="Created a ClientEntry class to make the ClientDatabseEditor better, ClientEntry  is in charge of turning database entries into easy to use client objects and vice versa. Doing the same thing with SiteEntry currently which will represent a table in the database storing list of sensors and their IPs as well as owner and name etc">
       <created>1498403386575</created>
@@ -1841,7 +1832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502203717575</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Added features to stats package to take average modulo a number. For example, take daily average modulo 7 will take the average of for all mondays, all tuesdays etc.">
+      <created>1502205065314</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1502205065314</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1877,7 +1875,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="492947000" />
+    <option name="totallyTimeSpent" value="493002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1901,7 +1899,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35602838" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35602838" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134752" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25250357" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -1951,7 +1949,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set up receiver for username and passwords. Will work on authentication stuff and checking from the database etc" />
     <MESSAGE value="Finished authentication. Made a filter that authenticates all incoming requests by checking their JWT with the users in the database. Made a facility to update user details. Made a facility to update passwords and require old password too. All that is left (which is small), is issue new token after update where username has changed. Can start work on site api now" />
     <MESSAGE value="Added API features for getting list of users a client has and getting list of sites a client has, assuming the user is logged in with a valid JWT. Admins can give site permissions to users and I've added an admin flag to UserEntry that controls this, and clientDatabaseEditor now supports the creation of admins, as does the command line tool" />
     <MESSAGE value="Added API for sites that allows you to get all labels at a site, all sensor IPs at a site, all labels for a given sensor, and a map of all IPs to the labels that sensor produces" />
@@ -1976,7 +1973,8 @@
     <MESSAGE value="Printed client sites for user when site removed to debug why not working" />
     <MESSAGE value="Fixed deletion bug for removing sites for a user from the client database" />
     <MESSAGE value="Added a basic stats toolbox that can calculate mean and standard deviation for a set of database entries. It can also summarise the same two for data, but over intervals (i.e mean for each hour between two dates, or standard deviation each day over a week etc)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a basic stats toolbox that can calculate mean and standard deviation for a set of database entries. It can also summarise the same two for data, but over intervals (i.e mean for each hour between two dates, or standard deviation each day over a week etc)" />
+    <MESSAGE value="Added features to stats package to take average modulo a number. For example, take daily average modulo 7 will take the average of for all mondays, all tuesdays etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added features to stats package to take average modulo a number. For example, take daily average modulo 7 will take the average of for all mondays, all tuesdays etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2424,14 +2422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/DataValuesWithMetaData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -2457,6 +2447,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
