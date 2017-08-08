@@ -60,4 +60,35 @@ public class DatabaseEntryStatsToolboxTest {
         assertEquals(expectedSds.get(0).getValue(), sdForIntervals.get(0).getValue(),0.0000001);
         assertEquals(expectedSds.get(1).getValue(), sdForIntervals.get(1).getValue(),0.0000001);
     }
+
+    @Test
+    public void shouldCalculateMeanForEachDayOfWeek() {
+        DatabaseEntrySet entries = generateWeeklyData();
+        ArrayList<AbstractMap.SimpleEntry<String, Double>> meanForIntervals = underTest.getMeanForIntervalsModulo(entries, "temp", 24*60*60*1000, 7);
+
+        assertEquals(4.5, meanForIntervals.get(0).getValue(), 0.000000001);
+        assertEquals(5.5, meanForIntervals.get(1).getValue(), 0.000000001);
+        assertEquals(7, meanForIntervals.get(6).getValue(), 0.000000001);
+    }
+
+    @Test
+    public void shouldCalculateSdForEachDayOfWeek() {
+        DatabaseEntrySet entries = generateWeeklyData();
+        ArrayList<AbstractMap.SimpleEntry<String, Double>> sdForIntervals = underTest.getSdForIntervalsModulo(entries, "temp", 24*60*60*1000, 7);
+
+        assertEquals(4.949747468305833, sdForIntervals.get(0).getValue(), 0.000000001);
+        assertEquals(4.949747468305833, sdForIntervals.get(1).getValue(), 0.000000001);
+        assertEquals(0, sdForIntervals.get(6).getValue(), 0.000000001);
+    }
+
+    private DatabaseEntrySet generateWeeklyData() {
+        DatabaseEntrySet entries = new DatabaseEntrySet();
+        for (int i = 1; i < 10; i++) {
+            DatabaseEntry entry = new DatabaseEntry();
+            entry.add("temp", i + 0.0);
+            entry.setTimestamp("2000-01-0" + i + " 00:00:00.000");
+            entries.add(entry);
+        }
+        return entries;
+    }
 }

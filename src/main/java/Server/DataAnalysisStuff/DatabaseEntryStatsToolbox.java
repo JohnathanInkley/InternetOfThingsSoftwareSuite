@@ -101,5 +101,33 @@ public class DatabaseEntryStatsToolbox {
         }
         return sdForEachInterval;
     }
+
+    public ArrayList<AbstractMap.SimpleEntry<String, Double>> getMeanForIntervalsModulo(DatabaseEntrySet entrySet,
+                                                                                  String fieldName,
+                                                                                  int intervalLengthInMS, int modulo) {
+        ArrayList<DatabaseEntry> entriesAsArray = generateArrayListOfEntries(entrySet);
+        DatabaseEntry minEntry = findMinTimestampEntry(entriesAsArray);
+        ArrayList<ArrayList<DatabaseEntry>> partitionedData = partitionDataByIntervalLengthModulo(intervalLengthInMS, modulo, entriesAsArray, minEntry);
+        return generateMeansFromPartitionedData(fieldName, intervalLengthInMS, minEntry, partitionedData);
+    }
+
+    private ArrayList<ArrayList<DatabaseEntry>> partitionDataByIntervalLengthModulo(int intervalLengthInMS, int modulo, ArrayList<DatabaseEntry> entriesAsArray, DatabaseEntry minTimeEntry) {
+        long minTimestamp = minTimeEntry.getLongTimeInMilliseconds();
+        ArrayListPartitioner<DatabaseEntry> partitioner = new ArrayListPartitioner<>(entriesAsArray);
+        return partitioner.partition(
+                (entry) -> (Math.toIntExact((entry.getLongTimeInMilliseconds() - minTimestamp) / intervalLengthInMS )) % modulo
+        );
+    }
+
+    public ArrayList<AbstractMap.SimpleEntry<String, Double>> getSdForIntervalsModulo(DatabaseEntrySet entrySet,
+                                                                                        String fieldName,
+                                                                                        int intervalLengthInMS, int modulo) {
+        ArrayList<DatabaseEntry> entriesAsArray = generateArrayListOfEntries(entrySet);
+        DatabaseEntry minEntry = findMinTimestampEntry(entriesAsArray);
+        ArrayList<ArrayList<DatabaseEntry>> partitionedData = partitionDataByIntervalLengthModulo(intervalLengthInMS, modulo, entriesAsArray, minEntry);
+        return generateSdFromPartitionedData(fieldName, intervalLengthInMS, minEntry, partitionedData);
+    }
+
+
 }
 
