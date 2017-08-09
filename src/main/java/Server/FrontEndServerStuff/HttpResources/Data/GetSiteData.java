@@ -206,25 +206,26 @@ public class GetSiteData {
         if (!user.getSitePermissions().contains(siteName)) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {
+            try {
             String siteTableIdentifier = user.getClientName() + "." + siteName;
             String start = startDate + " " + startTime;
             String end = endDate + " " + endTime;
             DatabaseEntrySet sensorEntries = timeSeriesDatabase.getSensorEntriesBetween(siteTableIdentifier, IP, start, end);
             ArrayList<AbstractMap.SimpleEntry<String, Double>> statsData = null;
-            try {
                 if (operation.equals("meanEvery")) {
                     statsData = statsToolbox.getMeanForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
                 } else if (operation.equals("sdEvery")) {
                     statsData = statsToolbox.getSdForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
             String resultJson = makeJsonFromMeans(IP, dataLabel, statsData);
             return Response.ok()
                     .type(MediaType.APPLICATION_JSON)
                     .entity(resultJson)
                     .build();
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
         }
     }
 
