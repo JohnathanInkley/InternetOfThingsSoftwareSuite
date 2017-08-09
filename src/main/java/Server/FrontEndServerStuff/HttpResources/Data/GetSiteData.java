@@ -211,10 +211,14 @@ public class GetSiteData {
             String end = endDate + " " + endTime;
             DatabaseEntrySet sensorEntries = timeSeriesDatabase.getSensorEntriesBetween(siteTableIdentifier, IP, start, end);
             ArrayList<AbstractMap.SimpleEntry<String, Double>> statsData = null;
-            if (operation.equals("meanEvery")) {
-                statsData = statsToolbox.getMeanForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
-            } else if (operation.equals("sdEvery")) {
-                statsData = statsToolbox.getSdForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
+            try {
+                if (operation.equals("meanEvery")) {
+                    statsData = statsToolbox.getMeanForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
+                } else if (operation.equals("sdEvery")) {
+                    statsData = statsToolbox.getSdForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             String resultJson = makeJsonFromMeans(IP, dataLabel, statsData);
             return Response.ok()
