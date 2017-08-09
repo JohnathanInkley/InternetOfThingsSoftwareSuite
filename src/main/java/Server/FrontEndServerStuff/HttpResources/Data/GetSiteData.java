@@ -206,7 +206,6 @@ public class GetSiteData {
         if (!user.getSitePermissions().contains(siteName)) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {
-            try {
             String siteTableIdentifier = user.getClientName() + "." + siteName;
             String start = startDate + " " + startTime;
             String end = endDate + " " + endTime;
@@ -222,10 +221,6 @@ public class GetSiteData {
                     .type(MediaType.APPLICATION_JSON)
                     .entity(resultJson)
                     .build();
-            } catch (Exception e) {
-                e.printStackTrace();
-                return null;
-            }
         }
     }
 
@@ -233,8 +228,14 @@ public class GetSiteData {
         List<DataValuesWithMetaData> results = new ArrayList<>();
         for (int i = 0; i < statsData.size(); i++) {
             AbstractMap.SimpleEntry<String, Double> entry = statsData.get(i);
-            DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getKey(), ip, dataLabel, entry.getValue());
-            results.add(datum);
+            Double value = entry.getValue();
+            if (value.isNaN()) {
+                DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getKey(), ip, dataLabel, 0.0);
+                results.add(datum);
+            } else {
+                DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getKey(), ip, dataLabel, value);
+                results.add(datum);
+            }
         }
         return gson.toJson(results);
     }
