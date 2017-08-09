@@ -1,5 +1,7 @@
 1) Implement mean and standard deviation api requests (same format as get data but produces mean and sd instead)
 
+
+
 ---- To do for when get back ----
 Approx 4 weeks. 1 week for report, 1 week presentation
 3 weeks for machine learning and front end stuff

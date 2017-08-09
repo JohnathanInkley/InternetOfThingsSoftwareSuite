@@ -1,6 +1,7 @@
 package Server.FrontEndServerStuff.HttpResources.Data;
 
 import Server.AccountManagement.UserEntry;
+import Server.DataAnalysisStuff.DatabaseEntryStatsToolbox;
 import Server.DatabaseStuff.*;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter;
 import Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager;
@@ -17,10 +18,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Path("")
 public class GetSiteData {
@@ -28,6 +26,7 @@ public class GetSiteData {
     private static ClientDatabaseEditor editor;
     private static Database timeSeriesDatabase;
     private static AuthenticationManager authenticationManager;
+    private static DatabaseEntryStatsToolbox statsToolbox;
     private static Gson gson;
 
     public static void setClientDatabaseEditor(ClientDatabaseEditor clientDatabaseEditor, Database timeSeriesDatabase) {
@@ -35,6 +34,7 @@ public class GetSiteData {
         GetSiteData.timeSeriesDatabase = timeSeriesDatabase;
         authenticationManager = new AuthenticationManager(editor);
         AuthenticationFilter.setAuthenticationManager(authenticationManager);
+        statsToolbox = new DatabaseEntryStatsToolbox();
         gson = new GsonBuilder().create();
     }
 
@@ -169,17 +169,70 @@ public class GetSiteData {
             String start = startDate + " " + startTime;
             String end = endDate + " " + endTime;
             DatabaseEntrySet sensorEntries = timeSeriesDatabase.getSensorEntriesBetween(siteTableIdentifier, IP, start, end);
-            List<DataValuesWithMetaData> results = new ArrayList<>();
-            for (int i = 0; i < sensorEntries.size(); i++) {
-                DatabaseEntry entry = sensorEntries.get(i);
-                DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getTimestamp(), IP, dataLabel, (Double) entry.get(dataLabel));
-                results.add(datum);
-            }
-            String resultJson = gson.toJson(results);
+            String resultJson = makeJsonFromEntries(IP, dataLabel, sensorEntries);
             return Response.ok()
                     .type(MediaType.APPLICATION_JSON)
                     .entity(resultJson)
                     .build();
         }
     }
+
+    private String makeJsonFromEntries(String IP, String dataLabel, DatabaseEntrySet sensorEntries) {
+        List<DataValuesWithMetaData> results = new ArrayList<>();
+        for (int i = 0; i < sensorEntries.size(); i++) {
+            DatabaseEntry entry = sensorEntries.get(i);
+            DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getTimestamp(), IP, dataLabel, (Double) entry.get(dataLabel));
+            results.add(datum);
+        }
+        return gson.toJson(results);
+    }
+
+    @GET
+    @Path("/api/sites/{siteName}/sensors/{sensorIP}/{label}/{operation}/{intervalMS}/modulo/{mod}/from/{startDate}/{startTime}/until/{endDate}/{endTime}")
+    @Secured
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getStatsForSensorDataBetweenTimesModulo(@PathParam("siteName") String siteName,
+                                                            @PathParam("sensorIP") String IP,
+                                                            @PathParam("label") String dataLabel,
+                                                            @PathParam("intervalMS") int intervalMS,
+                                                            @PathParam("mod") int mod,
+                                                            @PathParam("operation") String operation,
+                                                            @PathParam("startDate") String startDate,
+                                                            @PathParam("startTime") String startTime,
+                                                            @PathParam("endDate") String endDate,
+                                                            @PathParam("endTime") String endTime,
+                                                            @Context SecurityContext context) {
+        UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
+        if (!user.getSitePermissions().contains(siteName)) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        } else {
+            String siteTableIdentifier = user.getClientName() + "." + siteName;
+            String start = startDate + " " + startTime;
+            String end = endDate + " " + endTime;
+            DatabaseEntrySet sensorEntries = timeSeriesDatabase.getSensorEntriesBetween(siteTableIdentifier, IP, start, end);
+            ArrayList<AbstractMap.SimpleEntry<String, Double>> statsData = null;
+            if (operation.equals("meanEvery")) {
+                statsData = statsToolbox.getMeanForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
+            } else if (operation.equals("sdEvery")) {
+                statsData = statsToolbox.getSdForIntervalsModulo(sensorEntries, dataLabel, intervalMS, mod);
+            }
+            String resultJson = makeJsonFromMeans(IP, dataLabel, statsData);
+            return Response.ok()
+                    .type(MediaType.APPLICATION_JSON)
+                    .entity(resultJson)
+                    .build();
+        }
+    }
+
+    private String makeJsonFromMeans(String ip, String dataLabel, ArrayList<AbstractMap.SimpleEntry<String, Double>> statsData) {
+        List<DataValuesWithMetaData> results = new ArrayList<>();
+        for (int i = 0; i < statsData.size(); i++) {
+            AbstractMap.SimpleEntry<String, Double> entry = statsData.get(i);
+            DataValuesWithMetaData datum = new DataValuesWithMetaData(entry.getKey(), ip, dataLabel, entry.getValue());
+            results.add(datum);
+        }
+        return gson.toJson(results);
+    }
+
+
 }

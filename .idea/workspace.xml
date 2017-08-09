@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo.txt" afterPath="$PROJECT_DIR$/src/todo.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -60,18 +70,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="170" column="78" lean-forward="false" selection-start-line="170" selection-start-column="78" selection-end-line="170" selection-end-column="78" />
+            <state relative-caret-position="120">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,21 +80,29 @@
       <file leaf-file-name="todo.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/todo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseEntryStatsToolbox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java">
+      <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="206" column="67" lean-forward="false" selection-start-line="206" selection-start-column="67" selection-end-line="206" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetSiteDataTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3645">
+              <caret line="299" column="36" lean-forward="true" selection-start-line="299" selection-start-column="36" selection-end-line="299" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,8 +110,8 @@
       <file leaf-file-name="DatabaseEntryStatsToolboxTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+            <state relative-caret-position="87">
+              <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -530,7 +538,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/UsernameSitePair.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/SensorLabelMapGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/DataValuesWithMetaData.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/AccountManagement/ClientEntryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseEntryTest.java" />
@@ -540,7 +547,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/AccountManagement/SiteEntryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/AccountManagement/UserEntryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/ClientDatabaseEditorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationFilter.java" />
@@ -566,13 +572,15 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/AccountManagement/UserEntry.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java" />
-        <option value="$PROJECT_DIR$/src/todo.txt" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/ArrayListPartionerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/ArrayListPartioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/ArrayListPartitioner.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/ArrayListPartitionerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" />
+        <option value="$PROJECT_DIR$/src/todo.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
@@ -697,130 +705,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontEndServerStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontEndServerStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HttpResources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaseStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataAnalysisStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IndividualProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -899,7 +783,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -945,13 +829,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/Server/AccountManagement" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DatabaseEntryStatsToolboxTest">
-    <configuration default="false" name="DatabaseTest.enterFakeEntries" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'Server.AccountManagement'">
+    <configuration default="false" name="Tests in 'Server.FrontEndServerStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;Server.DatabaseStuff.DatabaseTest.enterFakeEntries&quot;" />
+        <option name="scriptParameters" value="--tests Server.FrontEndServerStuff.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -965,12 +849,12 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="AuthenticationManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="Tests in 'Server.DatabaseStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" />
+        <option name="scriptParameters" value="--tests Server.DatabaseStuff.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -984,12 +868,12 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="AuthenticationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="Tests in 'Server.DataAnalysisStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" />
+        <option name="scriptParameters" value="--tests Server.DataAnalysisStuff.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1003,12 +887,12 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="DatabaseEntryStatsToolboxTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="Tests in 'Server.BaseStationServerStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" />
+        <option name="scriptParameters" value="--tests Server.BaseStationServerStuff.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1022,12 +906,12 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="ArrayListPartitionerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="false" name="Tests in 'Server.AccountManagement'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.DataAnalysisStuff.ArrayListPartitionerTest" />
+        <option name="scriptParameters" value="--tests Server.AccountManagement.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1438,19 +1322,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Gradle.DatabaseTest.enterFakeEntries" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.AuthenticationManagerTest" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.AuthenticationTest" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.DatabaseEntryStatsToolboxTest" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.ArrayListPartitionerTest" />
+      <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DatabaseStuff'" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.DatabaseEntryStatsToolboxTest" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.ArrayListPartitionerTest" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.AuthenticationManagerTest" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.AuthenticationTest" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.DatabaseTest.enterFakeEntries" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DatabaseStuff'" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
       </list>
     </recent_temporary>
   </component>
@@ -1494,14 +1378,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="20439000" />
-    </task>
-    <task id="LOCAL-00008" summary="Created a ClientEntry class to make the ClientDatabseEditor better, ClientEntry  is in charge of turning database entries into easy to use client objects and vice versa. Doing the same thing with SiteEntry currently which will represent a table in the database storing list of sensors and their IPs as well as owner and name etc">
-      <created>1498403386575</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1498403386575</updated>
+      <workItem from="1500670013280" duration="25656000" />
     </task>
     <task id="LOCAL-00009" summary="Started to wire up clientDatabaseEditor to the command line tool. Current functionality allows new clients to be added to the system, sites added for these clients, and a list of clients and sites for each to be displayed. About to start UserEntry.">
       <created>1498496038731</created>
@@ -1839,43 +1716,50 @@
       <option name="project" value="LOCAL" />
       <updated>1502205065314</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Added features to stats package to take average modulo a number. For example, take daily average modulo 7 will take the average of for all mondays, all tuesdays etc.">
+      <created>1502205080849</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1502205080849</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 14h 03m 42s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.09 at 11h 41m 49s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 14h 05m 27s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 04m 24s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 03m 34s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 04m 55s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 03m 58s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 05m 21s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 04m 17s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 08m 52s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 05m 05s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Server_AccountManagement' - 2017.08.09 at 12h 29m 52s.xml">
+      <configuration name="Tests in 'Server.AccountManagement'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 05m 54s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Server_BaseStationServerStuff' - 2017.08.09 at 12h 29m 42s.xml">
+      <configuration name="Tests in 'Server.BaseStationServerStuff'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 06m 23s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Server_DataAnalysisStuff' - 2017.08.09 at 12h 29m 35s.xml">
+      <configuration name="Tests in 'Server.DataAnalysisStuff'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 09m 21s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Server_DatabaseStuff' - 2017.08.09 at 12h 29m 07s.xml">
+      <configuration name="Tests in 'Server.DatabaseStuff'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="DatabaseEntryStatsToolboxTest - 2017.08.08 at 16h 10m 16s.xml">
-      <configuration name="DatabaseEntryStatsToolboxTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Server_FrontEndServerStuff' - 2017.08.09 at 12h 28m 35s.xml">
+      <configuration name="Tests in 'Server.FrontEndServerStuff'" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="493002000" />
+    <option name="totallyTimeSpent" value="498219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2048,13 +1932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="212" column="62" lean-forward="false" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpsClientMaker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -2157,13 +2034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="144" column="42" lean-forward="false" selection-start-line="142" selection-start-column="7" selection-end-line="144" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -2342,22 +2212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="170" column="78" lean-forward="false" selection-start-line="170" selection-start-column="78" selection-end-line="170" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/ArrayListPartitionerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -2393,31 +2247,31 @@
         <state relative-caret-position="300">
           <caret line="104" column="63" lean-forward="true" selection-start-line="103" selection-start-column="12" selection-end-line="104" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-            <element signature="e#2618#2619#0" expanded="true" />
-            <element signature="e#2654#2655#0" expanded="true" />
-            <element signature="e#2700#2701#0" expanded="true" />
-            <element signature="e#2777#2778#0" expanded="true" />
-            <element signature="e#2820#2821#0" expanded="true" />
-            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#520#521#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
+            <element signature="e#812#813#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#940#941#0" expanded="false" />
+            <element signature="e#972#973#0" expanded="false" />
+            <element signature="e#1169#1170#0" expanded="false" />
+            <element signature="e#1218#1219#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1297#1298#0" expanded="false" />
+            <element signature="e#1337#1338#0" expanded="false" />
+            <element signature="e#1373#1374#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1732#1733#0" expanded="false" />
+            <element signature="e#1789#1790#0" expanded="false" />
+            <element signature="e#2618#2619#0" expanded="false" />
+            <element signature="e#2654#2655#0" expanded="false" />
+            <element signature="e#2700#2701#0" expanded="false" />
+            <element signature="e#2777#2778#0" expanded="false" />
+            <element signature="e#2820#2821#0" expanded="false" />
+            <element signature="e#2864#2865#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2440,20 +2294,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="206" column="67" lean-forward="false" selection-start-line="206" selection-start-column="67" selection-end-line="206" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        <state relative-caret-position="87">
+          <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3645">
+          <caret line="299" column="36" lean-forward="true" selection-start-line="299" selection-start-column="36" selection-end-line="299" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

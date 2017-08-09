@@ -51,6 +51,7 @@ public class GetSiteDataTest {
         gson = new GsonBuilder().create();
         setupDatabase();
         GetSiteData.setClientDatabaseEditor(editor, tsDatabase);
+        generateDataForMeanAndSdTest();
         underTest = new FrontEndServer(serverUrl);
         underTest.runServer();
     }
@@ -198,9 +199,6 @@ public class GetSiteDataTest {
             listShouldBe.add(data);
         }
 
-        System.out.println(listOfData);
-        System.out.println(listShouldBe);
-
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatusLine().getStatusCode());
         assertTrue(listShouldBe.containsAll(listOfData));
 
@@ -239,6 +237,80 @@ public class GetSiteDataTest {
                 entry.add(DATA_LABELS.get(1), 5 + i);
                 entry.add("IP", "345");
             }
+            tsDatabase.addEntry(entry);
+        }
+    }
+
+    @Test
+    public void shouldBeAbleToGetDailyMeanOfDataForGivenLabelAndSensor() throws IOException {
+        HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
+        HttpGet getSensorData = new HttpGet(serverUrl +
+                "/api/sites/" +
+                SITE_NAME +
+                "/sensors/456/temp/meanEvery/" +
+                24*60*60*1000 +
+                "/modulo/7/from/2000-01-01/00:00:00/until/2000-01-10/01:00:00");
+        getSensorData.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        HttpResponse response = httpClient.execute(getSensorData);
+        List<DataValuesWithMetaData> listOfData = getDataValuesWithMetaDatas(response);
+
+        List<DataValuesWithMetaData> listShouldBe = new ArrayList<>();
+        for (int i = 1; i <= 7; i++) {
+            DataValuesWithMetaData data;
+            if (i <= 2) {
+                data = new DataValuesWithMetaData("2000-01-0" + i + " 00:00:00.000", "456", "temp", i + 3.5);
+            } else {
+                data = new DataValuesWithMetaData("2000-01-0" + i + " 00:00:00.000", "456", "temp", i + 0.0);
+            }
+            listShouldBe.add(data);
+        }
+
+        assertEquals(Response.Status.OK.getStatusCode(), response.getStatusLine().getStatusCode());
+        assertTrue(listShouldBe.containsAll(listOfData));
+    }
+
+    @Test
+    public void shouldBeAbleToGetDailySdOfDataForGivenLabelAndSensor() throws IOException {
+        HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
+        HttpGet getSensorData = new HttpGet(serverUrl +
+                "/api/sites/" +
+                SITE_NAME +
+                "/sensors/456/temp/sdEvery/" +
+                24*60*60*1000 +
+                "/modulo/7/from/2000-01-01/00:00:00/until/2000-01-10/01:00:00");
+        getSensorData.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        HttpResponse response = httpClient.execute(getSensorData);
+        List<DataValuesWithMetaData> listOfData = getDataValuesWithMetaDatas(response);
+
+        List<DataValuesWithMetaData> listShouldBe = new ArrayList<>();
+        for (int i = 1; i <= 7; i++) {
+            DataValuesWithMetaData data;
+            if (i <= 2) {
+                data = new DataValuesWithMetaData("2000-01-0" + i + " 00:00:00.000", "456", "temp", 4.949747468305833);
+            } else {
+                data = new DataValuesWithMetaData("2000-01-0" + i + " 00:00:00.000", "456", "temp", 0.0);
+            }
+            listShouldBe.add(data);
+        }
+
+        assertEquals(Response.Status.OK.getStatusCode(), response.getStatusLine().getStatusCode());
+        assertTrue(listShouldBe.containsAll(listOfData));
+    }
+
+    private List<DataValuesWithMetaData> getDataValuesWithMetaDatas(HttpResponse response) throws IOException {
+        byte[] messageBytes = new byte[(int) response.getEntity().getContentLength()];
+        response.getEntity().getContent().read(messageBytes);
+        Type listOfDataType = new TypeToken<List<DataValuesWithMetaData>>() {}.getType();
+        return gson.fromJson(new String(messageBytes), listOfDataType);
+    }
+
+    private static void generateDataForMeanAndSdTest() {
+        for (int i = 1; i < 10; i++) {
+            DatabaseEntry entry = new DatabaseEntry();
+            entry.add("DeviceCollection", CLIENT + "." + SITE_NAME);
+            entry.add("temp", i + 0.0);
+            entry.add("IP", "456");
+            entry.setTimestamp("2000-01-0" + i + " 00:00:00.000");
             tsDatabase.addEntry(entry);
         }
     }
