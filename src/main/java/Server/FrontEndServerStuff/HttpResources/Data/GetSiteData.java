@@ -140,11 +140,8 @@ public class GetSiteData {
             SensorLabelMapGenerator labelMapGenerator = new SensorLabelMapGenerator(timeSeriesDatabase);
             String clientName = user.getClientName();
             List<String> sensorIPsAtSite = getSensorIPsAtSite(clientName, siteName);
-            System.out.println("got to here3: " + sensorIPsAtSite);
             Map<String, List<String>> mapOfIPsToLabels = labelMapGenerator.getLabelMap(sensorIPsAtSite, clientName, siteName);
-            System.out.println("got to here4: " + mapOfIPsToLabels);
             String mapAsJson = gson.toJson(mapOfIPsToLabels);
-            System.out.println("got to here5: " + mapAsJson);
             return Response.status(Response.Status.OK)
                     .type(MediaType.APPLICATION_JSON)
                     .entity(mapAsJson)

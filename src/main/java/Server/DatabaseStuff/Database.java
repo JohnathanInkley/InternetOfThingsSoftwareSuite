@@ -109,10 +109,19 @@ public class Database {
     public DatabaseEntry getLatestEntryForParticularLabel(String deviceCollectionIdentifier, String fieldName, String fieldValue) {
         System.out.println("getting labels: " + deviceCollectionIdentifier + " and " + fieldName + " and " + fieldValue);
         Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
-                "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
-                "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-        return getResultsSetFromQuery(query).get(0);
+
+        DatabaseEntrySet resultsSetFromQuery = getResultsSetFromQuery(query);
+        long latestTime = 0;
+        DatabaseEntry result = null;
+        for (int i = 0; i < resultsSetFromQuery.size(); i++) {
+            DatabaseEntry entry = resultsSetFromQuery.get(i);
+            if (entry.get(fieldName).equals(fieldValue) && entry.getLongTimeInMilliseconds() > latestTime) {
+                result = entry;
+                latestTime = result.getLongTimeInMilliseconds();
+            }
+        }
+        return result;
     }
 
     public double getMeanSiteEntriesForFieldBetween(DeviceCollection site, String fieldName, String beforeDate, String afterDate) {
@@ -133,7 +142,6 @@ public class Database {
     private DatabaseEntrySet getResultsSetFromQuery(Query query) {
         QueryResult queryResults = database.query(query);
         List<QueryResult.Result> queryList = queryResults.getResults();
-        System.out.println("got some results from " + query.getCommand() + " results " + queryList);
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
             processIndividualQueryResult(result, entrySet);
