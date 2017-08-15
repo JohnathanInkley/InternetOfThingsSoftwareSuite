@@ -121,7 +121,7 @@ public class Database {
                 latestTime = result.getLongTimeInMilliseconds();
             }
         }
-        System.out.println(result);
+        System.out.println(resultsSetFromQuery.size());
         return result;
     }
 
