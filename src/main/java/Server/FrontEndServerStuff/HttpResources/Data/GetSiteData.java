@@ -138,9 +138,7 @@ public class GetSiteData {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {
             SensorLabelMapGenerator labelMapGenerator = new SensorLabelMapGenerator(timeSeriesDatabase);
-            System.out.println("got to here1");
             String clientName = user.getClientName();
-            System.out.println("got to here2");
             List<String> sensorIPsAtSite = getSensorIPsAtSite(clientName, siteName);
             System.out.println("got to here3: " + sensorIPsAtSite);
             Map<String, List<String>> mapOfIPsToLabels = labelMapGenerator.getLabelMap(sensorIPsAtSite, clientName, siteName);
