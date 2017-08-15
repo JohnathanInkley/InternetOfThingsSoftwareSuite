@@ -112,7 +112,7 @@ public class Database {
                 "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
                 "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-        System.out.println(getResultsSetFromQuery(query));
+        System.out.println(getResultsSetFromQuery(query).size());
         return getResultsSetFromQuery(query).get(0);
     }
 
