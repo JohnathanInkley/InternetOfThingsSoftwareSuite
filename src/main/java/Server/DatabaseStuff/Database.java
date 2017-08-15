@@ -107,22 +107,11 @@ public class Database {
 
 
     public DatabaseEntry getLatestEntryForParticularLabel(String deviceCollectionIdentifier, String fieldName, String fieldValue) {
-        System.out.println("getting labels: " + deviceCollectionIdentifier + " and " + fieldName + " and " + fieldValue);
         Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
+                "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
+                "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-
-        DatabaseEntrySet resultsSetFromQuery = getResultsSetFromQuery(query);
-        long latestTime = 0;
-        DatabaseEntry result = null;
-        for (int i = 0; i < resultsSetFromQuery.size(); i++) {
-            DatabaseEntry entry = resultsSetFromQuery.get(i);
-            System.out.println(entry);
-            if (entry.get(fieldName).equals(fieldValue) && entry.getLongTimeInMilliseconds() > latestTime) {
-                result = entry;
-                latestTime = result.getLongTimeInMilliseconds();
-            }
-        }
-        return result;
+        return getResultsSetFromQuery(query).get(0);
     }
 
     public double getMeanSiteEntriesForFieldBetween(DeviceCollection site, String fieldName, String beforeDate, String afterDate) {

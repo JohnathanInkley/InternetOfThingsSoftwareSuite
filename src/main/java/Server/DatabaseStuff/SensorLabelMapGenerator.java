@@ -35,9 +35,13 @@ public class SensorLabelMapGenerator {
         ipToLabelListMap = new HashMap<>();
         labelsForSite = new HashSet<>();
         for (String ip : listIP) {
-            List<String> labelsForIP = getLabels(ip, clientName, siteName);
-            labelsForSite.addAll(labelsForIP);
-            ipToLabelListMap.put(ip, labelsForIP);
+            try {
+                List<String> labelsForIP = getLabels(ip, clientName, siteName);
+                labelsForSite.addAll(labelsForIP);
+                ipToLabelListMap.put(ip, labelsForIP);
+            } catch (Exception e) {
+
+            }
         }
         return ipToLabelListMap;
     }
