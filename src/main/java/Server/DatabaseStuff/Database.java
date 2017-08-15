@@ -148,8 +148,10 @@ public class Database {
 
         for (QueryResult.Series individualSeries : individualResult.getSeries()) {
             List<String> columnLabels = individualSeries.getColumns();
+            System.out.println("here are labels: " + columnLabels);
             for (List<Object> individualEntry : individualSeries.getValues()) {
                 DatabaseEntry entry = produceDatabaseEntryObjectFromActualEntry(columnLabels, individualEntry);
+                System.out.println("entry: " + entry);
                 entrySetToAddResultTo.add(entry);
             }
         }
