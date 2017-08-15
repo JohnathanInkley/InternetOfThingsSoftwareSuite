@@ -100,8 +100,8 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="141" column="70" lean-forward="false" selection-start-line="141" selection-start-column="70" selection-end-line="141" selection-end-column="70" />
+            <state relative-caret-position="164">
+              <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -2341,14 +2341,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="35356000" />
-    </task>
-    <task id="LOCAL-00019" summary="Setting up server and doing HTTPS debugging">
-      <created>1499693680110</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1499693680110</updated>
+      <workItem from="1500670013280" duration="35459000" />
     </task>
     <task id="LOCAL-00020" summary="Added real certificates and added * to CORSFilter">
       <created>1499781786554</created>
@@ -2686,7 +2679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502805451510</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Added a few system.outs to see why API request failing in production but not in test">
+      <created>1502805547657</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1502805547657</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2722,7 +2722,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507919000" />
+    <option name="totallyTimeSpent" value="508022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -4040,8 +4040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="141" column="70" lean-forward="false" selection-start-line="141" selection-start-column="70" selection-end-line="141" selection-end-column="70" />
+        <state relative-caret-position="164">
+          <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
           <folding />
         </state>
       </provider>

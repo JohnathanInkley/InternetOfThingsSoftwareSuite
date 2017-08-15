@@ -147,6 +147,7 @@ public class Database {
 
     private void processIndividualQueryResult(QueryResult.Result individualResult, DatabaseEntrySet entrySetToAddResultTo) {
         if (individualResult.getSeries() == null) {
+            System.out.println("damn" );
             return;
         }
 
