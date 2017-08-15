@@ -116,12 +116,12 @@ public class Database {
         DatabaseEntry result = null;
         for (int i = 0; i < resultsSetFromQuery.size(); i++) {
             DatabaseEntry entry = resultsSetFromQuery.get(i);
+            System.out.println(entry);
             if (entry.get(fieldName).equals(fieldValue) && entry.getLongTimeInMilliseconds() > latestTime) {
                 result = entry;
                 latestTime = result.getLongTimeInMilliseconds();
             }
         }
-        System.out.println(resultsSetFromQuery.size());
         return result;
     }
 
