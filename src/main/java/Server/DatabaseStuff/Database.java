@@ -132,7 +132,9 @@ public class Database {
     }
 
     private DatabaseEntrySet getResultsSetFromQuery(Query query) {
+        System.out.println("did query work? " );
         QueryResult queryResults = database.query(query);
+        System.out.println("it did!" );
         List<QueryResult.Result> queryList = queryResults.getResults();
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
@@ -151,7 +153,7 @@ public class Database {
             System.out.println("here are labels: " + columnLabels);
             for (List<Object> individualEntry : individualSeries.getValues()) {
                 DatabaseEntry entry = produceDatabaseEntryObjectFromActualEntry(columnLabels, individualEntry);
-                System.out.println("entry: " + entry);
+                System.out.println("entry: " + entry    );
                 entrySetToAddResultTo.add(entry);
             }
         }
