@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="Realised was using wrong API but should fixed bug that existed in other one anyway">
+    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -60,28 +61,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetSiteDataTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="168" column="22" lean-forward="false" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="139" column="71" lean-forward="true" selection-start-line="139" selection-start-column="71" selection-end-line="139" selection-end-column="71" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1206,10 +1187,10 @@
         <option value="$PROJECT_DIR$/src/todo.txt" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
@@ -1480,6 +1461,10 @@
               <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhysicalLocationStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1672,6 +1657,32 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1797,7 +1808,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/Server/AccountManagement" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'Server.FrontEndServerStuff'">
+  <component name="RunManager" selected="Gradle.Tests in 'Server'">
     <configuration default="false" name="Tests in 'Server.BaseStationServerStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -2298,9 +2309,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server'" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.GetSiteDataTest" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server'" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.GetSiteDataTest" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
         <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
       </list>
@@ -2346,14 +2357,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="39188000" />
-    </task>
-    <task id="LOCAL-00038" summary="Added a check for site permissions already to avoid adding a site multiple times">
-      <created>1499870037260</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1499870037260</updated>
+      <workItem from="1500670013280" duration="40499000" />
     </task>
     <task id="LOCAL-00039" summary="Fixed base station server to look for new AES keys in the database if it doesn't already have one for a site. Added a psvm for this server and also for the base station">
       <created>1499941838478</created>
@@ -2691,15 +2695,19 @@
       <option name="project" value="LOCAL" />
       <updated>1502809690221</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Realised was using wrong API but should fixed bug that existed in other one anyway">
+      <created>1502809782680</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1502809782680</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests_in_'Server' - 2017.08.15 at 14h 37m 33s.xml">
-      <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Tests_in_'Server' - 2017.08.15 at 15h 44m 53s.xml">
-      <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
+    <history-entry file="GetSiteDataTest - 2017.08.15 at 16h 35m 41s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
     </history-entry>
     <history-entry file="Tests_in_'Server' - 2017.08.15 at 15h 45m 46s.xml">
       <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
@@ -2719,6 +2727,9 @@
     <history-entry file="Tests_in_'Server' - 2017.08.15 at 16h 00m 33s.xml">
       <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="Tests_in_'Server' - 2017.08.15 at 16h 36m 32s.xml">
+      <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
+    </history-entry>
     <history-entry file="Tests_in_'Server_FrontEndServerStuff' - 2017.08.15 at 16h 04m 03s.xml">
       <configuration name="Tests in 'Server.FrontEndServerStuff'" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -2727,7 +2738,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511751000" />
+    <option name="totallyTimeSpent" value="513062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2747,12 +2758,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35602838" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35602838" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134752" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25250357" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -2894,13 +2905,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/SecureRandomStringGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -4019,10 +4023,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="168" column="22" lean-forward="false" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="26" />
+        <state relative-caret-position="240">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/PhysicalLocationStuff/SensorLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -4035,29 +4050,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="139" column="71" lean-forward="true" selection-start-line="139" selection-start-column="71" selection-end-line="139" selection-end-column="71" />
+        <state relative-caret-position="60">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="376">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

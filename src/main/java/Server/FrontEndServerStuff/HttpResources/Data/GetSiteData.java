@@ -150,6 +150,24 @@ public class GetSiteData {
     }
 
     @GET
+    @Path("/api/sites/{siteName}/sensorsAndLocations")
+    @Secured
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getSensorIPsAndLocations(@PathParam("siteName") String siteName, @Context SecurityContext context) {
+        UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
+        if (!user.getSitePermissions().contains(siteName)) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        } else {
+            List<SensorLocation> sensorsForClientSite = editor.getSensorsForClientSite(user.getClientName(), siteName);
+            String resultAsJson = gson.toJson(sensorsForClientSite);
+            return Response.status(Response.Status.OK)
+                    .type(MediaType.APPLICATION_JSON)
+                    .entity(resultAsJson)
+                    .build();
+        }
+    }
+
+    @GET
     @Path("/api/sites/{siteName}/sensors/{sensorIP}/{label}/from/{startDate}/{startTime}/until/{endDate}/{endTime}")
     @Secured
     @Produces(MediaType.APPLICATION_JSON)

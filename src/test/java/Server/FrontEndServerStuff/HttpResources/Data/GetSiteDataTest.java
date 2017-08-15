@@ -90,6 +90,23 @@ public class GetSiteDataTest {
         assertEquals(Response.Status.UNAUTHORIZED.getStatusCode(), response.getStatusLine().getStatusCode());
     }
 
+
+    @Test
+    public void shouldBeAbleToGetIPsWithCoords() throws IOException {
+        HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
+        HttpGet getSensorIPsAndCoords = new HttpGet(serverUrl + "/api/sites/" + SITE_NAME + "/sensorsAndLocations");
+        getSensorIPsAndCoords.setHeader("Authorization", "Bearer " + NON_ADMIN_TOKEN);
+        HttpResponse response = httpClient.execute(getSensorIPsAndCoords);
+
+        byte[] messageBytes = new byte[(int) response.getEntity().getContentLength()];
+        response.getEntity().getContent().read(messageBytes);
+        Type listOfSensorLocationsType = new TypeToken<List<SensorLocation>>() {}.getType();
+        List<SensorLocation> locations = gson.fromJson(new String(messageBytes), listOfSensorLocationsType);
+
+        assertTrue(locations.contains(new SensorLocation("123", 0.1, 0.2)));
+        assertTrue(locations.contains(new SensorLocation("234", 0.2, 0.3)));
+    }
+
     @Test
     public void shouldBeAbleToGetSensorIPsForSite() throws IOException {
         HttpClient httpClient = HttpsClientMaker.makeHttpsClient();
