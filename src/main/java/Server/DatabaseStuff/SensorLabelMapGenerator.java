@@ -16,9 +16,7 @@ public class SensorLabelMapGenerator {
     }
 
     public List<String> getLabels(String sensorIP, String clientName, String siteName) {
-        System.out.println("getting labels: " + 1);
         DatabaseEntry entry = database.getLatestEntryForParticularLabel(clientName + "." + siteName,IP_LABEL, sensorIP);
-        System.out.println("getting labels:yo " + entry);
         listOfColumnHeadings = new ArrayList<>();
         for (DatabaseEntryField field : entry) {
             addLabelIfValueNotNull(field);
@@ -34,14 +32,10 @@ public class SensorLabelMapGenerator {
     }
 
     public Map<String, List<String>> getLabelMap(List<String> listIP, String clientName, String siteName) {
-        System.out.println("start here1");
         ipToLabelListMap = new HashMap<>();
         labelsForSite = new HashSet<>();
-        System.out.println("start here2");
         for (String ip : listIP) {
-            System.out.println("IP: " + ip);
             List<String> labelsForIP = getLabels(ip, clientName, siteName);
-            System.out.println("labels: " + labelsForIP);
             labelsForSite.addAll(labelsForIP);
             ipToLabelListMap.put(ip, labelsForIP);
         }

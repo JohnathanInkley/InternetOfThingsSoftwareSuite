@@ -107,6 +107,7 @@ public class Database {
 
 
     public DatabaseEntry getLatestEntryForParticularLabel(String deviceCollectionIdentifier, String fieldName, String fieldValue) {
+        System.out.println("getting labels: " + deviceCollectionIdentifier + " and " + fieldName + " and " + fieldValue);
         Query query = new Query("SELECT * FROM \"" + deviceCollectionIdentifier + "\" " +
                 "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
                 "GROUP BY * ORDER BY DESC LIMIT 1" +
