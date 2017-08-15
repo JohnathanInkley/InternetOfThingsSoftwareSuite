@@ -136,8 +136,10 @@ public class Database {
         QueryResult queryResults = database.query(query);
         System.out.println("it did!" );
         List<QueryResult.Result> queryList = queryResults.getResults();
+        System.out.println("it also got results" );
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
+            System.out.println("now it's processing result: " + result );
             processIndividualQueryResult(result, entrySet);
         }
         return entrySet;
