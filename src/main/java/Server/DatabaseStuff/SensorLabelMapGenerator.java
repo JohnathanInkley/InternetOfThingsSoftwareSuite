@@ -16,7 +16,9 @@ public class SensorLabelMapGenerator {
     }
 
     public List<String> getLabels(String sensorIP, String clientName, String siteName) {
+        System.out.println("getting labels: " + 1);
         DatabaseEntry entry = database.getLatestEntryForParticularLabel(clientName + "." + siteName,IP_LABEL, sensorIP);
+        System.out.println("getting labels:yo " + entry);
         listOfColumnHeadings = new ArrayList<>();
         for (DatabaseEntryField field : entry) {
             addLabelIfValueNotNull(field);
