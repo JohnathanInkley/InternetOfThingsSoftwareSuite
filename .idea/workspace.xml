@@ -101,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="107" selection-end-line="135" selection-end-column="107" />
+              <caret line="135" column="98" lean-forward="false" selection-start-line="135" selection-start-column="98" selection-end-line="135" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -777,6 +777,7 @@
       <find>System</find>
       <find>Admin</find>
       <find>admin</find>
+      <find>query</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2341,14 +2342,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="36629000" />
-    </task>
-    <task id="LOCAL-00030" summary="changed database url to 0.0.0.0 to allow connection from here">
-      <created>1499788332889</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1499788332889</updated>
+      <workItem from="1500670013280" duration="36997000" />
     </task>
     <task id="LOCAL-00031" summary="Securing get/foo to test whether token works">
       <created>1499856425192</created>
@@ -2686,7 +2680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502806811093</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Added a few system.outs to see why API request failing in production but not in test">
+      <created>1502806877973</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1502806877973</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2722,7 +2723,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509192000" />
+    <option name="totallyTimeSpent" value="509560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2889,20 +2890,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpsClientMaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.JI">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/SecureRandomStringGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -4038,10 +4025,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/impl/InfluxDBImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="328" column="0" lean-forward="true" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.influxdb/influxdb-java/2.5/44fb838efc9abde7adb4a5d35b130837b0021600/influxdb-java-2.5-sources.jar!/org/influxdb/InfluxDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="107" selection-end-line="135" selection-end-column="107" />
+          <caret line="135" column="98" lean-forward="false" selection-start-line="135" selection-start-column="98" selection-end-line="135" selection-end-column="98" />
           <folding />
         </state>
       </provider>
