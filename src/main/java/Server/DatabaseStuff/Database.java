@@ -112,7 +112,7 @@ public class Database {
                 "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
                 "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-
+        System.out.println(getResultsSetFromQuery(query));
         return getResultsSetFromQuery(query).get(0);
     }
 
@@ -132,14 +132,10 @@ public class Database {
     }
 
     private DatabaseEntrySet getResultsSetFromQuery(Query query) {
-        System.out.println("did query work? " );
         QueryResult queryResults = database.query(query);
-        System.out.println("it did!" );
         List<QueryResult.Result> queryList = queryResults.getResults();
-        System.out.println("it also got results" );
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
-            System.out.println("now it's processing result: " + result );
             processIndividualQueryResult(result, entrySet);
         }
         return entrySet;
@@ -147,16 +143,13 @@ public class Database {
 
     private void processIndividualQueryResult(QueryResult.Result individualResult, DatabaseEntrySet entrySetToAddResultTo) {
         if (individualResult.getSeries() == null) {
-            System.out.println("damn" );
             return;
         }
 
         for (QueryResult.Series individualSeries : individualResult.getSeries()) {
             List<String> columnLabels = individualSeries.getColumns();
-            System.out.println("here are labels: " + columnLabels);
             for (List<Object> individualEntry : individualSeries.getValues()) {
                 DatabaseEntry entry = produceDatabaseEntryObjectFromActualEntry(columnLabels, individualEntry);
-                System.out.println("entry: " + entry    );
                 entrySetToAddResultTo.add(entry);
             }
         }
