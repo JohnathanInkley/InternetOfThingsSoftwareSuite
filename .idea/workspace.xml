@@ -101,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="135" column="91" lean-forward="false" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+              <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="107" selection-end-line="135" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -2341,14 +2341,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="36565000" />
-    </task>
-    <task id="LOCAL-00029" summary="Printing out username when user attempts to make changes">
-      <created>1499787201374</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1499787201374</updated>
+      <workItem from="1500670013280" duration="36629000" />
     </task>
     <task id="LOCAL-00030" summary="changed database url to 0.0.0.0 to allow connection from here">
       <created>1499788332889</created>
@@ -2686,7 +2679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502806640270</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Added a few system.outs to see why API request failing in production but not in test">
+      <created>1502806811093</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1502806811093</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2722,7 +2722,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509128000" />
+    <option name="totallyTimeSpent" value="509192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -4041,7 +4041,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="135" column="91" lean-forward="false" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+          <caret line="135" column="107" lean-forward="false" selection-start-line="135" selection-start-column="107" selection-end-line="135" selection-end-column="107" />
           <folding />
         </state>
       </provider>

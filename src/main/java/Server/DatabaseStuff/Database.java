@@ -133,7 +133,7 @@ public class Database {
     private DatabaseEntrySet getResultsSetFromQuery(Query query) {
         QueryResult queryResults = database.query(query);
         List<QueryResult.Result> queryList = queryResults.getResults();
-        System.out.println("got some results: " + queryList.size() + " " + query.toString());
+        System.out.println("got some results: " + queryList.size() + " " + query.getCommandWithUrlEncoded());
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
             processIndividualQueryResult(result, entrySet);
