@@ -112,7 +112,6 @@ public class Database {
                 "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
                 "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-        System.out.println(getResultsSetFromQuery(query).size());
         return getResultsSetFromQuery(query).get(0);
     }
 
@@ -134,6 +133,7 @@ public class Database {
     private DatabaseEntrySet getResultsSetFromQuery(Query query) {
         QueryResult queryResults = database.query(query);
         List<QueryResult.Result> queryList = queryResults.getResults();
+        System.out.println("got some results: " + queryList.size());
         DatabaseEntrySet entrySet = new DatabaseEntrySet();
         for (QueryResult.Result result : queryList) {
             processIndividualQueryResult(result, entrySet);
