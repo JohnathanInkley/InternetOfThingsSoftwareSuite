@@ -101,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="135" column="98" lean-forward="false" selection-start-line="135" selection-start-column="98" selection-end-line="135" selection-end-column="98" />
+              <caret line="135" column="85" lean-forward="false" selection-start-line="135" selection-start-column="85" selection-end-line="135" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -2342,14 +2342,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="36997000" />
-    </task>
-    <task id="LOCAL-00031" summary="Securing get/foo to test whether token works">
-      <created>1499856425192</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1499856425193</updated>
+      <workItem from="1500670013280" duration="37293000" />
     </task>
     <task id="LOCAL-00032" summary="Securing get/foo to test whether token works">
       <created>1499857042136</created>
@@ -2687,7 +2680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502806877973</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Added a few system.outs to see why API request failing in production but not in test">
+      <created>1502807306977</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1502807306977</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2723,7 +2723,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509560000" />
+    <option name="totallyTimeSpent" value="509856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -4050,7 +4050,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="135" column="98" lean-forward="false" selection-start-line="135" selection-start-column="98" selection-end-line="135" selection-end-column="98" />
+          <caret line="135" column="85" lean-forward="false" selection-start-line="135" selection-start-column="85" selection-end-line="135" selection-end-column="85" />
           <folding />
         </state>
       </provider>
