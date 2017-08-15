@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="Fixed code so datapoints with no">
+    <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="Added a few system.outs to see why API request failing in production but not in test">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,7 +58,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -77,24 +78,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="232" column="108" lean-forward="false" selection-start-line="232" selection-start-column="108" selection-end-line="232" selection-end-column="108" />
+            <state relative-caret-position="345">
+              <caret line="148" column="59" lean-forward="false" selection-start-line="148" selection-start-column="59" selection-end-line="148" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseEntryStatsToolbox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolbox.java">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="104" column="62" lean-forward="false" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,21 +101,645 @@
       <file leaf-file-name="GetSiteDataTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="299" column="36" lean-forward="true" selection-start-line="299" selection-start-column="36" selection-end-line="299" selection-end-column="36" />
+            <state relative-caret-position="210">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseEntryStatsToolboxTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+      <file leaf-file-name="JAVA/Server" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/Server">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>Server</OriginalElement>
+              <nodes>
+                <node x="5431.00833539645" y="746.0">Server.AccountManagement.UserConfigFileGeneratorTest</node>
+                <node x="4605.693768037518" y="925.0">Server.AccountManagement.UserChoiceHandler</node>
+                <node x="4225.729482323232" y="1224.0">Server.AccountManagement.Resources.NewSitesForClientHandler</node>
+                <node x="6162.50833539645" y="746.0">Server.AccountManagement.ResourceFileReader</node>
+                <node x="2378.6111111111113" y="925.0">Server.FrontEndServerStuff.FrontEndServer</node>
+                <node x="268.0" y="1397.0">Server.FrontEndServerStuff.HttpsClientMaker</node>
+                <node x="1360.111111111111" y="925.0">Server.DataAnalysisStuff.ArrayListPartitionerTest</node>
+                <node x="2002.611111111111" y="925.0">Server.AccountManagement.UserEntry</node>
+                <node x="1049.620568547286" y="1224.0">Server.DatabaseStuff.SensorLabelMapGeneratorTest</node>
+                <node x="2793.1111111111113" y="1224.0">Server.FrontEndServerStuff.InstallCert</node>
+                <node x="0.0" y="1397.0">Server.AccountManagement.SecureRandomStringGenerator</node>
+                <node x="1559.111111111111" y="457.0">Server.PhysicalLocationStuff.sensorLocationTest</node>
+                <node x="5252.460735983506" y="457.0">Server.DatabaseStuff.DeviceCollectionTest</node>
+                <node x="1973.611111111111" y="457.0">Server.DatabaseStuff.Database</node>
+                <node x="2033.611111111111" y="1224.0">Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest</node>
+                <node x="4700.729482323232" y="1224.0">Server.AccountManagement.Resources.NewClientHandler</node>
+                <node x="958.1111111111111" y="746.0">Server.DataAnalysisStuff.ArrayListPartitioner</node>
+                <node x="1319.620568547286" y="457.0">Server.AccountManagement.ClientEntry</node>
+                <node x="5662.00833539645" y="746.0">Server.AccountManagement.SiteConfigFileGeneratorTest</node>
+                <node x="3278.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler</node>
+                <node x="6186.75833539645" y="925.0">Server.AccountManagement.ResourceFileReaderTest</node>
+                <node x="5779.91804615505" y="1224.0">Server.BaseStationServerStuff.IncomingReadingDecryptorTest</node>
+                <node x="614.1111111111113" y="925.0">Server.DataAnalysisStuff.DatabaseEntryStatsToolbox</node>
+                <node x="1269.4354383644584" y="79.0">Server.DatabaseStuff.DatabaseEntry</node>
+                <node x="2784.1111111111113" y="925.0">Server.FrontEndServerStuff.InstallCert.SavingTrustManager</node>
+                <node x="627.0" y="1397.0">Server.FrontEndServerStuff.CorsFilter</node>
+                <node x="3671.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest</node>
+                <node x="3690.1982323232323" y="746.0">Server.DatabaseStuff.ClientDatabaseEditor</node>
+                <node x="3071.53011569948" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.Secured</node>
+                <node x="3822.9482323232323" y="457.0">Server.AccountManagement.SiteConfigFileGenerator</node>
+                <node x="2524.1000508705183" y="1323.0">Server.BaseStationServerStuff.BaseStationConnectionServerTest</node>
+                <node x="220.27777777777828" y="746.0">Server.AccountManagement.ClientEntryTest</node>
+                <node x="2399.6854383644586" y="238.0">Server.AccountManagement.UsernamePasswordPair</node>
+                <node x="406.1111111111113" y="925.0">Server.DatabaseStuff.ClientDatabaseEditorTest</node>
+                <node x="799.8833070770406" y="0.0">Server.DatabaseStuff.DatabaseEntryField</node>
+                <node x="4862.729482323232" y="1224.0">Server.AccountManagement.Resources.NewUserAccountsForClientHandler</node>
+                <node x="3105.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter</node>
+                <node x="2576.1111111111113" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.OldAndNewPasswordPair</node>
+                <node x="302.97473521395295" y="238.0">Server.DatabaseStuff.DatabaseEntrySet</node>
+                <node x="3480.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler</node>
+                <node x="3952.7294823232323" y="1224.0">Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler</node>
+                <node x="717.349735213953" y="457.0">Server.DatabaseStuff.DatabaseEntrySetTest</node>
+                <node x="6384.75833539645" y="925.0">Server.BaseStationServerStuff.SensorReadingParser</node>
+                <node x="379.2777777777783" y="746.0">Server.AccountManagement.SiteEntryTest</node>
+                <node x="1659.611111111111" y="238.0">Server.PhysicalLocationStuff.SensorLocation</node>
+                <node x="5926.75833539645" y="925.0">Server.AccountManagement.UserChoiceHandlerGeneratorTest</node>
+                <node x="5500.716417801688" y="1224.0">Server.AccountManagement.Resources.DeleteClientHandler</node>
+                <node x="3250.0845208959017" y="746.0">Server.FrontEndServerStuff.HttpResources.Authentication.UserJson</node>
+                <node x="3617.9482323232323" y="457.0">Server.AccountManagement.UserConfigFileGenerator</node>
+                <node x="5245.690153578269" y="925.0">Server.AccountManagement.CommandLineTool</node>
+                <node x="1878.361111111111" y="1224.0">Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest</node>
+                <node x="5607.466417801688" y="925.0">Server.BaseStationServerStuff.IncomingReadingDecryptor</node>
+                <node x="2249.6111111111113" y="1224.0">Server.FrontEndServerStuff.FrontEndServerConnectionTest</node>
+                <node x="4437.729482323232" y="1224.0">Server.AccountManagement.Resources.Handler1</node>
+                <node x="5887.00833539645" y="746.0">Server.AccountManagement.UserChoiceHandlerGenerator</node>
+                <node x="2916.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler</node>
+                <node x="6496.549871084797" y="1323.0">Server.DatabaseStuff.DatabaseTest</node>
+                <node x="4543.729482323232" y="1224.0">Server.AccountManagement.Resources.ClientListHandler</node>
+                <node x="144.0060069117444" y="1224.0">Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest</node>
+                <node x="10.5" y="457.0">Server.DatabaseStuff.DatabaseEntryTest</node>
+                <node x="1770.611111111111" y="457.0">Server.AccountManagement.SiteEntry</node>
+                <node x="3251.5845208959017" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager</node>
+                <node x="6282.6083353964505" y="1224.0">Server.BaseStationServerStuff.SensorReadingParserTest</node>
+                <node x="2495.6111111111113" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest</node>
+                <node x="5132.729482323232" y="1224.0">Server.BaseStationServerStuff.BaseStationConnectionServer</node>
+                <node x="452.0" y="1397.0">Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest</node>
+                <node x="852.245568547286" y="1224.0">Server.FrontEndServerStuff.HttpResources.Data.GetSiteData</node>
+                <node x="1152.111111111111" y="925.0">Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData</node>
+                <node x="6680.903760233051" y="238.0">Server.AccountManagement.UserEntryTest</node>
+                <node x="1808.611111111111" y="238.0">Server.DatabaseStuff.DeviceCollection</node>
+                <node x="6492.6083353964505" y="1224.0">Server.BaseStationServerStuff.PostResource</node>
+                <node x="850.1111111111113" y="925.0">Server.DatabaseStuff.SensorLabelMapGenerator</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Server.BaseStationServerStuff.IncomingReadingDecryptor" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.Database" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.SiteEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.FrontEndServerStuff.FrontEndServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.FrontEndServerStuff.FrontEndServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.Database" target="Server.DatabaseStuff.DatabaseEntrySet">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DatabaseEntrySet">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.SiteConfigFileGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.ClientEntry" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DeviceCollection">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DeviceCollectionTest" target="Server.DatabaseStuff.DeviceCollection">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.PostResource" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.SensorLabelMapGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="0.0" y="-14.5" />
+                  <point x="4612.229482323232" y="1084.0" />
+                  <point x="4681.193768037518" y="1084.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.ClientEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.AccountManagement.UserEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter" target="Server.FrontEndServerStuff.HttpResources.Authentication.Secured">
+                  <point x="-38.25" y="-14.5" />
+                  <point x="3143.5277777777783" y="1144.0" />
+                  <point x="3112.53011569948" y="1144.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.DeviceCollection">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.FrontEndServer" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntrySetTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserChoiceHandlerGeneratorTest" target="Server.AccountManagement.UserChoiceHandlerGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntryTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntrySetTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="0.0" y="-14.5" />
+                  <point x="4771.729482323232" y="1034.0" />
+                  <point x="4702.765196608947" y="1034.0" />
+                  <point x="21.57142857142844" y="14.5" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager" target="Server.FrontEndServerStuff.HttpResources.Authentication.UserJson">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.PostResource" target="Server.BaseStationServerStuff.SensorReadingParser">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="-51.0" y="-14.5" />
+                  <point x="5526.216417801688" y="994.0" />
+                  <point x="4745.908053751804" y="994.0" />
+                  <point x="64.71428571428532" y="14.5" />
+                </edge>
+                <edge source="Server.AccountManagement.UserConfigFileGenerator" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.CommandLineTool" target="Server.AccountManagement.UserChoiceHandlerGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.CommandLineTool" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.ClientEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.UserConfigFileGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="31.625" y="-14.5" />
+                  <point x="4110.854482323232" y="1054.0" />
+                  <point x="4616.479482323233" y="1054.0" />
+                  <point x="-64.71428571428532" y="14.5" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.AccountManagement.UserEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="-83.33333333333303" y="-14.5" />
+                  <point x="4904.396148989899" y="1024.0" />
+                  <point x="4724.3366251803745" y="1024.0" />
+                  <point x="43.14285714285688" y="14.5" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.InstallCert" target="Server.FrontEndServerStuff.FrontEndServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntrySet" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntry" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.SensorLabelMapGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.Handler1" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="0.0" y="-14.5" />
+                  <point x="4480.729482323232" y="1074.0" />
+                  <point x="4659.62233946609" y="1074.0" />
+                  <point x="-21.57142857142844" y="14.5" />
+                </edge>
+                <edge source="Server.DatabaseStuff.SensorLabelMapGenerator" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteConfigFileGeneratorTest" target="Server.AccountManagement.SiteConfigFileGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.FrontEndServerStuff.FrontEndServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.FrontEndServerConnectionTest" target="Server.FrontEndServerStuff.FrontEndServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserConfigFileGeneratorTest" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserConfigFileGeneratorTest" target="Server.AccountManagement.UserConfigFileGenerator">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.PostResource" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.CommandLineTool" target="Server.AccountManagement.ResourceFileReader">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServerTest" target="Server.BaseStationServerStuff.BaseStationConnectionServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserEntry" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.FrontEndServerStuff.HttpResources.Authentication.OldAndNewPasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox" target="Server.DataAnalysisStuff.ArrayListPartitioner">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.UserEntry" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DeviceCollection">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+                  <point x="0.0" y="-14.5" />
+                  <point x="4321.729482323232" y="1064.0" />
+                  <point x="4638.050910894661" y="1064.0" />
+                  <point x="-43.14285714285688" y="14.5" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServerTest" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.CommandLineTool" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.InstallCert" target="Server.FrontEndServerStuff.InstallCert.SavingTrustManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.Database">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.BaseStationConnectionServer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.AccountManagement.UsernamePasswordPair">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.SensorReadingParser" target="Server.DatabaseStuff.DatabaseEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.SensorReadingParserTest" target="Server.BaseStationServerStuff.SensorReadingParser">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntryTest" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.BaseStationServerStuff.SensorReadingParser">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.SiteEntryTest" target="Server.AccountManagement.SiteEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.AccountManagement.CommandLineTool">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.ResourceFileReaderTest" target="Server.AccountManagement.ResourceFileReader">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.SensorReadingParser">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DataAnalysisStuff.ArrayListPartitionerTest" target="Server.DataAnalysisStuff.ArrayListPartitioner">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.BaseStationServerStuff.IncomingReadingDecryptorTest" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.FrontEndServer" target="Server.DatabaseStuff.ClientDatabaseEditor">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntry" target="Server.DatabaseStuff.DatabaseEntryField">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.AccountManagement.UserEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.PhysicalLocationStuff.sensorLocationTest" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.AccountManagement.ClientEntryTest" target="Server.AccountManagement.ClientEntry">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.PhysicalLocationStuff.SensorLocation">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DatabaseEntryField">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.6531808853708589" x="5127.432675044884" y="382.43267504488335" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -562,7 +1185,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/UsersAndDetailsHandler.java" />
         <option value="$PROJECT_DIR$/JILive.test" />
-        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/IncomingReadingDecryptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/PostResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/BaseStationServerStuff/BaseStationConnectionServer.java" />
@@ -582,8 +1204,9 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" />
         <option value="$PROJECT_DIR$/src/todo.txt" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -656,6 +1279,174 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HttpResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HttpResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Authentication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
@@ -683,6 +1474,176 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HttpResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HttpResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontEndServerStuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HttpResources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Authentication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IndividualProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseStuff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -785,13 +1746,14 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="settings.editor.selected.configurable" value="coverage" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -831,45 +1793,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/Server/AccountManagement" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'Server.AccountManagement'">
-    <configuration default="false" name="Tests in 'Server.FrontEndServerStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.FrontEndServerStuff.*" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="Tests in 'Server.DatabaseStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests Server.DatabaseStuff.*" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Gradle.Tests in 'Server'">
     <configuration default="false" name="Tests in 'Server.DataAnalysisStuff'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -914,6 +1838,44 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests Server.AccountManagement.*" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="GetSiteDataTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="Tests in 'Server'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests Server.*" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1324,19 +2286,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DatabaseStuff'" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
+      <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.GetSiteDataTest" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server'" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DatabaseStuff'" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.FrontEndServerStuff'" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.Tests in 'Server'" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.GetSiteDataTest" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.AccountManagement'" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.BaseStationServerStuff'" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.Tests in 'Server.DataAnalysisStuff'" />
       </list>
     </recent_temporary>
   </component>
@@ -1380,14 +2342,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="28646000" />
-    </task>
-    <task id="LOCAL-00012" summary="Set up receiver for username and passwords. Will work on authentication stuff and checking from the database etc">
-      <created>1498854943667</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1498854943667</updated>
+      <workItem from="1500670013280" duration="34401000" />
     </task>
     <task id="LOCAL-00013" summary="Finished authentication. Made a filter that authenticates all incoming requests by checking their JWT with the users in the database. Made a facility to update user details. Made a facility to update passwords and require old password too. All that is left (which is small), is issue new token after update where username has changed. Can start work on site api now">
       <created>1498937455778</created>
@@ -1725,24 +2680,31 @@
       <option name="project" value="LOCAL" />
       <updated>1502286927457</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Fixed code so datapoints with NaN appear as 0">
+      <created>1502287400945</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1502287400945</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GetSiteDataTest - 2017.08.09 at 11h 41m 49s.xml">
-      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 04m 24s.xml">
-      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 04m 55s.xml">
-      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 05m 21s.xml">
-      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GetSiteDataTest - 2017.08.09 at 12h 08m 52s.xml">
       <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GetSiteDataTest - 2017.08.15 at 14h 34m 08s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GetSiteDataTest - 2017.08.15 at 14h 35m 31s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GetSiteDataTest - 2017.08.15 at 14h 35m 58s.xml">
+      <configuration name="GetSiteDataTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Server' - 2017.08.15 at 14h 37m 33s.xml">
+      <configuration name="Tests in 'Server'" configurationId="GradleRunConfiguration" />
     </history-entry>
     <history-entry file="Tests_in_'Server_AccountManagement' - 2017.08.09 at 12h 29m 52s.xml">
       <configuration name="Tests in 'Server.AccountManagement'" configurationId="GradleRunConfiguration" />
@@ -1761,7 +2723,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501209000" />
+    <option name="totallyTimeSpent" value="506964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1802,6 +2764,42 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35602838" sideWeight="0.50858366" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.4914163" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35602838" sideWeight="0.4914163" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134752" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25250357" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761088" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1835,7 +2833,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added API features for getting list of users a client has and getting list of sites a client has, assuming the user is logged in with a valid JWT. Admins can give site permissions to users and I've added an admin flag to UserEntry that controls this, and clientDatabaseEditor now supports the creation of admins, as does the command line tool" />
     <MESSAGE value="Added API for sites that allows you to get all labels at a site, all sensor IPs at a site, all labels for a given sensor, and a map of all IPs to the labels that sensor produces" />
     <MESSAGE value="Finished basic API that does the following: allows users to log in, change password, change account details, get a list of sites they have access to, if they are admin add and remove access for other users, get a list of reading labels at each site, get a list of sensors at each of site, get the labels for a given sensor, get a map of sensor to labels, get data for a given sensor and a given site and a given label between two given times&#10;" />
     <MESSAGE value="Setting up server and doing HTTPS debugging" />
@@ -1860,7 +2857,8 @@
     <MESSAGE value="Added a basic stats toolbox that can calculate mean and standard deviation for a set of database entries. It can also summarise the same two for data, but over intervals (i.e mean for each hour between two dates, or standard deviation each day over a week etc)" />
     <MESSAGE value="Added features to stats package to take average modulo a number. For example, take daily average modulo 7 will take the average of for all mondays, all tuesdays etc." />
     <MESSAGE value="Added API functionality to allow mean and standard deviation of data at fixed intervals modulo at a certain number to be getted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added API functionality to allow mean and standard deviation of data at fixed intervals modulo at a certain number to be getted" />
+    <MESSAGE value="Fixed code so datapoints with NaN appear as 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed code so datapoints with NaN appear as 0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1892,48 +2890,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/keystore_server">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.grizzly/grizzly-http-server/2.3.16/56b6c5b45c4ec3878a1a4c55a21451ec5020f88e/grizzly-http-server-2.3.16-sources.jar!/org/glassfish/grizzly/http/server/HttpHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="76" column="22" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.grizzly/grizzly-framework/2.3.16/a68fde5028bc1624fecf79020f66830df7193144/grizzly-framework-2.3.16-sources.jar!/org/glassfish/grizzly/ssl/SSLContextConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="327" column="19" lean-forward="false" selection-start-line="327" selection-start-column="19" selection-end-line="327" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JILIve.test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/OldAndNewPasswordPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpsClientMaker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -2004,38 +2960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="55" column="40" lean-forward="false" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="108" column="66" lean-forward="false" selection-start-line="108" selection-start-column="66" selection-end-line="108" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -2072,6 +3000,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2086,6 +3015,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2170,14 +3100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="71" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -2294,37 +3216,760 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/InstallCert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">Server</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">apple</node>
+            <node x="" y="">java</node>
+            <node x="" y="">assets</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">okhttp3</node>
+            <node x="" y="">jersey</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">javassist</node>
+            <node x="" y="">junit</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">io</node>
+            <node x="" y="">BaseStationCode</node>
+            <node x="" y="">jssc</node>
+            <node x="" y="">retrofit2</node>
+            <node x="" y="">resources</node>
+            <node x="" y="">mozilla</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">okio</node>
+            <node x="" y="">libs</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.6521060842433697" x="292.2500000000001" y="470.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Server.AccountManagement">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Server.AccountManagement</OriginalElement>
+          <nodes>
+            <node x="" y="">Server.AccountManagement.UserConfigFileGeneratorTest</node>
+            <node x="" y="">Server.AccountManagement.UserChoiceHandler</node>
+            <node x="" y="">Server.AccountManagement.ClientEntry</node>
+            <node x="" y="">Server.AccountManagement.SiteConfigFileGeneratorTest</node>
+            <node x="" y="">Server.AccountManagement.ResourceFileReader</node>
+            <node x="" y="">Server.AccountManagement.SiteEntry</node>
+            <node x="" y="">Server.AccountManagement.ResourceFileReaderTest</node>
+            <node x="" y="">Server.AccountManagement.SiteEntryTest</node>
+            <node x="" y="">Server.AccountManagement.Resources</node>
+            <node x="" y="">Server.AccountManagement.UserChoiceHandlerGeneratorTest</node>
+            <node x="" y="">Server.AccountManagement.UserEntry</node>
+            <node x="" y="">Server.AccountManagement.UserConfigFileGenerator</node>
+            <node x="" y="">Server.AccountManagement.SecureRandomStringGenerator</node>
+            <node x="" y="">Server.AccountManagement.CommandLineTool</node>
+            <node x="" y="">Server.AccountManagement.UserEntryTest</node>
+            <node x="" y="">Server.AccountManagement.SiteConfigFileGenerator</node>
+            <node x="" y="">Server.AccountManagement.UserChoiceHandlerGenerator</node>
+            <node x="" y="">Server.AccountManagement.ClientEntryTest</node>
+            <node x="" y="">Server.AccountManagement.UsernamePasswordPair</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7307692307692307" x="298.0" y="316.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Server">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Server</OriginalElement>
+          <nodes>
+            <node x="5431.00833539645" y="746.0">Server.AccountManagement.UserConfigFileGeneratorTest</node>
+            <node x="4605.693768037518" y="925.0">Server.AccountManagement.UserChoiceHandler</node>
+            <node x="4225.729482323232" y="1224.0">Server.AccountManagement.Resources.NewSitesForClientHandler</node>
+            <node x="6162.50833539645" y="746.0">Server.AccountManagement.ResourceFileReader</node>
+            <node x="2378.6111111111113" y="925.0">Server.FrontEndServerStuff.FrontEndServer</node>
+            <node x="268.0" y="1397.0">Server.FrontEndServerStuff.HttpsClientMaker</node>
+            <node x="1360.111111111111" y="925.0">Server.DataAnalysisStuff.ArrayListPartitionerTest</node>
+            <node x="2002.611111111111" y="925.0">Server.AccountManagement.UserEntry</node>
+            <node x="1049.620568547286" y="1224.0">Server.DatabaseStuff.SensorLabelMapGeneratorTest</node>
+            <node x="2793.1111111111113" y="1224.0">Server.FrontEndServerStuff.InstallCert</node>
+            <node x="0.0" y="1397.0">Server.AccountManagement.SecureRandomStringGenerator</node>
+            <node x="1559.111111111111" y="457.0">Server.PhysicalLocationStuff.sensorLocationTest</node>
+            <node x="5252.460735983506" y="457.0">Server.DatabaseStuff.DeviceCollectionTest</node>
+            <node x="1973.611111111111" y="457.0">Server.DatabaseStuff.Database</node>
+            <node x="2033.611111111111" y="1224.0">Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest</node>
+            <node x="4700.729482323232" y="1224.0">Server.AccountManagement.Resources.NewClientHandler</node>
+            <node x="958.1111111111111" y="746.0">Server.DataAnalysisStuff.ArrayListPartitioner</node>
+            <node x="1319.620568547286" y="457.0">Server.AccountManagement.ClientEntry</node>
+            <node x="5662.00833539645" y="746.0">Server.AccountManagement.SiteConfigFileGeneratorTest</node>
+            <node x="3278.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler</node>
+            <node x="6186.75833539645" y="925.0">Server.AccountManagement.ResourceFileReaderTest</node>
+            <node x="5779.91804615505" y="1224.0">Server.BaseStationServerStuff.IncomingReadingDecryptorTest</node>
+            <node x="614.1111111111113" y="925.0">Server.DataAnalysisStuff.DatabaseEntryStatsToolbox</node>
+            <node x="1269.4354383644584" y="79.0">Server.DatabaseStuff.DatabaseEntry</node>
+            <node x="2784.1111111111113" y="925.0">Server.FrontEndServerStuff.InstallCert.SavingTrustManager</node>
+            <node x="627.0" y="1397.0">Server.FrontEndServerStuff.CorsFilter</node>
+            <node x="3671.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest</node>
+            <node x="3690.1982323232323" y="746.0">Server.DatabaseStuff.ClientDatabaseEditor</node>
+            <node x="3071.53011569948" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.Secured</node>
+            <node x="3822.9482323232323" y="457.0">Server.AccountManagement.SiteConfigFileGenerator</node>
+            <node x="2524.1000508705183" y="1323.0">Server.BaseStationServerStuff.BaseStationConnectionServerTest</node>
+            <node x="220.27777777777828" y="746.0">Server.AccountManagement.ClientEntryTest</node>
+            <node x="2399.6854383644586" y="238.0">Server.AccountManagement.UsernamePasswordPair</node>
+            <node x="406.1111111111113" y="925.0">Server.DatabaseStuff.ClientDatabaseEditorTest</node>
+            <node x="799.8833070770406" y="0.0">Server.DatabaseStuff.DatabaseEntryField</node>
+            <node x="4862.729482323232" y="1224.0">Server.AccountManagement.Resources.NewUserAccountsForClientHandler</node>
+            <node x="3105.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter</node>
+            <node x="2576.1111111111113" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.OldAndNewPasswordPair</node>
+            <node x="302.97473521395295" y="238.0">Server.DatabaseStuff.DatabaseEntrySet</node>
+            <node x="3480.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler</node>
+            <node x="3952.7294823232323" y="1224.0">Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler</node>
+            <node x="717.349735213953" y="457.0">Server.DatabaseStuff.DatabaseEntrySetTest</node>
+            <node x="6384.75833539645" y="925.0">Server.BaseStationServerStuff.SensorReadingParser</node>
+            <node x="379.2777777777783" y="746.0">Server.AccountManagement.SiteEntryTest</node>
+            <node x="1659.611111111111" y="238.0">Server.PhysicalLocationStuff.SensorLocation</node>
+            <node x="5926.75833539645" y="925.0">Server.AccountManagement.UserChoiceHandlerGeneratorTest</node>
+            <node x="5500.716417801688" y="1224.0">Server.AccountManagement.Resources.DeleteClientHandler</node>
+            <node x="3250.0845208959017" y="746.0">Server.FrontEndServerStuff.HttpResources.Authentication.UserJson</node>
+            <node x="3617.9482323232323" y="457.0">Server.AccountManagement.UserConfigFileGenerator</node>
+            <node x="5245.690153578269" y="925.0">Server.AccountManagement.CommandLineTool</node>
+            <node x="1878.361111111111" y="1224.0">Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest</node>
+            <node x="5607.466417801688" y="925.0">Server.BaseStationServerStuff.IncomingReadingDecryptor</node>
+            <node x="2249.6111111111113" y="1224.0">Server.FrontEndServerStuff.FrontEndServerConnectionTest</node>
+            <node x="4437.729482323232" y="1224.0">Server.AccountManagement.Resources.Handler1</node>
+            <node x="5887.00833539645" y="746.0">Server.AccountManagement.UserChoiceHandlerGenerator</node>
+            <node x="2916.2777777777783" y="1224.0">Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler</node>
+            <node x="6496.549871084797" y="1323.0">Server.DatabaseStuff.DatabaseTest</node>
+            <node x="4543.729482323232" y="1224.0">Server.AccountManagement.Resources.ClientListHandler</node>
+            <node x="144.0060069117444" y="1224.0">Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest</node>
+            <node x="10.5" y="457.0">Server.DatabaseStuff.DatabaseEntryTest</node>
+            <node x="1770.611111111111" y="457.0">Server.AccountManagement.SiteEntry</node>
+            <node x="3251.5845208959017" y="925.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager</node>
+            <node x="6282.6083353964505" y="1224.0">Server.BaseStationServerStuff.SensorReadingParserTest</node>
+            <node x="2495.6111111111113" y="1224.0">Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest</node>
+            <node x="5132.729482323232" y="1224.0">Server.BaseStationServerStuff.BaseStationConnectionServer</node>
+            <node x="452.0" y="1397.0">Server.FrontEndServerStuff.HttpResources.Tests.ConnectionTest</node>
+            <node x="852.245568547286" y="1224.0">Server.FrontEndServerStuff.HttpResources.Data.GetSiteData</node>
+            <node x="1152.111111111111" y="925.0">Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData</node>
+            <node x="6680.903760233051" y="238.0">Server.AccountManagement.UserEntryTest</node>
+            <node x="1808.611111111111" y="238.0">Server.DatabaseStuff.DeviceCollection</node>
+            <node x="6492.6083353964505" y="1224.0">Server.BaseStationServerStuff.PostResource</node>
+            <node x="850.1111111111113" y="925.0">Server.DatabaseStuff.SensorLabelMapGenerator</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Server.BaseStationServerStuff.IncomingReadingDecryptor" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.Database" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.SiteEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.FrontEndServerStuff.FrontEndServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.FrontEndServerStuff.FrontEndServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.Database" target="Server.DatabaseStuff.DatabaseEntrySet">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DatabaseEntrySet">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.SiteConfigFileGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.ClientEntry" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DeviceCollection">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DeviceCollectionTest" target="Server.DatabaseStuff.DeviceCollection">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.PostResource" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.SensorLabelMapGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="0.0" y="-14.5" />
+              <point x="4612.229482323232" y="1084.0" />
+              <point x="4681.193768037518" y="1084.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.ClientEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.AccountManagement.UserEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter" target="Server.FrontEndServerStuff.HttpResources.Authentication.Secured">
+              <point x="-38.25" y="-14.5" />
+              <point x="3143.5277777777783" y="1144.0" />
+              <point x="3112.53011569948" y="1144.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.DeviceCollection">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.FrontEndServer" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntrySetTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserChoiceHandlerGeneratorTest" target="Server.AccountManagement.UserChoiceHandlerGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntryTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntrySetTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="0.0" y="-14.5" />
+              <point x="4771.729482323232" y="1034.0" />
+              <point x="4702.765196608947" y="1034.0" />
+              <point x="21.57142857142844" y="14.5" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager" target="Server.FrontEndServerStuff.HttpResources.Authentication.UserJson">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.PostResource" target="Server.BaseStationServerStuff.SensorReadingParser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="-51.0" y="-14.5" />
+              <point x="5526.216417801688" y="994.0" />
+              <point x="4745.908053751804" y="994.0" />
+              <point x="64.71428571428532" y="14.5" />
+            </edge>
+            <edge source="Server.AccountManagement.UserConfigFileGenerator" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.CommandLineTool" target="Server.AccountManagement.UserChoiceHandlerGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.CommandLineTool" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.ClientEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditor" target="Server.AccountManagement.UserConfigFileGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="31.625" y="-14.5" />
+              <point x="4110.854482323232" y="1054.0" />
+              <point x="4616.479482323233" y="1054.0" />
+              <point x="-64.71428571428532" y="14.5" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.AccountManagement.UserEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="-83.33333333333303" y="-14.5" />
+              <point x="4904.396148989899" y="1024.0" />
+              <point x="4724.3366251803745" y="1024.0" />
+              <point x="43.14285714285688" y="14.5" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.InstallCert" target="Server.FrontEndServerStuff.FrontEndServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntrySet" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntry" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.SensorLabelMapGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntry" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.Handler1" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="0.0" y="-14.5" />
+              <point x="4480.729482323232" y="1074.0" />
+              <point x="4659.62233946609" y="1074.0" />
+              <point x="-21.57142857142844" y="14.5" />
+            </edge>
+            <edge source="Server.DatabaseStuff.SensorLabelMapGenerator" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.UsersAndDetailsHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteConfigFileGeneratorTest" target="Server.AccountManagement.SiteConfigFileGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.FrontEndServerStuff.FrontEndServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.FrontEndServerConnectionTest" target="Server.FrontEndServerStuff.FrontEndServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserConfigFileGeneratorTest" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.DeleteClientHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandler" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserConfigFileGeneratorTest" target="Server.AccountManagement.UserConfigFileGenerator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.PostResource" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.CommandLineTool" target="Server.AccountManagement.ResourceFileReader">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServerTest" target="Server.BaseStationServerStuff.BaseStationConnectionServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserEntry" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationTest" target="Server.FrontEndServerStuff.HttpResources.Authentication.OldAndNewPasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox" target="Server.DataAnalysisStuff.ArrayListPartitioner">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.UserEntry" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DeviceCollection">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.AccountManagement.UserChoiceHandler">
+              <point x="0.0" y="-14.5" />
+              <point x="4321.729482323232" y="1064.0" />
+              <point x="4638.050910894661" y="1064.0" />
+              <point x="-43.14285714285688" y="14.5" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntryTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.SensorLabelMapGeneratorTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServerTest" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DatabaseStuff.DatabaseEntrySet">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewUserAccountsForClientHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.ClientListHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.CommandLineTool" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.InstallCert" target="Server.FrontEndServerStuff.InstallCert.SavingTrustManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSensorLocationsForSiteHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.DatabaseStuff.Database">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.BaseStationConnectionServer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManagerTest" target="Server.AccountManagement.UsernamePasswordPair">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest" target="Server.FrontEndServerStuff.HttpResources.Data.DataValuesWithMetaData">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.SensorReadingParser" target="Server.DatabaseStuff.DatabaseEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.SensorReadingParserTest" target="Server.BaseStationServerStuff.SensorReadingParser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntryTest" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Data.GetSiteData" target="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest" target="Server.DataAnalysisStuff.DatabaseEntryStatsToolbox">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.BaseStationConnectionServer" target="Server.BaseStationServerStuff.SensorReadingParser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.SiteEntryTest" target="Server.AccountManagement.SiteEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewClientHandler" target="Server.AccountManagement.CommandLineTool">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationFilter" target="Server.FrontEndServerStuff.HttpResources.Authentication.AuthenticationManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.ResourceFileReaderTest" target="Server.AccountManagement.ResourceFileReader">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseTest" target="Server.BaseStationServerStuff.SensorReadingParser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DataAnalysisStuff.ArrayListPartitionerTest" target="Server.DataAnalysisStuff.ArrayListPartitioner">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.Resources.NewSitesForClientHandler" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.BaseStationServerStuff.IncomingReadingDecryptorTest" target="Server.BaseStationServerStuff.IncomingReadingDecryptor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.FrontEndServer" target="Server.DatabaseStuff.ClientDatabaseEditor">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntry" target="Server.DatabaseStuff.DatabaseEntryField">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.FrontEndServerStuff.HttpResources.Sites.GetListOfSitesHandlerTest" target="Server.AccountManagement.UserEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.PhysicalLocationStuff.sensorLocationTest" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.AccountManagement.ClientEntryTest" target="Server.AccountManagement.ClientEntry">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.ClientDatabaseEditorTest" target="Server.PhysicalLocationStuff.SensorLocation">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Server.DatabaseStuff.DatabaseEntryTest" target="Server.DatabaseStuff.DatabaseEntryField">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6531808853708589" x="5127.432675044884" y="382.43267504488335" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Authentication/AuthenticationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="55" column="40" lean-forward="false" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="299" column="36" lean-forward="true" selection-start-line="299" selection-start-column="36" selection-end-line="299" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="705">
+          <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2338,10 +3983,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Sites/GetListOfSitesHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="148" column="15" lean-forward="false" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/SensorLabelMapGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#360#361#0" expanded="false" />
+            <element signature="e#400#401#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="232" column="108" lean-forward="false" selection-start-line="232" selection-start-column="108" selection-end-line="232" selection-end-column="108" />
+        <state relative-caret-position="345">
+          <caret line="148" column="59" lean-forward="false" selection-start-line="148" selection-start-column="59" selection-end-line="148" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

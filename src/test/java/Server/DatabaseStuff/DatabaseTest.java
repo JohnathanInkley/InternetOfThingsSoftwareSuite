@@ -5,6 +5,7 @@ import BaseStationCode.BaseStation;
 import Server.BaseStationServerStuff.BaseStationConnectionServer;
 import Server.BaseStationServerStuff.IncomingReadingDecryptor;
 import Server.BaseStationServerStuff.SensorReadingParser;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -68,7 +69,7 @@ public class DatabaseTest {
         DeviceCollection site = new DeviceCollection("owner", "factory1");
 
         for (int i = 0; i < 10; i ++) {
-            String timeOfEntry = "2000-01-23 00:34:0" + i + ".000"      ;
+            String timeOfEntry = "2000-01-23 00:34:0" + i + ".000";
             Double temperature = (double) (30 + i);
             DatabaseEntry entry = generateSampleEntry(timeOfEntry, temperature);
             entry.setDeviceCollectionIdentifier(site);
@@ -89,7 +90,7 @@ public class DatabaseTest {
         DeviceCollection site2 = new DeviceCollection("owner", "factory2");
 
         for (int i = 0; i < 10; i ++) {
-            String timeOfEntry = "2000-01-23 00:34:0" + i + ".000"      ;
+            String timeOfEntry = "2000-01-23 00:34:0" + i + ".000";
             Double temperature1 = (double) (30 + i);
             Double temperature2 = (double) (40 + i);
             DatabaseEntry entry1 = generateSampleEntry(timeOfEntry, temperature1);
@@ -137,6 +138,7 @@ public class DatabaseTest {
         }
     }
 
+    @Ignore
     @Test
     public void runningWholeSetUpShouldPutEntriesIntoDatabase() throws InterruptedException, IOException {
         // Set up client side
