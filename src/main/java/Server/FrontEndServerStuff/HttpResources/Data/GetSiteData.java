@@ -117,13 +117,9 @@ public class GetSiteData {
     }
 
     private Response getResponseForValidIP(String IP, String siteName, String clientName) {
-        System.out.println("1");
         SensorLabelMapGenerator labelMapGenerator = new SensorLabelMapGenerator(timeSeriesDatabase);
-        System.out.println("2");
         List<String> labels = labelMapGenerator.getLabels(IP, clientName, siteName);
-        System.out.println("3");
         String labelsAsJson = gson.toJson(labels);
-        System.out.println("4");
         return Response.status(Response.Status.OK)
                 .type(MediaType.APPLICATION_JSON)
                 .entity(labelsAsJson)
