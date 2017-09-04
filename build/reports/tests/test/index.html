@@ -20,7 +20,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">40</div>
+<div class="counter">122</div>
 <p>tests</p>
 </div>
 </td>
@@ -32,13 +32,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">26.897s</div>
+<div class="counter">36.179s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,7 +47,7 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
+<div class="infoBox skipped" id="successRate">
 <div class="percent">100%</div>
 <p>successful</p>
 </div>
@@ -58,13 +58,25 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Ignored tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Ignored tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/Server.DatabaseStuff.DatabaseTest.html">DatabaseTest</a>.
+<a href="classes/Server.DatabaseStuff.DatabaseTest.html#runningWholeSetUpShouldPutEntriesIntoDatabase">runningWholeSetUpShouldPutEntriesIntoDatabase</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -80,12 +92,52 @@
 <tbody>
 <tr>
 <td class="success">
+<a href="packages/Server.AccountManagement.html">Server.AccountManagement</a>
+</td>
+<td>30</td>
+<td>0</td>
+<td>0</td>
+<td>4.988s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/Server.BaseStationServerStuff.html">Server.BaseStationServerStuff</a>
+</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>1.783s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/Server.DataAnalysisStuff.html">Server.DataAnalysisStuff</a>
+</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0.081s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="skipped">
+<a href="packages/Server.DatabaseStuff.html">Server.DatabaseStuff</a>
+</td>
+<td>35</td>
+<td>0</td>
+<td>1</td>
+<td>5.401s</td>
+<td class="skipped">100%</td>
+</tr>
+<tr>
+<td class="success">
 <a href="packages/Server.FrontEndServerStuff.html">Server.FrontEndServerStuff</a>
 </td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>2.553s</td>
+<td>0.646s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -95,17 +147,17 @@
 <td>17</td>
 <td>0</td>
 <td>0</td>
-<td>14.633s</td>
+<td>13.626s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success">
 <a href="packages/Server.FrontEndServerStuff.HttpResources.Data.html">Server.FrontEndServerStuff.HttpResources.Data</a>
 </td>
-<td>12</td>
+<td>13</td>
 <td>0</td>
 <td>0</td>
-<td>0.711s</td>
+<td>0.577s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -115,13 +167,23 @@
 <td>10</td>
 <td>0</td>
 <td>0</td>
-<td>9.000s</td>
+<td>9.076s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/Server.PhysicalLocationStuff.html">Server.PhysicalLocationStuff</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
 <td class="success">100%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -137,11 +199,173 @@
 <tbody>
 <tr>
 <td class="success"/>
+<a href="classes/Server.AccountManagement.ClientEntryTest.html">Server.AccountManagement.ClientEntryTest</a>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0.031s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.ResourceFileReaderTest.html">Server.AccountManagement.ResourceFileReaderTest</a>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0.043s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.SiteConfigFileGeneratorTest.html">Server.AccountManagement.SiteConfigFileGeneratorTest</a>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.024s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.SiteEntryTest.html">Server.AccountManagement.SiteEntryTest</a>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0.015s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.UserChoiceHandlerGeneratorTest.html">Server.AccountManagement.UserChoiceHandlerGeneratorTest</a>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.012s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.UserConfigFileGeneratorTest.html">Server.AccountManagement.UserConfigFileGeneratorTest</a>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.016s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.AccountManagement.UserEntryTest.html">Server.AccountManagement.UserEntryTest</a>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>4.847s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.BaseStationServerStuff.BaseStationConnectionServerTest.html">Server.BaseStationServerStuff.BaseStationConnectionServerTest</a>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1.591s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.BaseStationServerStuff.IncomingReadingDecryptorTest.html">Server.BaseStationServerStuff.IncomingReadingDecryptorTest</a>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.165s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.BaseStationServerStuff.SensorReadingParserTest.html">Server.BaseStationServerStuff.SensorReadingParserTest</a>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.027s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DataAnalysisStuff.ArrayListPartitionerTest.html">Server.DataAnalysisStuff.ArrayListPartitionerTest</a>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.008s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest.html">Server.DataAnalysisStuff.DatabaseEntryStatsToolboxTest</a>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0.073s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DatabaseStuff.ClientDatabaseEditorTest.html">Server.DatabaseStuff.ClientDatabaseEditorTest</a>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>5.050s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DatabaseStuff.DatabaseEntrySetTest.html">Server.DatabaseStuff.DatabaseEntrySetTest</a>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DatabaseStuff.DatabaseEntryTest.html">Server.DatabaseStuff.DatabaseEntryTest</a>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="skipped"/>
+<a href="classes/Server.DatabaseStuff.DatabaseTest.html">Server.DatabaseStuff.DatabaseTest</a>
+<td>8</td>
+<td>0</td>
+<td>1</td>
+<td>0.299s</td>
+<td class="skipped">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DatabaseStuff.DeviceCollectionTest.html">Server.DatabaseStuff.DeviceCollectionTest</a>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.003s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.DatabaseStuff.SensorLabelMapGeneratorTest.html">Server.DatabaseStuff.SensorLabelMapGeneratorTest</a>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.049s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
 <a href="classes/Server.FrontEndServerStuff.FrontEndServerConnectionTest.html">Server.FrontEndServerStuff.FrontEndServerConnectionTest</a>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>2.553s</td>
+<td>0.646s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -150,7 +374,7 @@
 <td>9</td>
 <td>0</td>
 <td>0</td>
-<td>0.490s</td>
+<td>0.300s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -159,16 +383,16 @@
 <td>8</td>
 <td>0</td>
 <td>0</td>
-<td>14.143s</td>
+<td>13.326s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success"/>
 <a href="classes/Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest.html">Server.FrontEndServerStuff.HttpResources.Data.GetSiteDataTest</a>
-<td>12</td>
+<td>13</td>
 <td>0</td>
 <td>0</td>
-<td>0.711s</td>
+<td>0.577s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -177,7 +401,16 @@
 <td>10</td>
 <td>0</td>
 <td>0</td>
-<td>9.000s</td>
+<td>9.076s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/Server.PhysicalLocationStuff.sensorLocationTest.html">Server.PhysicalLocationStuff.sensorLocationTest</a>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
 <td class="success">100%</td>
 </tr>
 </tbody>
@@ -191,7 +424,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.1</a> at 15-Aug-2017 16:07:30</p>
+<a href="http://www.gradle.org">Gradle 3.1</a> at 15-Aug-2017 16:36:32</p>
 </div>
 </div>
 </body>

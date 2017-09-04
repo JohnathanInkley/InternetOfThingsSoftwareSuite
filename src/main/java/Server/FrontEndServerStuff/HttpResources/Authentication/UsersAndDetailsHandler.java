@@ -84,7 +84,6 @@ public class UsersAndDetailsHandler {
     public Response getListOfUsers(@Context SecurityContext securityContext) {
         String adminUsername = securityContext.getUserPrincipal().getName();
         UserEntry adminEntry = editor.getUserEntry(adminUsername);
-
         if (adminEntry.isAdmin()) {
             List<String> userList = editor.getUserNamesForClient(adminEntry.getClientName());
             String userListJson = gson.toJson(userList);

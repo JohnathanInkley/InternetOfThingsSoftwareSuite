@@ -75,7 +75,7 @@ public class GetSiteData {
     }
 
     @GET
-    @Path("/api/sites/{siteName}/sensors")
+        @Path("/api/sites/{siteName}/sensors")
     @Secured
     @Produces(MediaType.APPLICATION_JSON)
     public Response getSensorIPsForSite(@PathParam("siteName") String siteName, @Context SecurityContext context) {
@@ -99,16 +99,21 @@ public class GetSiteData {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getLabelsForSensor(@PathParam("siteName") String siteName, @PathParam("IP") String IP, @Context SecurityContext context) {
         UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
-
+        System.out.println(user.getUsername());
         if (!user.getSitePermissions().contains(siteName)) {
+            System.out.println("bad1");
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {
+            System.out.println("worked here at least...");
             String clientName = user.getClientName();
+            System.out.println("gotClientName");
             List<String> sensorIPsAtSite = getSensorIPsAtSite(clientName, siteName);
-
+            System.out.println("got Ips");
             if (sensorIPsAtSite.contains(IP)) {
+                System.out.println("shouldWork");
                 return getResponseForValidIP(IP, siteName, clientName);
             } else {
+                System.out.println("didn't work");
                 return Response.status(Response.Status.NOT_FOUND)
                         .type(MediaType.TEXT_PLAIN)
                         .entity("No sensor with IP " + IP + " at site " + siteName)
