@@ -117,21 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorLabelMapGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="112" column="26" lean-forward="true" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+            <state relative-caret-position="242">
+              <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1503,14 +1493,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="62309000" />
-    </task>
-    <task id="LOCAL-00044" summary="Changed UserEntry to prevent sites being added multiple times">
-      <created>1500040824073</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1500040824073</updated>
+      <workItem from="1500670013280" duration="62470000" />
     </task>
     <task id="LOCAL-00045" summary="Changed UserEntry to prevent sites being added multiple times">
       <created>1500041179120</created>
@@ -1848,7 +1831,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504528306879</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="couts in the sensor Label stuff">
+      <created>1504528518594</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1504528518594</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1884,7 +1874,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534872000" />
+    <option name="totallyTimeSpent" value="535033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2592,6 +2582,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -2600,18 +2598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="112" column="26" lean-forward="true" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+        <state relative-caret-position="242">
+          <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
           <folding />
         </state>
       </provider>
