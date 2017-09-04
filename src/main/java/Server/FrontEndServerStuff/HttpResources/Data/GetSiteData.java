@@ -99,7 +99,7 @@ public class GetSiteData {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getLabelsForSensor(@PathParam("siteName") String siteName, @PathParam("IP") String IP, @Context SecurityContext context) {
         UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
-        System.out.println(user.getUsername());
+
         if (!user.getSitePermissions().contains(siteName)) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {

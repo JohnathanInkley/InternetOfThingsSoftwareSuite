@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f001a8-eab9-40a9-8059-b4151d0de79d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" afterPath="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
     </list>
@@ -111,18 +112,28 @@
       <file leaf-file-name="GetSiteData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="120" column="50" lean-forward="true" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+            <state relative-caret-position="174">
+              <caret line="120" column="52" lean-forward="false" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorLabelMapGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SensorLabelMapGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="159">
+              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -580,7 +591,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Server/DataAnalysisStuff/DatabaseEntryStatsToolboxTest.java" />
         <option value="$PROJECT_DIR$/src/todo.txt" />
         <option value="$PROJECT_DIR$/src/test/java/Server/DatabaseStuff/DatabaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/ClientDatabaseEditor.java" />
         <option value="$PROJECT_DIR$/src/test/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteDataTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -593,6 +603,7 @@
         <option value="$PROJECT_DIR$/IP of sensors" />
         <option value="$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java" />
       </list>
     </option>
   </component>
@@ -1494,14 +1505,7 @@
       <workItem from="1500030899669" duration="5309000" />
       <workItem from="1500075680011" duration="584000" />
       <workItem from="1500117746746" duration="6666000" />
-      <workItem from="1500670013280" duration="61913000" />
-    </task>
-    <task id="LOCAL-00042" summary="added admin yes or no to user json returned by the server">
-      <created>1499946817954</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1499946817954</updated>
+      <workItem from="1500670013280" duration="62103000" />
     </task>
     <task id="LOCAL-00043" summary="Changed sites to return Status.OK in a put request">
       <created>1500040406324</created>
@@ -1839,7 +1843,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504527993631</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="couts in the sensor Label stuff">
+      <created>1504528118975</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1504528118975</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1875,7 +1886,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534476000" />
+    <option name="totallyTimeSpent" value="534666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -2287,14 +2298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1079">
-          <caret line="79" column="109" lean-forward="false" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/BaseStationCode">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -2559,14 +2562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/AccountManagement/CommandLineTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -2591,18 +2586,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BaseStationCode/BaseStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/FrontEndServerStuff/HttpResources/Data/GetSiteData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="120" column="50" lean-forward="true" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+        <state relative-caret-position="174">
+          <caret line="120" column="52" lean-forward="false" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/SensorLabelMapGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="159">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/DatabaseStuff/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
           <folding />
         </state>
       </provider>
