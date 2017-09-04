@@ -101,19 +101,13 @@ public class GetSiteData {
         UserEntry user = editor.getUserEntry(context.getUserPrincipal().getName());
         System.out.println(user.getUsername());
         if (!user.getSitePermissions().contains(siteName)) {
-            System.out.println("bad1");
             return Response.status(Response.Status.UNAUTHORIZED).build();
         } else {
-            System.out.println("worked here at least...");
             String clientName = user.getClientName();
-            System.out.println("gotClientName");
             List<String> sensorIPsAtSite = getSensorIPsAtSite(clientName, siteName);
-            System.out.println("got Ips");
             if (sensorIPsAtSite.contains(IP)) {
-                System.out.println("shouldWork");
                 return getResponseForValidIP(IP, siteName, clientName);
             } else {
-                System.out.println("didn't work");
                 return Response.status(Response.Status.NOT_FOUND)
                         .type(MediaType.TEXT_PLAIN)
                         .entity("No sensor with IP " + IP + " at site " + siteName)
@@ -123,9 +117,13 @@ public class GetSiteData {
     }
 
     private Response getResponseForValidIP(String IP, String siteName, String clientName) {
+        System.out.println("1");
         SensorLabelMapGenerator labelMapGenerator = new SensorLabelMapGenerator(timeSeriesDatabase);
+        System.out.println("2");
         List<String> labels = labelMapGenerator.getLabels(IP, clientName, siteName);
+        System.out.println("3");
         String labelsAsJson = gson.toJson(labels);
+        System.out.println("4");
         return Response.status(Response.Status.OK)
                 .type(MediaType.APPLICATION_JSON)
                 .entity(labelsAsJson)
