@@ -111,7 +111,7 @@ public class Database {
                 "WHERE \"" + fieldName + "\" = \'" + fieldValue + "\' " +
                 "GROUP BY * ORDER BY DESC LIMIT 1" +
                 "", name);
-        System.out.println("is this empty: " + getResultsSetFromQuery(query).size());
+        System.out.println(query.getCommand());
         return getResultsSetFromQuery(query).get(0);
     }
 
